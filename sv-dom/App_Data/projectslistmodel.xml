@@ -1,0 +1,17 @@
+<ProjectsListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Projects>
+    <ProjectModel>
+      <Id>1</Id>
+      <Key>krepysh</Key>
+      <Name>Крепыш</Name>
+      <Type>1;2</Type>
+      <Area>156</Area>
+      <Size>13x9</Size>
+      <RoomCount>4</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>true</ShowOnMain>
+    </ProjectModel>
+  </Projects>
+</ProjectsListModel>

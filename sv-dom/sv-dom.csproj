@@ -173,13 +173,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\MainHelper.cs" />
+    <Compile Include="Helpers\XMLHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PriceListModel.cs" />
+    <Compile Include="Models\PriceModel.cs" />
+    <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\ProjectsListModel.cs" />
+    <Compile Include="Models\SampleImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\pricelistmodel.xml" />
+    <Content Include="App_Data\projectslistmodel.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\carusel\images\default\next.png" />
@@ -230,6 +240,12 @@
     <Content Include="Content\img\brus2.jpg" />
     <Content Include="Content\img\building.jpg" />
     <Content Include="Content\img\c79cdbb6c82f605d27d0060fc6efe755.jpg" />
+    <Content Include="Content\img\catalog\house_1.jpg" />
+    <Content Include="Content\img\catalog\house_2.jpg" />
+    <Content Include="Content\img\catalog\house_3.jpg" />
+    <Content Include="Content\img\catalog\house_4.jpg" />
+    <Content Include="Content\img\catalog\house_5.jpg" />
+    <Content Include="Content\img\catalog\house_6.jpg" />
     <Content Include="Content\img\check.png" />
     <Content Include="Content\img\design.jpg" />
     <Content Include="Content\img\e1f4f6f8df09224bfea64b8a89c88c3e.jpg" />
@@ -279,9 +295,17 @@
     <Content Include="Content\js\script.js" />
     <Content Include="Content\js\underscore-min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\1\001.jpg" />
+    <Content Include="Images\1\Gallery\001.jpg" />
+    <Content Include="Images\1\Gallery\002.jpg" />
+    <Content Include="Images\1\Gallery\003.jpg" />
+    <Content Include="Images\1\Planning\001.jpg" />
+    <Content Include="Images\1\Planning\002.jpg" />
+    <Content Include="Images\1\Samples\001.jpg" />
+    <Content Include="Images\1\Samples\002.jpg" />
+    <Content Include="Images\1\Samples\003.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
@@ -336,14 +360,18 @@
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Shared\_ShortLayout.cshtml" />
+    <Content Include="Views\Shared\_ContactPartial.cshtml" />
+    <Content Include="Views\Shared\_ProjectCartPartial.cshtml" />
+    <Content Include="Views\Shared\_SampleImagePartial.cshtml" />
+    <Content Include="Views\Home\Price.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Catalog.cshtml" />
+    <Content Include="Views\Home\ProjectsList.cshtml" />
+    <Content Include="Views\Shared\_ProjectFilterPartial.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

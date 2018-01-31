@@ -1,0 +1,17 @@
+﻿@using Helpers
+@model Models.ProjectModel
+
+<div class="proj-cart">
+    <div class="image1"><img src="@MainHelper.GetProjectTopPicture(Model.Id)" alt=""></div>
+    <div class="title1"><span style="font-size:18px">Проект «@Model.Name»</span></div>
+    <div class="txt1">
+        <ul>
+            <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>@Model.Area&nbsp;м<sup>2</sup></strong></p></li>
+            <li style="text-align:left"><p>Этажность:&nbsp;<strong>@Model.FloorsCount&nbsp;эт.</strong></p></li>
+            <li style="text-align:left"><p>Размеры:&nbsp;<strong>@Model.Size&nbsp;м</strong></p></li>
+        </ul>
+    </div>
+    <div class="price1"><span style="font-size:22px;">@MainHelper.GetProjectMinCost(Model.Id)</span></div>
+    <div class="btn1 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
+</div>
+

@@ -1,5 +1,9 @@
-﻿@{
+﻿@using Models
+@using Helpers
+
+@{
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var topProjects = MainHelper.GetProjectsForMainPage();
 }
 
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
@@ -11,7 +15,7 @@
             архитекторами. Ждем Вас!
         </div>
         <div class="arr1 ">
-            <div class="image1 size_450x350 "><img src="/content/img/krepysh001.jpg" alt=""></div>
+            <div class="image1 size_450x350 "><img src="/content/img/index_logo.jpg" alt=""></div>
             <div class="right size_450x350">
                 <div class="title1"><span style="font-size:18px;">В НАШЕЙ КОМПАНИИ ВЫ МОЖЕТЕ ЗАКАЗАТЬ ДОМА ИЗ ОЦИЛИНДРОВАННОГО БРЕВНА ИЛИ КЛЕНОГО БРУСА ПО ДОСТУПНЫМ ЦЕНАМ</span></div>
                 <div class="txt1" style="text-align:justify;">
@@ -29,97 +33,31 @@
     </div>
 </div>
 
+@if (topProjects.Any())
+{
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Выберите свой дом</div>
         <div class="sub_title">Ниже представлены цены на строительство самых популярных проектов домов <strong>"под ключ"</strong></div>
         <div class="arr1">
-            <div class="col_3 proj-cart">
-                <div class="image1"><img src="/content/img/bbeb51c0fd724350ddf81deef53d4256.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 005</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>90&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
+            @{int i = 1;}
+            @foreach (var project in topProjects.Take(6))
+            {
+                <div class="col_3 @(i == 3 || i == 6 ? "last" : "")">
+                    @Html.Partial("~/Views/Shared/_ProjectCartPartial.cshtml", project)
                 </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn1 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 proj-cart">
-                <div class="image2"><img src="/content/img/4abf0bc8fca5f2b52078dd87aaee7fd1_002.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 006</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>90&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
-                </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 last  proj-cart">
-                <div class="image2"><img src="/content/img/4abf0bc8fca5f2b52078dd87aaee7fd1_002.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 007</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>90&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
-                </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="clear"></div>
-            <div class="col_3  proj-cart">
-                <div class="image2"><img src="/content/img/4abf0bc8fca5f2b52078dd87aaee7fd1_002.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 008</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>90&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
-                </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3  proj-cart">
-                <div class="image3"><img src="/content/img/0dbedc2afa6548508faf05e0f0de7f01_002.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 009</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>290&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
-                </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 last proj-cart">
-                <div class="image2"><img src="/content/img/4abf0bc8fca5f2b52078dd87aaee7fd1_002.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дом из бревна 010</span></div>
-                <div class="txt1 ">
-                    <ul>
-                        <li style="text-align:left"><p>Общая площадь:&nbsp;<strong>190&nbsp;м<sup>2</sup></strong></p></li>
-                        <li style="text-align:left"><p>Этажность:&nbsp;<strong>1&nbsp;этаж</strong></p></li>
-                        <li style="text-align:left"><p>Размеры:&nbsp;<strong>8,2*7&nbsp;м</strong></p></li>
-                    </ul>
-                </div>
-                <div class="price1 "><span style="font-size:22px;">800 000 руб.</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="clear"></div>
+                if (i == 3 || i == 6)
+                {
+                    <div class="clear"></div>
+                }
+                i++;
+            }
         </div>
     </div>
+    <div class="clear"></div>
 </div>
-
-<div data-autoslide="0" class=" size_350x250 hide_line section section126 " style="background-color:#FFFFFF;  background-image:url(/img/1920x0/null.png);" data-id="784489" id="b_784489">
-    <div class="noise" style="background-image:url(/img/null.png);"></div>
+}
+<div class="size_350x250 hide_line section section126 " style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Используемые материалы</div>
         <div class="sub_title"><p>Наши клиенты могут выбрать проекты домов из нескольких видов материалов</p></div>
@@ -155,7 +93,7 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div class="arr1 ">
+        <div class="arr1">
             <div class="image1 size_350x250 "><img src="/content/img/brus2.jpg" alt=""></div>
             <div class="right size_350x250">
                 <div class="title1"><span style="font-size:20px;">Профилированный брус</span></div>
@@ -202,80 +140,17 @@
 <div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title  ">Примеры работ<br></div>
-        <div class="sub_title  ">Некоторые работы выполненные нами за последнее время.<br></div>
+        <div class="sub_title">Некоторые работы выполненные нами за последнее время<br></div>
         <div class="images">
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/3b7bd94676d1035db3ca9ce51fd05af7.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/8dfee0a0806cddc1353786d7414bcecb.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/3b045c4126c5dc53ab815761937d3ec8.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/e1f4f6f8df09224bfea64b8a89c88c3e.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/658be86bbe848005e69e9ba3a4c70333.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/fd68439fd657b94331215a172a4c3663.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/e934bcf2e60198a81f48bab5fcc85b49.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/c79cdbb6c82f605d27d0060fc6efe755.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
-            <div class="image_box image_size_300x225 arr1 ">
-                <img src="/content/img/e30efb320b0a3ad9af794e9320bb6b84.jpg" alt="">
-                <div class="overlay_image_box" data-link="">
-                    <div class="overlay_image_title"></div>
-                    <div class="overlay_image_descr"></div>
-                </div>
-            </div>
-
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "3b7bd94676d1035db3ca9ce51fd05af7" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "8dfee0a0806cddc1353786d7414bcecb" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "3b045c4126c5dc53ab815761937d3ec8" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e1f4f6f8df09224bfea64b8a89c88c3e" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "658be86bbe848005e69e9ba3a4c70333" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "fd68439fd657b94331215a172a4c3663" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e934bcf2e60198a81f48bab5fcc85b49" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "c79cdbb6c82f605d27d0060fc6efe755" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e30efb320b0a3ad9af794e9320bb6b84" })
             <div class="clear"></div>
         </div>
     </div>
@@ -285,25 +160,20 @@
     <div class="section_inner">
         <div class="title  ">Как мы работаем</div>
         <div class="sub_title">Схема работы с нашей компанией</div>
-
-
         <div class="arr1 ">
             <div class="col_3">
-
                 <div class="overlay_image_box ">
                     <div class="overlay_image_title title1"><strong>Назначаем встречу&nbsp; →</strong></div>
                     <div class="overlay_image_subtitle subtitle1">Позвоните нам или заполните форму «заказать звонок» и укажите, когда вам удобнее перезвонить.</div>
                 </div>
             </div>
             <div class="col_3">
-
                 <div class="overlay_image_box ">
                     <div class="overlay_image_title title2"><strong>Выбор оптимального решения →</strong></div>
                     <div class="overlay_image_subtitle subtitle2">Предварительный расчет. Встречаемся и составляем техзадание на проектирование.</div>
                 </div>
             </div>
             <div class="col_3 last">
-
                 <div class="overlay_image_box ">
                     <div class="overlay_image_title title3"><strong>Подписание договора  →</strong></div>
                     <div class="overlay_image_subtitle subtitle3">Подписание договора с двух сторон и внесение предоплаты за наши услуги.</div>
@@ -311,7 +181,6 @@
             </div>
             <div class="clear"></div>
         </div>
-
         <div class="arr1 ">
             <div class="col_3">
                 <div class="overlay_image_box ">
@@ -337,20 +206,18 @@
     </div>
 </div>
 
-<div class="hide_line section transparent_ico section128  " style="background-color:#ffffff;" data-id="49702" id="b_49702">
-    <a name="a_49702"></a>
-    <div class="noise" style="background-image:url(/img/null.png);"></div>
+<div class="hide_line section transparent_ico section128  " style="background-color:#ffffff;">
     <div class="section_inner">
-        <div class="title  ">Преимущества работы с намии<br></div>
-        <div class="sub_title  ">Лучшее предложение по качеству и цене!</div>
+        <div class="title">Преимущества работы с намии<br></div>
+        <div class="sub_title">Лучшее предложение по качеству и цене!</div>
         <div class="arr1">
             <div class="col_3">
-                <div class="ico1   radius     " style="color:#3F7B16;"><i class="fa fa-gg" style="color:#3F7B16;"></i></div>
+                <div class="ico1 radius" style="color:#3F7B16;"><i class="fa fa-gg" style="color:#3F7B16;"></i></div>
                 <div class="title1"><span style="font-size:18px;">Оптимальная стоимость работ</span></div>
                 <div class="txt1 ">Мы сохраняем достойную оплату труда благодаря слаженности и высокой производительности, уменьшая издержки и сроки строительства.</div>
             </div>
             <div class="col_3">
-                <div class="ico2  radius     " style="color:#3F7B16;"><i class="fa fa-money" style="color:#3F7B16;"></i></div>
+                <div class="ico2 radius" style="color:#3F7B16;"><i class="fa fa-money" style="color:#3F7B16;"></i></div>
                 <div class="title2"><span style="font-size:18px;">Самые лучшие цены</span></div>
                 <div class="txt2 ">
                     Напрямую от производителей, без накруток и посредников. И даже больше –&nbsp;
@@ -359,7 +226,7 @@
                 </div>
             </div>
             <div class="col_3 last">
-                <div class="ico3   radius     " style="color:#3F7B16;"><i class="fa fa-expeditedssl" style="color:#3F7B16;"></i></div>
+                <div class="ico3 radius" style="color:#3F7B16;"><i class="fa fa-expeditedssl" style="color:#3F7B16;"></i></div>
                 <div class="title3"><span style="font-size:18px;">Качественный результат</span></div>
                 <div class="txt3 ">
                     Достигается благодаря опытом мастеров, системой разработки техзаданий по
@@ -367,71 +234,21 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_247.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="extra_info1"></div>
-                        <div class="btn1x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_220.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="extra_info2"></div>
-                        <div class="btn2x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_286.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="extra_info3"></div>
-                        <div class="btn3x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <div class="popup_thanks">
-            <div class="popup_thanks_inner">
-                <div class="popup_thanks_close">X</div>
-                <div class="popup_thanks_title">Спасибо за заявку!</div>
-                <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
-            </div>
         </div>
         <div class="arr1">
             <div class="col_3">
                 <div class="ico1 radius" style="color:#3F7B16;"><i class="fa fa-toggle-right" style="color:#3F7B16;"></i></div>
-                <div class="title1"><span style="font-size:18px;">Эффект постоянного присутствия на объекте</span></div>
+                <div class="title1"><span style="font-size:18px;">Эффект постоянного присутствия</span></div>
                 <div class="txt1 ">
                     Даже если у вас нет возможности появляться на стройплощадке, в течении
                     каждого рабочего дня&nbsp; вы получаете фото и видео отчеты с комментариями о
                     проделанной работе.
                 </div>
-                <div class="price1  hidden  ">2000 руб. за кв. м</div>
-                <div class="hidden btn1" style="color:#0187BC;">Узнать подробнее</div>
             </div>
             <div class="col_3">
                 <div class="ico2  radius" style="color:#3F7B16;"><i class="fa fa-object-ungroup" style="color:#3F7B16;"></i></div>
                 <div class="title2"><span style="font-size:18px;">Всегда порядок на участке</span></div>
                 <div class="txt2 ">Мы за здоровый образ жизни. Наша команда мастеров не употребляет спиртное, поэтому можете быть спокойны за чистоту и порядок.</div>
-                <div class="price2  hidden  ">2000 руб. за кв. м</div>
-                <div class="hidden btn2" style="color:#0187BC;">Узнать подробнее</div>
             </div>
             <div class="col_3 last">
                 <div class="ico3 radius" style="color:#3F7B16;"><i class="fa fa-slideshare" style="color:#3F7B16;"></i></div>
@@ -440,90 +257,13 @@
                     Мы используем натуральные материалы, которые не просто безопасны для
                     человека, но и полезны для его физического и психологического здоровья.
                 </div>
-                <div class="price3 hidden">2000 руб. за кв. м</div>
-                <div class="hidden btn3" style="color:#0187BC;">Узнать подробнее</div>
             </div>
             <div class="clear"></div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_247.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="extra_info1"></div>
-                        <div class="btn1x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_220.jpg" alt="">
-
-                    </div>
-                    <div class="right">
-                        <div class="extra_info2"></div>
-                        <div class="btn2x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-
-                </div>
-            </div>
-            <div class="extra_info_block_wrapper">
-                <div class="extra_info_block">
-                    <div class="close">Х</div>
-                    <div class="left">
-                        <img src="/content/img/image_286.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="extra_info3"></div>
-                        <div class="btn3x " style="color:#0187BC;">Узнать подробнее</div>
-                    </div>
-                    <div class="clear"></div>
-
-                </div>
-            </div>
-        </div>
-        <div class="popup_thanks">
-            <div class="popup_thanks_inner">
-                <div class="popup_thanks_close">X</div>
-                <div class="popup_thanks_title">Спасибо за заявку!</div>
-                <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
-            </div>
         </div>
     </div>
 </div>
 
-<div class="hide_line section section162 notext" style="background-color:#FFFFFF;" data-id="49703" id="b_49703">
-    <a id="contacts"></a>
+@Html.Partial("~/Views/Shared/_ContactPartial.cshtml")
 
-    <div class="noise"></div>
-    <div class="section_inner">
-        <div class="title  ">Наши контакты<br></div>
-        <div class="sub_title">
-            <div style="float:left;margin-right:50px;">
-                <a href="https://yandex.ru/maps/?um=constructor%3A1e372745a33ed304e87f60fc391ea75ec115c2fc52f79304b513623ea6d1b0b9&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A1e372745a33ed304e87f60fc391ea75ec115c2fc52f79304b513623ea6d1b0b9&amp;width=500&amp;height=400&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
-            </div>
-            <ul>
-                <li style="text-align:left">Адрес: г. Москва, Шитова наб. 4 стр.1</li>
-                <li style="text-align:left">Телефон: +7 495 783-83-89</li>
-                <li style="text-align:left">Электронный адрес: info@sv-dom.ru</li>
-                <li style="text-align:left">График работы: с 10:00 до 19:00 (пн-пт)<br />Сб, Вс - по предварительной договоренности</li>
-            </ul>
-            <p style="text-align:left">
-                <em><span style="color:#A9A9A9;"></span></em>
-            </p>
-        </div>
-        <div class="map hidden">
-            <div class="map_inner">
-            </div>
-        </div>
-        <div class="text hidden">ПСК "СВ-СТРОЙ"<br>Индекс: 123456, <br>г.Москва, Шитова наб. 4 стр.1 ИНН 1234567890 <br>ОГРН 123456789012</div>
-        <div class="clear"></div>
-    </div>
-</div>
 
 

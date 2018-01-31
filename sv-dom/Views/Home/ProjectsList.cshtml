@@ -1,0 +1,29 @@
+﻿@using Models
+@using Helpers
+
+@model IEnumerable<ProjectModel>
+
+@{
+    Layout = "~/Views/Shared/_ShortLayout.cshtml";
+    int i = 1;
+}
+
+@Html.Partial("~/Views/Shared/_ProjectFilterPartial.cshtml")
+
+<div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="arr1">
+            @foreach (var project in Model)
+            {
+                <div class="col_3 @(i % 3 == 0 ? "last" : "")">
+                    @Html.Partial("~/Views/Shared/_ProjectCartPartial.cshtml", project)
+                </div>
+                if (i % 3 == 0)
+                {
+                    <div class="clear"></div>
+                }
+                i++;
+            }
+        </div>
+    </div>
+</div>

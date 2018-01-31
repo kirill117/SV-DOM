@@ -18,11 +18,89 @@ body{
     font-family: 'PT Sans', sans-serif;
     color: #333;
 }
-body.modal{
-    overflow: hidden;
-}
+    body.modal {
+        overflow: hidden;
+    }
 
+    h1 {
+        font-size:1.2em !important;
+    }
 
+        .filter-panel {
+            display:inline-block;
+            padding:18px;
+            color: #fff;
+            background: #7d7d7d;
+            border: 1px solid #dedede;
+        }
+
+        .filter-panel .col_3 {
+            float:left;
+            width: 205px;
+            margin-right:20px;
+        }
+
+        .filter-panel .col_3 label {
+            cursor:pointer;
+        }
+
+        .filter-panel .col_3 label:hover {
+            cursor:pointer;
+            color: #ccc;
+        }
+
+        .filter-panel .title1 {
+            font-weight:600;
+            width:200px;
+            font-size: 18px;
+            text-align:left;
+            border-bottom: 1px solid #dedede;
+            margin-bottom:10px;
+        }
+
+        #carousel, #carousel1 {
+            border: 1px solid #dedede;
+            height: 500px;
+            position: relative;
+            clear: both;
+            overflow: hidden;
+            background: #fafafa;
+        }
+
+        #carousel img, #carousel img {
+            visibility: hidden; /* hide images until carousel can handle them */
+            cursor: pointer; /* otherwise it's not as obvious items can be clicked */
+        }
+
+        .split-left {
+            width: 450px;
+            float: left;
+        }
+
+        .split-right {
+            width: 400px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        #callback-output {
+            height: 250px;
+            overflow: scroll;
+        }
+
+        textarea#newoptions {
+            width: 430px;
+        }
+
+        .nav {
+            width: 180px;
+            margin: 5px auto;
+        }
+
+        table td {
+            border: 1px solid #dedede;
+            padding:10px;
+        }
 
         .proj-cart{
              background-color:#fafafa;
@@ -10243,7 +10321,7 @@ body.editor_true .section157 .form_wrapper.replace_form_html{
 .section128 .price3{
     padding-top: 5px;
     text-align: center;
-    width: 250px;
+    /*width: 250px;*/
     margin: 0 5px auto ;
 
 

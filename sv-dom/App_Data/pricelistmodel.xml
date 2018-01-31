@@ -1,0 +1,10 @@
+<PriceListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Prices>
+    <PriceModel>
+      <ProjectID>1</ProjectID>
+      <MatherialID>0</MatherialID>
+      <ConfigurationID>0</ConfigurationID>
+      <Cost>0</Cost>
+    </PriceModel>
+  </Prices>
+</PriceListModel>
