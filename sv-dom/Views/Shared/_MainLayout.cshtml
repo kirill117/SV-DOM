@@ -2,6 +2,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script>
+    $(document).ready(function () {
+        $(".btn_recall").click(function () {
+            $('.popup_form').show();
+        });
+
+        $(".popup_form_close").click(function () {
+            $('.popup_form').hide();
+        });
+    });
+</script>
 
 <div class="section fixed section153" style="background-color:#ffffff; background-image:url(/content/img/slyder1.jpg);">
     <div class="dark"></div>
@@ -9,31 +20,55 @@
         <div class="layer">
             <div class="title"><h1><strong>Строительство домов из оцилиндрованного бревна и клееного бруса</strong></h1></div>
             <div class="sub_title  ">Деревянные дома из лучших материалов под ключ по доступной цене</div>
-            <div class="btn1 surround" style="background-color: rgb(63, 123, 22); border-radius: 1.5em; color: rgb(255, 255, 255);" data-color="rgb(63, 123, 22)">Рассчитать стоимость</div>
+            <div class="btn_recall btn1 surround" style="background-color: rgb(63, 123, 22); border-radius: 1.5em; color: rgb(255, 255, 255);" data-color="rgb(63, 123, 22)">Рассчитать стоимость</div>
             <div class="btn_descr">Нужна помощь? Обратитесь к нам по телефону +7(495) 783-83-89 или отправьте сообщение.<br></div>
         </div>
-
-        <div class="popup_form">
-            <div class="popup_form_inner">
-                <div class="popup_form_close">X</div>
-                <div class="popup_form_title"><span style="font-size:20px">Оставить заявку и наши менеджеры с вами свяжутся</span></div>
-                <form action="handler.php" enctype="multipart/form-data" method="post">
-                    <div class="form1"><input name="Расчет стоимости" value="Расчет стоимости строительства дома" type="hidden">	<div class="field"><div class="field_title">Введите имя</div><div class="field_description"></div><div class="field_input"><input required="required" name="Введите имя" placeholder="Введите имя" type="text"></div></div><div class="field"><div class="field_title">Введите E-mail</div><div class="field_description"></div><div class="field_input"><input required="required" name="Введите E-mail" placeholder="Введите E-mail" type="email"></div></div><div class="field"><div class="field_title">Введите номер телефона</div><div class="field_description"></div><div class="field_input"><input required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text"></div></div><div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Заказать расчет стоимости" style="background-color:#3F7B16;    border-radius: 1.5em; ;   " type="submit"></div></div></div>
-                </form>
-                <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank" data-cke-saved-href="/?personal_data=1" href="#">Положение</a> и <a target="_blank" data-cke-saved-href="/?personal_data=2" href="#">Согласие</a> на обработку персональных данных.</div>
-            </div>
-        </div>
-        <div class="popup_thanks">
-            <div class="popup_thanks_inner">
-                <div class="popup_thanks_close">X</div>
-                <div class="popup_thanks_title">Спасибо за заявку!</div>
-                <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
-            </div>
-        </div>
-
     </div>
 </div>
 
 <div>
     @RenderBody()
+</div>
+
+<div class="popup_form">
+    <div class="popup_form_inner">
+        <div class="popup_form_close">X</div>
+        <div class="popup_form_title"><span style="font-size:20px">Оставьте заявку и наши менеджеры с вами свяжутся</span></div>
+        <form action="handler.php" enctype="multipart/form-data" method="post">
+            <div class="form1">
+                <input name="Расчет стоимости" value="Расчет стоимости строительства дома" type="hidden" />
+                <div class="field"><div class="field_title">Введите имя</div>
+                    <div class="field_description"></div><div class="field_input">
+                        <input required="required" name="Введите имя" placeholder="Введите имя" type="text">
+                    </div>
+                </div>
+            <div class="field">
+                <div class="field_title">Введите E-mail</div>
+                <div class="field_description"></div>
+                <div class="field_input">
+                    <input required="required" name="Введите E-mail" placeholder="Введите E-mail" type="email">
+                </div>
+            </div>
+            <div class="field">
+                <div class="field_title">Введите номер телефона</div>
+                <div class="field_description"></div>
+                <div class="field_input">
+                    <input required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text"></div>
+                </div>
+                <div class="field">
+                    <div class="field_input">
+                        <input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Отправить заявку" style="background-color:#3F7B16;border-radius: 1.5em" type="submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a href="">Положение</a> и <a href="">Согласие</a> на обработку персональных данных.</div>
+    </div>
+</div>
+<div class="popup_thanks">
+    <div class="popup_thanks_inner">
+        <div class="popup_thanks_close">X</div>
+        <div class="popup_thanks_title">Спасибо за заявку!</div>
+        <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
+    </div>
 </div>

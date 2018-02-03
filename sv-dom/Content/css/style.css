@@ -344,6 +344,7 @@ p{
 .btn3x,
 .btn4x,
 .btn5x,
+.btn_recall,
 .submit_btn{
     cursor: pointer;
     box-sizing: border-box;
