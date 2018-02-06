@@ -8,6 +8,18 @@
     int i = 1;
 }
 
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('.proj-cart').click(function () {
+                var id = $(this).attr('item');
+                if (id && id.length > 0) {
+                    window.location.href = "project/" + id;
+                }
+            });
+        });
+</script>
+
 @Html.Partial("~/Views/Shared/_ProjectFilterPartial.cshtml")
 
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">

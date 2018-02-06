@@ -6,6 +6,17 @@
     var topProjects = MainHelper.GetProjectsForMainPage();
 }
 
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('.proj-cart').click(function () {
+                var id = $(this).attr('item');
+                if (id && id.length > 0) {
+                    window.location.href = "project/" + id;
+                }
+            });
+        });
+</script>
+
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Деревянные дома - долговечны и красивы</div>
@@ -142,15 +153,15 @@
         <div class="title  ">Примеры работ<br></div>
         <div class="sub_title">Некоторые работы выполненные нами за последнее время<br></div>
         <div class="images">
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "3b7bd94676d1035db3ca9ce51fd05af7" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "8dfee0a0806cddc1353786d7414bcecb" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "3b045c4126c5dc53ab815761937d3ec8" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e1f4f6f8df09224bfea64b8a89c88c3e" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "658be86bbe848005e69e9ba3a4c70333" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "fd68439fd657b94331215a172a4c3663" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e934bcf2e60198a81f48bab5fcc85b49" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "c79cdbb6c82f605d27d0060fc6efe755" })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "e30efb320b0a3ad9af794e9320bb6b84" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/3b7bd94676d1035db3ca9ce51fd05af7.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/8dfee0a0806cddc1353786d7414bcecb.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/3b045c4126c5dc53ab815761937d3ec8.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/e1f4f6f8df09224bfea64b8a89c88c3e.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/658be86bbe848005e69e9ba3a4c70333.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/fd68439fd657b94331215a172a4c3663.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/e934bcf2e60198a81f48bab5fcc85b49.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/c79cdbb6c82f605d27d0060fc6efe755.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/e30efb320b0a3ad9af794e9320bb6b84.jpg" })
             <div class="clear"></div>
         </div>
     </div>

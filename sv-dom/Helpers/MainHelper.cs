@@ -19,13 +19,18 @@ namespace Helpers
 
         public static string GetProjectMinCost(int projectId)
         {
+            return GetProjectCost(projectId, 1, 1);
+        }
+
+        public static string GetProjectCost(int projectId, int matherialId, int complectationId)
+        {
             var result = "Цена по запросу";
-            var prc = _prices.Prices.Where(s => s.ProjectID == projectId);
+            var prc = _prices.Prices.Where(s => s.ProjectID == projectId && s.ConfigurationID == complectationId && s.MatherialID == matherialId);
             if (prc != null && prc.Any())
             {
                 var price = prc.Min(x => x.Cost);
                 if (price > 0)
-                    result = price.ToString("# #0") + " руб.";
+                    result = price.ToString("### ### ##0") + " руб.";
             }
             return result;
         }
@@ -49,6 +54,66 @@ namespace Helpers
             if (string.IsNullOrEmpty(path))
                 path = "~/Content/img/no_image.jpg";
             return path;
+        }
+
+        public static SampleImageModel[] GetProjectPlanings(int projectId)
+        {
+            var list = new List<SampleImageModel>();
+            var basePath = $"/Images/{projectId}/Planing";
+
+            var localPath = HttpContext.Current.Server.MapPath(basePath);
+
+            if (Directory.Exists(localPath))
+            {
+                var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+                foreach(var file in files)
+                {
+                    var path = basePath + "/" + Path.GetFileName(file);
+                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                }
+            }
+
+            return list.ToArray();
+        }
+
+        public static SampleImageModel[] GetProjectSamples(int projectId)
+        {
+            var list = new List<SampleImageModel>();
+            var basePath = $"/Images/{projectId}/Samples";
+
+            var localPath = HttpContext.Current.Server.MapPath(basePath);
+
+            if (Directory.Exists(localPath))
+            {
+                var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+                foreach (var file in files)
+                {
+                    var path = basePath + "/" + Path.GetFileName(file);
+                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                }
+            }
+
+            return list.ToArray();
+        }
+
+        public static SampleImageModel[] GetProjectGallery(int projectId)
+        {
+            var list = new List<SampleImageModel>();
+            var basePath = $"/Images/{projectId}/Gallery";
+
+            var localPath = HttpContext.Current.Server.MapPath(basePath);
+
+            if (Directory.Exists(localPath))
+            {
+                var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+                foreach (var file in files)
+                {
+                    var path = basePath + "/" + Path.GetFileName(file);
+                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                }
+            }
+
+            return list.ToArray();
         }
     }
 }

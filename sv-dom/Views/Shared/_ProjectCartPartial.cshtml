@@ -1,7 +1,7 @@
 ﻿@using Helpers
 @model Models.ProjectModel
 
-<div class="proj-cart">
+<div class="proj-cart" item="@Model.Id">
     <div class="image1"><img src="@MainHelper.GetProjectTopPicture(Model.Id)" alt=""></div>
     <div class="title1"><span style="font-size:18px">Проект «@Model.Name»</span></div>
     <div class="txt1">

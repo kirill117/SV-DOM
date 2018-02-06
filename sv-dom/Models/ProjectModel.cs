@@ -20,5 +20,7 @@ namespace Models
 
         public int Index { get; set; }
         public bool ShowOnMain { get; set; }
+
+        public string Description { get; set; }
     }
 }

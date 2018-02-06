@@ -1,0 +1,193 @@
+﻿@using Helpers
+@model Models.ProjectModel
+
+@{
+    Layout = "~/Views/Shared/_ShortLayout.cshtml";
+}
+
+
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/default.css">
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/nivo-slider.css">
+<script src="/content/js/jquery.nivo.slider.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#slider').nivoSlider({
+                directionNav: true,
+                directionNavHide: false,
+                controlNav: true,
+                controlNavThumbs: false
+            });
+
+            $('.matSel').click(function () {
+                changePrice($(this).val(), $('body').find('.complSel:checked').val());
+            });
+
+            $('.complSel').click(function () {
+                changePrice($('body').find('.matSel:checked').val(), $(this).val());
+            });
+
+        });
+
+        function changePrice(mat, comp) {
+            var val = 'Цена по запросу';
+            $.ajax({
+                type: 'POST',
+                url: '/GetProjectCost',
+                data:
+                {
+                    projectId: @Model.Id,
+                    matherialId: mat,
+                    complectationId: comp
+                },
+                success: function (val) {
+                    $('.cost').text(val);
+                },
+                traditional: true,
+                dataType: 'json'
+            });
+        };
+</script>
+
+@Html.HiddenFor(m => m.Id)
+
+<div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title" style="font-size:34px;font-weight:600;">Проект «@(Model.Name)»</div>
+        <div class="sub_title  "> </div>
+        <div class="">
+            <div style="float:left;width:640px;">
+                <div id="slider" class="theme-default nivoSlider">
+                    @foreach (var item in MainHelper.GetProjectGallery(Model.Id))
+                    {
+                    <img src="@item.Name" alt="@item.Comment">
+                    }
+                </div>
+            </div>
+            <div class="project_description">
+                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Площадь</span></div>
+                <div class="txt1" style="text-align:justify;font-size:18px;">
+                    @Model.Area кв.м.
+                </div>
+                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Планировка</span></div>
+                <div class="txt1" style="text-align:justify;font-size:18px;">
+                    Комнат - @Model.RoomCount  Санузлов - @Model.WcCount
+                </div>
+                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Метериал стен</span></div>
+                <div class="txt1" style="text-align:justify;font-size:16px;">
+                    <input type="radio" class="matSel" id="brevno" name="material" value="1" checked>
+                    <label for="brevno">Оцилиндрованное бревно</label>
+                    <br />
+                    <input type="radio" class="matSel" id="profbrus" name="material" value="2">
+                    <label for="profbrus">Профилированный брус</label>
+                    <br />
+                    <input type="radio" class="matSel" id="brus" name="material" value="3">
+                    <label for="brus">Клееный брус</label>
+                </div>
+                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Комплектация</span></div>
+                <div class="txt1" style="text-align:justify;font-size:16px;">
+                    <input type="radio" class="complSel" id="base" name="compl" value="1" checked>
+                    <label for="base">База</label>
+                    <br />
+                    <input type="radio" class="complSel" id="mid" name="compl" value="2">
+                    <label for="mid">Под отделку</label>
+                    <br />
+                    <input type="radio" class="complSel" id="high" name="compl" value="3">
+                    <label for="high">Под ключ</label>
+                </div>
+                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Цена</span></div>
+                <div class="txt1 cost" style="text-align:justify;font-size:18px;">
+                    @MainHelper.GetProjectMinCost(Model.Id)
+                </div>
+                <div class="info">
+                    <a href="#complectation">подробнее</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hide_line section img_zoom" style="background-color:#FFFFFF;" data-id="49555" id="b_49555">
+    <a name="plan"></a>
+    <div class="section_inner">
+        <div class="title">Планировки<br></div>
+        <div class="sub_title"></div>
+        <div class="images">
+            @foreach (var item in MainHelper.GetProjectPlanings(Model.Id))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", item)
+            }
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div id="complectation" class="title">Комплектация</div>
+        <div class="sub_title hidden"></div>
+        <div class="text">
+            <table>
+                <tr>
+                    <td rowspan="4" class="title1" style="width:100px;">Базовая</td>
+                    <td>Фундамент - монолитный ленточный малозаглубленный по буронабивным сваям</td>
+                </tr>
+                <tr>
+                    <td>Стены - оцилиндрованное бревно Ø22 см (сосна-ель) зимней заготовки. Сборка на сухие березовые нагеля с прокладкой джутового льноволокна.</td>
+                </tr>
+                <tr>
+                    <td>Перекрытия - брусовые (сечение 100x200 мм)</td>
+                </tr>
+                <tr>
+                    <td>Крыша - стропильная конструкция из доски 50x200 мм, покрытие руберойд</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3" class="title1">Под отделку</td>
+                    <td>Пластиковые окна</td>
+                </tr>
+                <tr>
+                    <td>Входная железная дверь</td>
+                </tr>
+                <tr>
+                    <td>Черновой пол первого этажа</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2" class="title1">Под ключ</td>
+                    <td>Чистовые полы первого и второго этажей</td>
+                </tr>
+                <tr>
+                    <td>Межкомнатные двери дверь</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.Description))
+{
+<div class="hide_line style_0 section section132 " style="background-color:#ffffff;">
+    <div class="section_inner">
+        <div class="title">Описание</div>
+        <div class="sub_title hidden"></div>
+        <div class="text" style="text-align:justify; ">
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>
+}
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <a name="gallery"></a>
+    <div class="section_inner">
+        <div class="title  ">Построенные дома<br></div>
+        <div class="sub_title"></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetProjectSamples(Model.Id))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", item)
+            }
+        </div>
+    </div>
+</div>

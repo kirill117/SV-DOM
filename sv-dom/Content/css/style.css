@@ -26,6 +26,91 @@ body{
         font-size:1.2em !important;
     }
 
+    .project_samples .image_box img{
+        width:300px !important; 
+        height:220px !important;
+    }
+
+        .project_description input[type=radio] {
+           display: none;
+        }
+
+        .project_description label {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+            margin-right: 15px;
+        }
+
+        .project_description label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background: url(/content/img/uncheck.png) left top no-repeat;
+        }
+
+        .project_description input[type=radio]:checked + label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background: url(/content/img/check.png) left top no-repeat;
+        }
+
+        .project_description {
+            display:inline-block;
+            height:100%;
+            margin-left:10px;
+            padding: 3px 13px;
+            background: #fafafa;
+            border: 1px solid #dedede;
+        }
+
+        .project_description .title1 {
+            margin-top: 14px;
+        }
+
+        .project_description .info {
+            margin-top:15px;
+            font-size: 18px;
+            text-align:center;
+        }
+
+        .project_description .cost {
+            font-size: 34px !important; 
+            line-height: 1;
+            text-align: left;
+            color: #c8821c;
+        }
+
+        .nivo-controlNav {
+            background: #fafafa;
+        }
+
+        .nivo-controlNav a {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url(/content/css/nivo/bullets.png) no-repeat;
+            text-indent: -9999px;
+            border: 0;
+            margin: 0 2px;
+            color:#fff;
+        }
+
+        .nivo-controlNav a.active {
+            background-position: 0 -22px;
+        }
+
+
         .filter-panel {
             display:inline-block;
             padding:18px;

@@ -302,8 +302,8 @@
     <Content Include="Images\1\Gallery\001.jpg" />
     <Content Include="Images\1\Gallery\002.jpg" />
     <Content Include="Images\1\Gallery\003.jpg" />
-    <Content Include="Images\1\Planning\001.jpg" />
-    <Content Include="Images\1\Planning\002.jpg" />
+    <Content Include="Images\1\Planing\001.jpg" />
+    <Content Include="Images\1\Planing\002.jpg" />
     <Content Include="Images\1\Samples\001.jpg" />
     <Content Include="Images\1\Samples\002.jpg" />
     <Content Include="Images\1\Samples\003.jpg" />
@@ -370,6 +370,7 @@
     <Content Include="Views\Home\Catalog.cshtml" />
     <Content Include="Views\Home\ProjectsList.cshtml" />
     <Content Include="Views\Shared\_ProjectFilterPartial.cshtml" />
+    <Content Include="Views\Home\Project.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

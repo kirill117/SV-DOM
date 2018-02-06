@@ -10,6 +10,31 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
+
+
+    <script>
+        $(document).ready(function () {
+            $(".image_box, .overlay_image_box").click(function () {
+                var this_section = $(this).closest('.section');
+                if (this_section.hasClass('img_zoom')) {
+                    var image_url = $(this).parent().children().attr('src');
+                    var t_arr = image_url.split('/');
+                    if ($('#img_zoomer_bg').size()) {
+                        $('#img_zoomer_bg').remove();
+                    }
+                    $('body').append('<div id="img_zoomer_bg"><div id="img_zoomer" style="background:url(' + image_url + ') no-repeat center; background-size:contain;"></div><div id="img_zoomer_close">X</div></div>');
+                }
+            });
+
+            $('body').on('click', '#img_zoomer_bg ,#img_zoomer_close', function () {
+                if ($('#img_zoomer_bg').size()) {
+                    $('#img_zoomer_bg').remove();
+                }
+
+            })
+        });
+    </script>
+
 </head>
 
 <body>
@@ -33,12 +58,12 @@
             <div class="menu-toogler"><i class="fa fa-bars"></i></div>
             <div class="menu1">
                 <ul>
-                    <li class="level0"><a href="/home/index" title="">О компании</a></li>
-                    <li class="level0"><a href="/home/catalog" title="">Проекты</a></li>
-                    <li class="level0"><a href="/home/services" title="">Услуги</a></li>
-                    <li class="level0"><a href="/home/gallery" title="">Примеры работ</a></li>
-                    <li class="level0"><a href="/home/price" title="">Стоимость</a></li>
-                    <li class="level0"><a href="/home/contacts" title="">Контакты</a></li>
+                    <li class="level0"><a href="/index" title="">О компании</a></li>
+                    <li class="level0"><a href="/catalog" title="">Проекты</a></li>
+                    <li class="level0"><a href="/services" title="">Услуги</a></li>
+                    <li class="level0"><a href="/gallery" title="">Примеры работ</a></li>
+                    <li class="level0"><a href="/price" title="">Стоимость</a></li>
+                    <li class="level0"><a href="/contacts" title="">Контакты</a></li>
                 </ul>
             </div>
         </div>

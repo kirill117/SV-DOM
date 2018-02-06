@@ -1,10 +1,15 @@
 <PriceListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Prices>
-    <PriceModel>
-      <ProjectID>1</ProjectID>
-      <MatherialID>0</MatherialID>
-      <ConfigurationID>0</ConfigurationID>
-      <Cost>0</Cost>
-    </PriceModel>
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="1" Cost="1390000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="2" Cost="1690000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="3" Cost="1990000" />
+
+    <PriceModel ProjectID="1" MatherialID="2" ConfigurationID="1" Cost="1290000" />
+    <PriceModel ProjectID="1" MatherialID="2" ConfigurationID="2" Cost="1590000" />
+    <PriceModel ProjectID="1" MatherialID="2" ConfigurationID="3" Cost="1890000" />
+
+    <PriceModel ProjectID="1" MatherialID="3" ConfigurationID="1" Cost="1850000" />
+    <PriceModel ProjectID="1" MatherialID="3" ConfigurationID="2" Cost="2090000" />
+    <PriceModel ProjectID="1" MatherialID="3" ConfigurationID="3" Cost="2250000" />
   </Prices>
 </PriceListModel>

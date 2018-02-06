@@ -52,5 +52,17 @@ namespace sv_dom.Controllers
             return View(model);
         }
 
+        public ActionResult Project(int id)
+        {
+            var model = MainHelper._projects.Projects.FirstOrDefault(s => s.Id == id);
+            return View(model);
+        }
+
+        public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId)
+        {
+            var result = MainHelper.GetProjectCost(projectId, matherialId, complectationId);
+
+            return Json(result);
+        }
     }
 }
