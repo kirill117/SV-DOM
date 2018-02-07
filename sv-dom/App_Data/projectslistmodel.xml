@@ -1,4 +1,4 @@
-<ProjectsListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<ProjectsListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Projects>
     <ProjectModel>
       <Id>1</Id>
@@ -19,6 +19,21 @@
         а также уютная веранда с выходом в сад или на лужайку. На втором (мансардном) этаже дома из оцилиндрованного бревна Крепыш расположены три спальни и просторный и светлый санузел.
         Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>2</Id>
+      <Key>sv</Key>
+      <Name>СВ</Name>
+      <Type>1;2</Type>
+      <Area>243</Area>
+      <Size>15x13,5</Size>
+      <RoomCount>5</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>true</ShowOnMain>
+      <Description>
+	Загородный дом площадью более 240 квадратных метров. Два этажа, веранда. Просторные внутренние помещения, удобная планировка. Предназначен для постоянного проживания семьи 4-5 человек. Удачно располагается на участках разной формы и площади. Имеет интересные внешние архитектурные решения.      </Description>
     </ProjectModel>
   </Projects>
 </ProjectsListModel>
