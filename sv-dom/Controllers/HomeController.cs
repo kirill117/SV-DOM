@@ -49,6 +49,25 @@ namespace sv_dom.Controllers
         public ActionResult ProjectsList(int? type)
         {
             var model = MainHelper._projects.Projects;
+
+            var filter = new ProjectFilterModel();
+            if (type.HasValue)
+            {
+                switch(type.Value)
+                {
+                    case 1:
+                        filter.Matherial1 = true;
+                        break;
+                    case 2:
+                        filter.Matherial2 = true;
+                        break;
+                    case 3:
+                        filter.Matherial3 = true;
+                        break;
+                }
+            }
+
+            ViewBag.ProjectFilter = filter;
             return View(model);
         }
 
@@ -60,9 +79,14 @@ namespace sv_dom.Controllers
 
         public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId)
         {
-            var result = MainHelper.GetProjectCost(projectId, matherialId, complectationId);
+            var result = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, complectationId));
 
             return Json(result);
+        }
+
+        public PartialViewResult FilterProjects(ProjectFilterModel filter)
+        {
+            return PartialView("~/Views/Shared/_ProjectListPartial.cshtml", MainHelper._projects.Projects.Filter(filter));
         }
     }
 }

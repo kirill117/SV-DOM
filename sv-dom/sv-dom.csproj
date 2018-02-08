@@ -181,6 +181,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PriceListModel.cs" />
     <Compile Include="Models\PriceModel.cs" />
+    <Compile Include="Models\ProjectFilterModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
     <Compile Include="Models\ProjectsListModel.cs" />
     <Compile Include="Models\SampleImageModel.cs" />
@@ -371,6 +372,7 @@
     <Content Include="Views\Home\ProjectsList.cshtml" />
     <Content Include="Views\Shared\_ProjectFilterPartial.cshtml" />
     <Content Include="Views\Home\Project.cshtml" />
+    <Content Include="Views\Shared\_ProjectListPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

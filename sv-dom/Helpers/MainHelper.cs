@@ -17,20 +17,91 @@ namespace Helpers
             return _projects.Projects.Where(s => s.ShowOnMain).ToList();
         }
 
-        public static string GetProjectMinCost(int projectId)
+        public static List<ProjectModel> Filter(this List<ProjectModel> list, ProjectFilterModel filter)
+        {
+            return list.Where(s => FilteredProject(s, filter)).ToList();
+        }
+
+        private static bool FilteredProject(ProjectModel project, ProjectFilterModel filter)
+        {
+            if (filter.IsEmpty())
+                return true;
+
+            var result = false;
+
+            if (filter.Area1 && project.Area <= 100)
+                result = true;
+
+            if (filter.Area2 && project.Area > 100 && project.Area <= 200)
+                result = true;
+
+            if (filter.Area3 && project.Area > 200)
+                result = true;
+
+            if ((filter.Area1 || filter.Area2 || filter.Area3) && !result)
+                return false;
+
+
+            if (filter.Matherial1 && project.Type.Contains("1;"))
+                result = true;
+
+            if (filter.Matherial2 && project.Type.Contains("2;"))
+                result = true;
+
+            if (filter.Matherial3 && project.Type.Contains("3;"))
+                result = true;
+
+            if ((filter.Matherial1 || filter.Matherial2 || filter.Matherial3) && !result)
+                return false;
+
+
+            if (filter.Price1 && GetProjectMinCost(project.Id) <= 1000000)
+                result = true;
+
+            if (filter.Price2 && GetProjectMinCost(project.Id) > 1000000 && project.Area <= 2000000)
+                result = true;
+
+            if (filter.Price3 && GetProjectMinCost(project.Id) > 2000000)
+                result = true;
+
+            if ((filter.Price1 || filter.Price2 || filter.Price2) && !result)
+                return false;
+
+
+            if (filter.Floor1 && project.FloorsCount == 1)
+                result = true;
+
+            if (filter.Floor2 && project.FloorsCount == 2)
+                result = true;
+
+            if (filter.Floor3 && project.FloorsCount > 2)
+                result = true;
+
+            if ((filter.Floor1 || filter.Floor2 || filter.Floor3) && !result)
+                return false;
+
+            return result;
+        }
+
+        public static string FormatPrice(decimal price)
+        {
+            return (price <= 0 ? "Цена по запросу" : price.ToString("### ### ##0") + " руб.");
+        }
+
+        public static decimal GetProjectMinCost(int projectId)
         {
             return GetProjectCost(projectId, 1, 1);
         }
 
-        public static string GetProjectCost(int projectId, int matherialId, int complectationId)
+        public static decimal GetProjectCost(int projectId, int matherialId, int complectationId)
         {
-            var result = "Цена по запросу";
+            var result = 0m;
             var prc = _prices.Prices.Where(s => s.ProjectID == projectId && s.ConfigurationID == complectationId && s.MatherialID == matherialId);
             if (prc != null && prc.Any())
             {
                 var price = prc.Min(x => x.Cost);
                 if (price > 0)
-                    result = price.ToString("### ### ##0") + " руб.";
+                    result = price;
             }
             return result;
         }

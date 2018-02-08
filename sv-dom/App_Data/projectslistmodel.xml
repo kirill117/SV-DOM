@@ -4,7 +4,7 @@
       <Id>1</Id>
       <Key>krepysh</Key>
       <Name>Крепыш</Name>
-      <Type>1;2</Type>
+      <Type>1;2;</Type>
       <Area>156</Area>
       <Size>13x9</Size>
       <RoomCount>4</RoomCount>
@@ -24,7 +24,7 @@
       <Id>2</Id>
       <Key>sv</Key>
       <Name>СВ</Name>
-      <Type>1;2</Type>
+      <Type>1;2;</Type>
       <Area>243</Area>
       <Size>15x13,5</Size>
       <RoomCount>5</RoomCount>

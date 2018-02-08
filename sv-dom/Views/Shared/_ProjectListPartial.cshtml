@@ -1,0 +1,22 @@
+﻿@using Models
+@using Helpers
+
+@model IEnumerable<ProjectModel>
+
+@{ 
+    int i = 1;
+}
+
+@foreach (var project in Model)
+            {
+    <div class="col_3 @(i % 3 == 0 ? "last" : "")">
+        @Html.Partial("~/Views/Shared/_ProjectCartPartial.cshtml", project)
+    </div>
+    if (i % 3 == 0)
+    {
+        <div class="clear"></div>
+    }
+    i++;
+}
+
+
