@@ -308,6 +308,15 @@
     <Content Include="Images\1\Samples\001.jpg" />
     <Content Include="Images\1\Samples\002.jpg" />
     <Content Include="Images\1\Samples\003.jpg" />
+    <Content Include="Images\2\001.jpg" />
+    <Content Include="Images\2\Gallery\001.jpg" />
+    <Content Include="Images\2\Gallery\002.jpg" />
+    <Content Include="Images\2\Gallery\003.jpg" />
+    <Content Include="Images\2\Planing\001.jpg" />
+    <Content Include="Images\2\Planing\002.jpg" />
+    <Content Include="Images\2\Samples\001.jpg" />
+    <Content Include="Images\2\Samples\002.jpg" />
+    <Content Include="Images\2\Samples\003.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
@@ -374,7 +383,11 @@
     <Content Include="Views\Home\Project.cshtml" />
     <Content Include="Views\Shared\_ProjectListPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\0\Gallery\" />
+    <Folder Include="Images\0\Planing\" />
+    <Folder Include="Images\0\Samples\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

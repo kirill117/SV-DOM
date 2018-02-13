@@ -23,6 +23,8 @@
                         $('#img_zoomer_bg').remove();
                     }
                     $('body').append('<div id="img_zoomer_bg"><div id="img_zoomer" style="background:url(' + image_url + ') no-repeat center; background-size:contain;"></div><div id="img_zoomer_close">X</div></div>');
+                    var p = $('#img_zoomer_close').parent().position().left + $('#img_zoomer_close').parent().width() - 100;
+                    $('#img_zoomer_close').css('left', p);
                 }
             });
 
@@ -74,26 +76,20 @@
     <div class="section section154" style="background-color:#ffffff;">
         <div class="dark"></div>
         <div class="section_inner ">
-            <div class="headliner revers ">
-                <div><div class="title  "><p><strong><br></strong></p><p><strong>Позвоните нам&nbsp;и узнайте всё, что&nbsp;нужно для строительства дома&nbsp;</strong></p></div></div>
-                <div class="margin"></div>
-                <div class="margin"></div>
-                <div><div class="sub_title  ">По любым &nbsp;вопросам проконсультируйтесь по телефону<br>+7 495 783-83-89 или оставьте заявку на сайте.&nbsp;Наш специалист ответит на все Ваши вопросы!</div></div>
+            <div class="headliner revers">
+                <div><div class="title"><p><strong><br></strong></p><p><strong>Позвоните нам&nbsp;и узнайте всё, что&nbsp;нужно для строительства дома Вашей мечты&nbsp;</strong></p></div></div>
+                <div><div class="sub_title">Обращаем Ваше внимание, что все цены представленные на сайте, носят исключительно информационный характер и не являются публичной офертой.</div></div>
+                <div><div class="sub_title">По любым &nbsp;вопросам проконсультируйтесь по телефону<br>+7 495 783-83-89 или оставьте заявку на сайте.&nbsp;Наш специалист ответит на все Ваши вопросы!</div></div>
             </div>
             <div class="form_wrapper revers">
                 <div class="form_title">Бесплатная консультация</div>
                 <div class="form_sub_title">Оставьте заявку прямо сейчас и специалист позвонит вам!<br></div>
                 <div class="form1">
                     <form action="handler.php" enctype="multipart/form-data" method="post">
-
                         <input name="Консультация специалиста" value="" type="hidden">
-
                         <div class="field"><div class="field_title">Введите имя</div><div class="field_description"></div><div class="field_input"><input required="required" name="Введите имя" placeholder="Введите имя" type="text"></div></div>
-
                         <div class="field"><div class="field_title">Введите номер телефона</div><div class="field_description">Наш менеджер Вам перезвонит</div><div class="field_input"><input required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text"></div></div>
-
                         <div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Получить консультацию!" style="background-color:#3F7B16;    border-radius: 1em; ;   " type="submit"></div></div>
-
                     </form>
                 </div>
                 <div class="form_text">Нажимая на кнопку, Вы принимаете <a target="_blank" data-cke-saved-href="/?personal_data=1" href="#">Положение</a> и <a target="_blank" data-cke-saved-href="/?personal_data=2" href="#">Согласие</a> на обработку персональных данных.<br></div>
@@ -112,7 +108,7 @@
         <div class="section_inner">
             <div class="logo_img"><img src="/content/img/logo.png" alt=""></div>
             <div class="address-and-ua">
-                <div class="address1">ПСК "СВ-СТРОЙ", 123456, г.Москва, Шитова наб. 4 стр.1 <br>ИНН 1234567890 ОГРН 123456789012</div>
+                <div class="address1">ПСК "СВ-СТРОЙ", 123456, г.Москва, Шитова наб. 4 стр.1 <br>ИНН 5044080411 ОГРН 1115044002920</div>
                 <div class="policy2 ">Политика конфиденциальности</div>
             </div>
             <div class="phone-and-address">

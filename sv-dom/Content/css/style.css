@@ -274,14 +274,14 @@ p{
 }
 
 #img_zoomer{
-    position: absolute;
-    height: 600px;
-    width: 800px;
+    /*position: absolute;*/
+    height: 100%;
+    width: auto;
     left: 50%;
     top: 50%;
     max-height: 90%;
-    margin-left: -400px;
-    margin-top: -300px;
+    /*margin-left: -400px;*/
+    margin-top: 30px;
     background-color: #fff;
     
     /*border: solid 1px #e2e2e2;
@@ -303,20 +303,22 @@ p{
 #img_zoomer_close{
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 24px;
-    height: 30px;
-    left: 50%;
-    line-height: 30px;
-    margin-left: 370px;
-    margin-top: -300px;
+    font-size: 52px;
+    width: 60px;
+    height: 60px;
+    left: 70%;
+    line-height: 60px;
+    /*margin-left: 370px;*/
+    margin-top: 30px;
     position: absolute;
     text-align: center;
     text-shadow: 1px 1px #000;
-    top: 50%;
-    width: 30px;
+    top: 0;
     cursor: pointer;
-
+    border-radius: 30px;
+    border: 1px solid #dedede;
 }
+
 #img_zoomer_close.portret{
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
@@ -10427,10 +10429,11 @@ body.editor_true .section157 .form_wrapper.replace_form_html{
 .section128 .image1,
 .section128 .image2,
 .section128 .image3{
-    width: 200px;
+    width: 250px;
     height: 200px;
     overflow: hidden;
     margin: 0 auto;
+    text-align:center;
 }
 
 .section128 .image1.radius,
