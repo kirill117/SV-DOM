@@ -135,3 +135,4 @@ C:\TEMPLATES\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.Twitter.xml
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.dll
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.pdb
+C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache

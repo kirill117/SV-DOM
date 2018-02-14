@@ -133,14 +133,61 @@
       <Key>prigorok</Key>
       <Name>Пригорок</Name>
       <Type>1;2;</Type>
-      <Area>240</Area>
-      <Size>14,9x13,7</Size>
+      <Area>95</Area>
+      <Size>8,8x8,8</Size>
+      <RoomCount>2</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Дом из оцилиндрованного бревна Пригорок - небольшой, но уютный дом для круглогодичного проживания семьи из 3-4 человек. Несмотря на небольшие размеры, всё необходимое для комфортного проживания современного человека в нём учтено. На первом этаже расположены функциональная кухня-столовая, совмещенная с гостиной, главным элементом которой является камин. Также на первом этаже расположены светлый и просторный санузел и терраса, размер которой можно при желании увеличить. На втором (мансардном) этаже расположены две спальни, одна из которых, по задумке архитектора детская. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>10</Id>
+      <Key>elna</Key>
+      <Name>Ельня</Name>
+      <Type>1;2;</Type>
+      <Area>122</Area>
+      <Size>8,4x8,4</Size>
+      <RoomCount>3</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>11</Id>
+      <Key>kanon</Key>
+      <Name>Канон</Name>
+      <Type>1;2;</Type>
+      <Area>156</Area>
+      <Size>9,9x10,5</Size>
+      <RoomCount>4</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>12</Id>
+      <Key>uyut</Key>
+      <Name>Уют</Name>
+      <Type>1;2;</Type>
+      <Area>126</Area>
+      <Size>7,7x9,7</Size>
       <RoomCount>4</RoomCount>
       <WcCount>2</WcCount>
       <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
+        Дом из оцилиндрованного бревна "Уют". Небольшой традиционный дом для круглогодичного проживания семьи из 4-6 человек. Планировка первого этажа предполагает кухню-столовую, гостиную, санузел, техническое помещение и вынесенный в отдельное помещение лестничный марш. На втором (мансардном) этаже расположены четыре одинаковые спальни и санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
     </ProjectModel>
   </Projects>
