@@ -53,6 +53,7 @@ namespace sv_dom.Controllers
             var filter = new ProjectFilterModel();
             if (type.HasValue)
             {
+                model = model.Where(s => s.Type.Split(new[] { ';' }).Any(x => x == type.ToString())).ToList();
                 switch(type.Value)
                 {
                     case 1:
