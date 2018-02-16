@@ -85,7 +85,7 @@ namespace Helpers
 
         public static string FormatPrice(decimal price)
         {
-            return (price <= 0 ? "Цена по запросу" : price.ToString("### ### ##0") + " руб.");
+            return (price <= 0 ? "Цена по запросу" : price.ToString("### ### ##0") + " ₽");
         }
 
         public static decimal GetProjectMinCost(int projectId)

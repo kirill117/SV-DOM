@@ -26,16 +26,26 @@ body{
         font-size:1.2em !important;
     }
 
+    .project-summary {
+        background-color:antiquewhite;
+    }
+
+    .project-summary td span {
+        font-weight:600;
+        font-size:24px;
+        text-align:center;
+    }
+
     .project_samples .image_box img{
         width:300px !important; 
         height:220px !important;
     }
 
-        .project_description input[type=radio] {
+        .project_description  input[type=radio], .project-compl-header  input[type=radio] {
            display: none;
         }
 
-        .project_description label {
+        .project_description label, .project-compl-header label {
             display: inline-block;
             cursor: pointer;
             position: relative;
@@ -61,6 +71,28 @@ body{
             height: 20px;
             position: absolute;
             left: 0;
+            bottom: 1px;
+            background: url(/content/img/check.png) left top no-repeat;
+        }
+
+        .project-compl-header td label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 112px;
+            bottom: 1px;
+            background: url(/content/img/uncheck.png) left top no-repeat;
+        }
+
+        .project-compl-header td input[type=radio]:checked + label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 112px;
             bottom: 1px;
             background: url(/content/img/check.png) left top no-repeat;
         }

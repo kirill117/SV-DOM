@@ -11,42 +11,63 @@
 <script src="/content/js/jquery.nivo.slider.js"></script>
 
 <script type="text/javascript">
-        $(document).ready(function() {
-            $('#slider').nivoSlider({
-                directionNav: true,
-                directionNavHide: false,
-                controlNav: true,
-                controlNavThumbs: false
-            });
+    $(document).ready(function() {
 
-            $('.matSel').click(function () {
-                changePrice($(this).val(), $('body').find('.complSel:checked').val());
-            });
+        changeCompl(1);
 
-            $('.complSel').click(function () {
-                changePrice($('body').find('.matSel:checked').val(), $(this).val());
-            });
-
+        $('#slider').nivoSlider({
+            directionNav: true,
+            directionNavHide: false,
+            controlNav: true,
+            controlNavThumbs: false
         });
 
-        function changePrice(mat, comp) {
-            var val = 'Цена по запросу';
-            $.ajax({
-                type: 'POST',
-                url: '/GetProjectCost',
-                data:
-                {
-                    projectId: @Model.Id,
-                    matherialId: mat,
-                    complectationId: comp
-                },
-                success: function (val) {
-                    $('.cost').text(val);
-                },
-                traditional: true,
-                dataType: 'json'
-            });
-        };
+        $('.matSel').click(function () {
+            changePrice($(this).val(), $('body').find('.complSel:checked').val());
+        });
+
+        $('.complSel').click(function () {
+            $('.complSel1').attr("checked",false);
+            $('.complSel2').attr("checked",false);
+            $('.complSel3').attr("checked",false);
+            changePrice($('body').find('.matSel:checked').val(), $(this).val());
+        });
+
+        $('.complTbl').on('click', function() {
+            changeCompl($(this).val());
+        });
+    });
+
+    function changeCompl(comp) {
+        var colIndex = comp;
+        $('.complectation-table tbody tr').find('td').css("background-color","white");
+        $('.complectation-table tbody tr').each(function(){
+            $('td:eq(' + colIndex + ')', this).css("background-color","aliceblue");
+        });
+    };
+
+    function changePrice(mat, comp) {
+        var val = 'Цена по запросу';
+        $('.complSel'+comp).click();
+        $.ajax({
+            type: 'POST',
+            url: '/GetProjectCost',
+            data:
+            {
+                projectId: @Model.Id,
+                matherialId: mat,
+                complectationId: comp
+            },
+            success: function (result) {
+                $('.cost').text(result.cost);
+                $('.project-summary-cost1').text(result.cost1);
+                $('.project-summary-cost2').text(result.cost2);
+                $('.project-summary-cost3').text(result.cost3);
+            },
+            traditional: true,
+            dataType: 'json'
+        });
+    };
 </script>
 
 @Html.HiddenFor(m => m.Id)
@@ -90,10 +111,10 @@
                     <label for="base">База</label>
                     <br />
                     <input type="radio" class="complSel" id="mid" name="compl" value="2">
-                    <label for="mid">Под отделку</label>
+                    <label for="mid">Стандарт</label>
                     <br />
                     <input type="radio" class="complSel" id="high" name="compl" value="3">
-                    <label for="high">Под ключ</label>
+                    <label for="high">Премиум</label>
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Цена</span></div>
                 <div class="txt1 cost" style="text-align:justify;font-size:18px;">
@@ -128,39 +149,142 @@
         <div id="complectation" class="title">Комплектация</div>
         <div class="sub_title hidden"></div>
         <div class="text">
-            <table>
-                <tr>
-                    <td rowspan="4" class="title1" style="width:100px;">Базовая</td>
-                    <td>Фундамент - монолитный ленточный малозаглубленный по буронабивным сваям</td>
-                </tr>
-                <tr>
-                    <td>Стены - оцилиндрованное бревно Ø22 см (сосна-ель) зимней заготовки. Сборка на сухие березовые нагеля с прокладкой джутового льноволокна.</td>
-                </tr>
-                <tr>
-                    <td>Перекрытия - брусовые (сечение 100x200 мм)</td>
-                </tr>
-                <tr>
-                    <td>Крыша - стропильная конструкция из доски 50x200 мм, покрытие руберойд</td>
-                </tr>
-
-                <tr>
-                    <td rowspan="3" class="title1">Под отделку</td>
-                    <td>Пластиковые окна</td>
-                </tr>
-                <tr>
-                    <td>Входная железная дверь</td>
-                </tr>
-                <tr>
-                    <td>Черновой пол первого этажа</td>
-                </tr>
-
-                <tr>
-                    <td rowspan="2" class="title1">Под ключ</td>
-                    <td>Чистовые полы первого и второго этажей</td>
-                </tr>
-                <tr>
-                    <td>Межкомнатные двери дверь</td>
-                </tr>
+            <table class="complectation-table">
+                <thead>
+                    <tr class="project-compl-header">
+                        <td class="" style="width:100px;">Комплектация</td>
+                        <td class="title1">
+                            <input type="radio" class="complTbl complSel1" id="base1" name="compl1" value="1" checked>
+                            <label for="base1">Базовая</label>
+                        </td>
+                        <td class="title1">
+                            <input type="radio" class="complTbl complSel2" id="mid1" name="compl1" value="2">
+                            <label for="mid1">Стандарт</label>
+                        </td>
+                        <td class="title1">
+                            <input type="radio" class="complTbl complSel3" id="high1" name="compl1" value="3">
+                            <label for="high1">Премиум</label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="title1">Фундамент</td>
+                        <td>свайно-винтовой диаметр свай 133мм</td>
+                        <td>монолитный ленточный малозаглубленный по буронабивным сваям</td>
+                        <td>монолитная железобетонная плита с ростверком</td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Стены</td>
+                        <td>оцилиндрованное бревно Ø22 см (сосна-ель) естественной влажности. Сборка на сухие березовые нагеля с прокладкой джутового льноволокна.</td>
+                        <td>оцилиндрованное бревно Ø24 см (сосна-ель) зимней заготовки. Сборка на сухие березовые нагеля с прокладкой джутового льноволокна.</td>
+                        <td>оцилиндрованное бревно Ø26 см (сосна-ель) зимней заготовки. Сборка на сухие березовые нагеля с прокладкой синтетического материала.</td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Перекрытия 1-го этажа</td>
+                        <td>
+                            - доска сечение 50x150 мм<br />
+                            - утепление минеральная вата 100 мм<br />
+                            - черновой пол обрезная доска 25х150
+                        </td>
+                        <td>
+                            - брус сечение 100x150 мм<br />
+                            - утепление минеральная вата 150 мм<br />
+                            - черновой пол обрезная доска 25х150
+                        </td>
+                        <td>
+                            - брус сечение 100x200 мм<br />
+                            - утепление минеральная вата 200 мм<br />
+                            - черновой пол влагостойкая березоввая фанера 20мм
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Межкомнатные перегородки 1-го этажа</td>
+                        <td>оцилиндрованное бревно Ø22 см </td>
+                        <td>оцилиндрованное бревно Ø24 см</td>
+                        <td>оцилиндрованное бревно Ø26 см</td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Перекрытия 2-го этажа</td>
+                        <td>
+                            - доска сечение 50x150 мм<br />
+                            - утепление минеральная вата 100 мм<br />
+                            - черновой пол обрезная доска 25х150
+                        </td>
+                        <td>
+                            - брус сечение 100x150 мм<br />
+                            - утепление минеральная вата 150 мм<br />
+                            - черновой пол обрезная доска 25х150
+                        </td>
+                        <td>
+                            - брус сечение 100x200 мм<br />
+                            - утепление минеральная вата 200 мм<br />
+                            - черновой пол влагостойкая березоввая фанера 20мм
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Межкомнатные перегородки 2-го этажа</td>
+                        <td>Каркасные, обшивка евровагонка 12х96 мм, неутепленные</td>
+                        <td>Каркасные, обшивка имитация бруса 20х146 мм, утепление минеральная вата 100мм</td>
+                        <td>Оцилиндрованное бревно Ø26 см</td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Крыша</td>
+                        <td>
+                            - стропильная конструкция из доски 50x150 мм<br />
+                            - временное покрытие руберойд<br />
+                            - без утепления
+                        </td>
+                        <td>
+                            - стропильная конструкция из доски 50x200 мм<br />
+                            - металлочерепица полиэстер толщина 0.5 мм<br />
+                            - утепление минеральная вата 200 мм
+                        </td>
+                        <td>
+                            - стропильная конструкция из доски 50x200 мм<br />
+                            - битумная черепица по сплошному настилу из OSB-плит<br />
+                            - утепление минеральная вата 200 мм
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Окна</td>
+                        <td>
+                            - пластиковые, однокамерный стеклопакет<br />
+                            - плоский наличник
+                        </td>
+                        <td>
+                            - пластиковые, двухкамерный стеклопакет, толщина профиля 60мм<br />
+                            - фигурный наличник
+                        </td>
+                        <td>
+                            - пластиковые, двухкамерный стеклопакет, толщина профиля 70мм, односторонняя цветная ламинация с декоративной раскладкой<br />
+                            - фигурный наличник с декоративными элементами
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title1">Двери</td>
+                        <td>
+                            - входная дверь деревянная 80х2000 филенчатая<br />
+                            - межкомнатные двери из хвойных пород
+                        </td>
+                        <td>
+                            - входная дверь металлическая с порошковым поктытием<br />
+                            - межкомнатные двери из хвойных пород с филенкой
+                        </td>
+                        <td>
+                            - входная дверь металлическая усиленная, покрытие шпон дерева ценных пород <br />
+                            - межкомнатные двери шпон дерева ценных пород
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="project-summary">
+                        <td class="title1">Цена</td>
+                        <td><span class="project-summary-cost1">@MainHelper.FormatPrice(MainHelper.GetProjectCost(Model.Id, 1, 1))</span></td>
+                        <td><span class="project-summary-cost2">@MainHelper.FormatPrice(MainHelper.GetProjectCost(Model.Id, 1, 2))</span></td>
+                        <td><span class="project-summary-cost3">@MainHelper.FormatPrice(MainHelper.GetProjectCost(Model.Id, 1, 3))</span></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>

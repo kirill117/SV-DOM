@@ -81,8 +81,11 @@ namespace sv_dom.Controllers
         public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId)
         {
             var result = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, complectationId));
+            var result1 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 1));
+            var result2 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 2));
+            var result3 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 3));
 
-            return Json(result);
+            return Json(new { cost = result, cost1 = result1, cost2 = result2, cost3 = result3  });
         }
 
         public PartialViewResult FilterProjects(ProjectFilterModel filter)

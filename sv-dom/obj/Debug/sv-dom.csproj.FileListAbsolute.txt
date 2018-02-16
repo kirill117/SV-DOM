@@ -64,7 +64,6 @@ D:\Template\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Template\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.Google.xml
 D:\Template\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Template\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Template\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache
 D:\Template\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.dll
 D:\Template\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.pdb
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\bin\roslyn\csc.exe
@@ -136,3 +135,4 @@ C:\TEMPLATES\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.MicrosoftAccount.
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.dll
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.pdb
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache
+D:\Template\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache
