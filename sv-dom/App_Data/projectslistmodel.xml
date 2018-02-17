@@ -265,5 +265,59 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>18</Id>
+      <Key>terma</Key>
+      <Name>Терма</Name>
+      <Type>4;</Type>
+      <Area>132</Area>
+      <Size>19,0x11,5</Size>
+      <RoomCount>3</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Оздоровительный комплекс.
+        Это сооружение с первого взгляда обращает на себя внимание.
+        Сложная разноуровневая крыша, изогнутые линии торцов делают это здание неповторимым.
+        Бассейн, бильярдная, большая парная с русской печью, просторная гостиная, терраса с барбекю доставят немало удовольствия счастливым обладателям этого дома.
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>19</Id>
+      <Key>pogrebok</Key>
+      <Name>Погребок</Name>
+      <Type>4;</Type>
+      <Area>79</Area>
+      <Size>7,0x8,5</Size>
+      <RoomCount>2</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Классическая баня с мансардным этажом.
+        Оптимальны размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>20</Id>
+      <Key>putinka</Key>
+      <Name>Путинка</Name>
+      <Type>4;</Type>
+      <Area>179</Area>
+      <Size>10,6x16,7</Size>
+      <RoomCount>5</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Солидный оздоровительный комплекс с бассейном, просторной террасой, и жилым мансардным этажом.
+        Размеры и планировка здания позволяют комфортно отдыхать большой шумной компании.
+        Прекрасный выбор для состоятельных людей.
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
