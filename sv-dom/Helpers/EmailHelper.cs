@@ -15,10 +15,15 @@ namespace Helpers
             var result = true;
             try
             {
-                SmtpClient client = new SmtpClient("mail.yandex.ru", 587);
+                var server = ConfigurationManager.AppSettings["MailServer"];
+                var user = ConfigurationManager.AppSettings["MailUser"];
+                var password = ConfigurationManager.AppSettings["MailPassword"];
+
+                SmtpClient client = new SmtpClient(server, 25);
                 client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential("kirill117@yandex.ru", "Inga30031");
-                MailAddress from = new MailAddress("kirill117@yandex.ru", "ПСК СВ-Строй", System.Text.Encoding.UTF8);
+                client.EnableSsl = true;
+                client.Credentials = new NetworkCredential(user, password);
+                MailAddress from = new MailAddress(user, user, System.Text.Encoding.UTF8);
                 MailAddress to = new MailAddress(email);
                 MailMessage message = new MailMessage(from, to);
                 message.Body = strMessage;

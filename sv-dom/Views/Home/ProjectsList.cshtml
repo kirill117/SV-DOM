@@ -11,13 +11,6 @@
 
 <script type="text/javascript">
         $(document).ready(function() {
-            $('.proj-cart').click(function () {
-                var id = $(this).attr('item');
-                if (id && id.length > 0) {
-                    window.location.href = "project/" + id;
-                }
-            });
-
             $('.filter-panel input[type="checkbox"]').click(function () {
                 $.ajax({
                     type: 'GET',

@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Models;
 using Helpers;
+using System.Text;
+using System.Configuration;
 
 namespace sv_dom.Controllers
 {
@@ -86,6 +88,27 @@ namespace sv_dom.Controllers
             var result3 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 3));
 
             return Json(new { cost = result, cost1 = result1, cost2 = result2, cost3 = result3  });
+        }
+
+        public JsonResult GetRecall(string name, string phone, string email)
+        {
+            var result = false;
+            var user = ConfigurationManager.AppSettings["MailUserTarget"];
+            if (!string.IsNullOrEmpty(user) && !string.IsNullOrEmpty(name) && (!string.IsNullOrEmpty(phone) || !string.IsNullOrEmpty(email)))
+            {
+                var body = new StringBuilder();
+                body.AppendLine("Форма обратной связи SV-DOM.RU");
+                body.AppendLine("");
+                body.AppendLine("Имя клиента: " + name.Trim());
+                body.AppendLine("Тел.: " + phone.Trim());
+                if (!string.IsNullOrEmpty(email))
+                {
+                    body.AppendLine("Email: " + email.Trim());
+                }
+
+                result = EmailHelper.SendMail(user, body.ToString(), "Сообщение с сайта SV-DOM.RU");
+            }
+            return Json(result);
         }
 
         public PartialViewResult FilterProjects(ProjectFilterModel filter)

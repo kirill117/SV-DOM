@@ -28,12 +28,56 @@
                 }
             });
 
+            $(".btn_recall").on('click', function () {
+                $('.popup_form').show();
+            });
+
+            $(".popup_form_close").on('click', function () {
+                $('.popup_form').hide();
+            });
+
             $('body').on('click', '#img_zoomer_bg ,#img_zoomer_close', function () {
                 if ($('#img_zoomer_bg').size()) {
                     $('#img_zoomer_bg').remove();
                 }
 
             })
+
+            $('body').on('click', '.proj-cart', function () {
+                var id = $(this).attr('item');
+                if (id && id.length > 0) {
+                    window.location.href = "project/" + id;
+                }
+            });
+
+            $('.form-get-recall, .form-get-info').on('click', '.submit_btn', function () {
+                $('.popup_form').hide();
+                var frm = $(this).parent().parent().parent();
+                $.ajax({
+                    type: 'POST',
+                    url: '/GetRecall',
+                    data:
+                    {
+                        name: frm.find('.input-name').val(),
+                        phone: frm.find('.input-phone').val(),
+                        email: frm.find('.input-mail').val()
+                },
+                    success: function (content) {
+                    },
+                    traditional: true,
+                    dataType: 'json'
+                });
+
+                    frm.find('input[type="text"], input[type="email"]').each(function () {
+                    $(this).val('');
+                });
+
+                $('.popup_thanks').show();
+            });
+
+            $(".popup_thanks_close").on('click', function () {
+                $('.popup_thanks').hide();
+            });
         });
     </script>
 
@@ -84,24 +128,31 @@
             <div class="form_wrapper revers">
                 <div class="form_title">Бесплатная консультация</div>
                 <div class="form_sub_title">Оставьте заявку прямо сейчас и специалист позвонит вам!<br></div>
-                <div class="form1">
-                    <form action="handler.php" enctype="multipart/form-data" method="post">
-                        <input name="Консультация специалиста" value="" type="hidden">
-                        <div class="field"><div class="field_title">Введите имя</div><div class="field_description"></div><div class="field_input"><input required="required" name="Введите имя" placeholder="Введите имя" type="text"></div></div>
-                        <div class="field"><div class="field_title">Введите номер телефона</div><div class="field_description">Наш менеджер Вам перезвонит</div><div class="field_input"><input required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text"></div></div>
-                        <div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Получить консультацию!" style="background-color:#3F7B16;    border-radius: 1em; ;   " type="submit"></div></div>
-                    </form>
+                <div class="form-get-info">
+                    <input name="Консультация специалиста" value="" type="hidden">
+                    <div class="field"><div class="field_title">Введите имя</div><div class="field_description"></div>
+                        <div class="field_input">
+                            <input class="input-name" required="required" name="Введите имя" placeholder="Введите имя" type="text">
+                        </div>
+                    </div>
+                    <div class="field"><div class="field_title">Введите номер телефона</div>
+                        <div class="field_description">Наш менеджер Вам перезвонит</div>
+                        <div class="field_input">
+                            <input class="input-phone" required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text">
+                        </div>
+                    </div>
+                    <div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Получить консультацию!" style="background-color:#3F7B16;border-radius: 1em;" type="submit"></div></div>
                 </div>
-                <div class="form_text">Нажимая на кнопку, Вы принимаете <a target="_blank" data-cke-saved-href="/?personal_data=1" href="#">Положение</a> и <a target="_blank" data-cke-saved-href="/?personal_data=2" href="#">Согласие</a> на обработку персональных данных.<br></div>
+                <div class="form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.<br></div>
             </div>
             <div class="clear"></div>
-            <div class="popup_thanks">
+            @*<div class="popup_thanks">
                 <div class="popup_thanks_inner">
                     <div class="popup_thanks_close">X</div>
                     <div class="popup_thanks_title">Спасибо за заявку!</div>
                     <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
     <div class="section section119" style="background-color:#ffffff;">
@@ -136,9 +187,52 @@
         </div>
     </div>
 
+    <div class="popup_form">
+        <div class="popup_form_inner">
+            <div class="popup_form_close">X</div>
+            <div class="popup_form_title"><span style="font-size:20px">Оставьте заявку и наши менеджеры с вами свяжутся</span></div>
+                <div class="form-get-recall">
+                    <input name="Расчет стоимости" value="Расчет стоимости строительства дома" type="hidden" />
+                    <div class="field">
+                        <div class="field_title">Введите имя</div>
+                        <div class="field_description"></div>
+                        <div class="field_input">
+                            <input class="input-name" required="required" name="Введите имя" placeholder="Введите имя" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field_title">Введите E-mail</div>
+                        <div class="field_description"></div>
+                        <div class="field_input">
+                            <input class="input-mail" required="required" name="Введите E-mail" placeholder="Введите E-mail" type="email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field_title">Введите номер телефона</div>
+                        <div class="field_description"></div>
+                        <div class="field_input">
+                            <input class="input-phone" required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field_input">
+                            <input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Отправить заявку" style="background-color:#3F7B16;border-radius: 1.5em" type="submit">
+                        </div>
+                    </div>
+                </div>
+            <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.</div>
+        </div>
+    </div>
+    <div class="popup_thanks">
+        <div class="popup_thanks_inner">
+            <div class="popup_thanks_close">X</div>
+            <div class="popup_thanks_title">Спасибо за заявку!</div>
+            <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
+        </div>
+    </div>
+
     @RenderSection("scripts", required: false)
 
     <script src="~/content/js/underscore-min.js"></script>
-    @*<script src="~/content/js/script.js"></script>*@
 </body>
 </html>
