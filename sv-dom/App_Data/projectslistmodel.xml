@@ -319,5 +319,53 @@
         Прекрасный выбор для состоятельных людей.
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>21</Id>
+      <Key>alenushka</Key>
+      <Name>Аленушка</Name>
+      <Type>4;</Type>
+      <Area>32</Area>
+      <Size>5,0x6,5</Size>
+      <RoomCount>1</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Небольшая, уютная банька с оригинальным дизайном.
+        Прекрасно впишется, даже в небольшой дачный участок.
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>22</Id>
+      <Key>dara</Key>
+      <Name>Дара</Name>
+      <Type>4;</Type>
+      <Area>47</Area>
+      <Size>5,5x9,7</Size>
+      <RoomCount>1</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Баня из оцилиндрованного бревна Дара. Небольшая функциональная баня, имеющая с тыльной стороны столь необходимое на загородном участке большое помещение для хозяйственных нужд. В плане баня имеет достаточно просторные помещения парной и помывочной, отдельный санузел и небольшую, но светлую комнату отдыха, дополнительный уют которой создает огонь в топке банной печи.
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>23</Id>
+      <Key>sparta</Key>
+      <Name>Спарта</Name>
+      <Type>4;</Type>
+      <Area>82</Area>
+      <Size>8,7x10,7</Size>
+      <RoomCount>2</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>

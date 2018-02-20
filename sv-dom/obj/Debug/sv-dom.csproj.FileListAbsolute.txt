@@ -135,3 +135,4 @@ C:\TEMPLATES\SV-DOM\WebHost\sv-dom\bin\Microsoft.Owin.Security.MicrosoftAccount.
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.dll
 C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.pdb
 D:\Template\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache
+C:\TEMPLATES\SV-DOM\WebHost\sv-dom\obj\Debug\sv-dom.csprojResolveAssemblyReference.cache
