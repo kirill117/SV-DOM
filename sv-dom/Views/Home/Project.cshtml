@@ -37,6 +37,21 @@
         $('.complTbl').on('click', function() {
             changeCompl($(this).val());
         });
+
+        $('.btn-gallery').on('click', function(e) {
+            e.preventDefault();
+            var dialog = $('#gellery-wrapper').dialog();
+            
+            var maxWidth = $(document).width()*0.8;
+            $('#gellery-wrapper').css('width', maxWidth);
+            $('#gellery-wrapper').css('left', ($(document).width() - maxWidth)/2);
+            $('#gellery-wrapper').css('top', '100px');
+        });
+
+        $('#gellery-wrapper').on('click', '#img_zoomer_close',function() {
+            $('#gellery-wrapper').dialog('close');
+        });
+
     });
 
     function changeCompl(comp) {
@@ -137,7 +152,7 @@
             <a href="#" class="btn btn-primary btn-green btn_recall">Изменить планировку</a>
             @if (samplesList.Count() > 3)
             {
-            <a href="#" class="btn btn-primary btn-yellow">Фотогаллерея</a>
+            <a href="#" class="btn btn-primary btn-yellow btn-gallery">Фотогалерея</a>
             }
 @*<a href="#" class="btn btn-primary btn-yellow">Видеотур по дому</a>
     <a href="#" class="btn btn-primary btn-green">Отзывы (3)</a>*@
@@ -334,3 +349,5 @@
     </div>
 </div>
 }
+
+@Html.Partial("~/Views/Shared/_ProjectGalleryPartial.cshtml", samplesList)

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Models.SampleImageModel>
+
+    <script type='text/javascript' src='/content/unitegallery/js/unitegallery.min.js'></script>
+    <link rel='stylesheet' href='/content/unitegallery/css/unite-gallery.css' type='text/css' />
+
+    <script type='text/javascript' src='/content/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+
+
+<script type="text/javascript">
+
+		jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery({
+				//tile_border_color:"#7a7a7a",
+				//tile_outline_color:"#8B8B8B",
+				//tile_enable_shadow:true,
+				//tile_shadow_color:"#8B8B8B",
+				//tile_overlay_opacity:0.3,
+				//tile_show_link_icon:true,
+				//tile_image_effect_type:"sepia",
+				//tile_image_effect_reverse:true,
+				//tile_enable_textpanel:true,
+				//lightbox_textpanel_title_color:"e5e5e5",
+				//tiles_col_width:450,
+			    //tiles_space_between_cols:20
+			    tiles_type: "nested",
+			    tiles_nested_optimal_tile_width: 400
+			});
+
+		});
+
+</script>
+
+<div id="gellery-wrapper" style="display:none;">
+    <h2></h2>
+    <div id="img_zoomer_close" style="margin-top:5px;left:auto;right:5px;">X</div>
+    <div id="gallery" style="display:none;">
+        @foreach (var item in Model)
+        {
+            <img alt="@item.Comment" src="@item.Name" data-image="@item.Name" data-description="@item.Comment" style="display:none">
+        }
+    </div>
+</div>
+

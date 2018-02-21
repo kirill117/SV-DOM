@@ -366,6 +366,7 @@
     <Content Include="Views\Shared\_ProjectFilterPartial.cshtml" />
     <Content Include="Views\Home\Project.cshtml" />
     <Content Include="Views\Shared\_ProjectListPartial.cshtml" />
+    <Content Include="Views\Shared\_ProjectGalleryPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\0\Gallery\" />
