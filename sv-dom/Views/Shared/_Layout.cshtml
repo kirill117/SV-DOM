@@ -3,8 +3,8 @@
 <head>
     <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Строительство и проектирование домов и бань из оцилиндрованного бревна и клееного бруса. Реконструкция деревянных домов. Внешняя и внутренняя отделка. Инженерные системы и коммуникации.">
+    <meta name="keywords" content="оцилиндрованное бревно,клееный брус,строительство домов,бани,реконструкция домов,проекты коттеджей">
 
     <title>Дома из оцилиндрованного бревна - строительство деревянных домов ПСК СВ-Строй</title>
     @Styles.Render("~/Content/css")
@@ -28,7 +28,8 @@
                 }
             });
 
-            $(".btn_recall").on('click', function () {
+            $(".btn_recall").on('click', function (e) {
+                e.preventDefault();
                 $('.popup_form').show();
             });
 
@@ -121,7 +122,7 @@
         <div class="dark"></div>
         <div class="section_inner ">
             <div class="headliner revers">
-                <div><div class="title"><p><strong><br></strong></p><p><strong>Позвоните нам&nbsp;и узнайте всё, что&nbsp;нужно для строительства дома Вашей мечты&nbsp;</strong></p></div></div>
+                <div><div class="title"><p><strong>Позвоните нам&nbsp;и узнайте всё, что&nbsp;нужно для строительства дома Вашей мечты&nbsp;</strong></p></div></div>
                 <div><div class="sub_title">Обращаем Ваше внимание, что все цены представленные на сайте, носят исключительно информационный характер и не являются публичной офертой.</div></div>
                 <div><div class="sub_title">По любым &nbsp;вопросам проконсультируйтесь по телефону<br>+7 495 783-83-89 или оставьте заявку на сайте.&nbsp;Наш специалист ответит на все Ваши вопросы!</div></div>
             </div>

@@ -26,6 +26,33 @@ body{
         font-size:1.2em !important;
     }
 
+    .line-top {
+        padding-bottom:20px;
+        border-top: 1px solid #dedede;
+    }
+    .line-bottom {
+        padding-top:20px;
+        border-bottom: 1px solid #dedede;
+    }
+
+    .btn-green {
+        background-color: #587640;
+        padding:12px;
+        color:#fff !important;
+        font-weight:200 !important;
+        margin-right:12px;
+        font-size:15px;
+    }
+
+    .btn-yellow {
+        background-color: #b68600;
+        padding:12px;
+        color:#fff !important;
+        font-weight:200 !important;
+        margin-right:12px;
+        font-size:15px;
+    }
+
     .project-summary {
         background-color:antiquewhite;
     }
@@ -104,6 +131,7 @@ body{
             padding: 3px 13px;
             background: #fafafa;
             border: 1px solid #dedede;
+            width:260px;
         }
 
         .project_description .title1 {
@@ -519,7 +547,7 @@ a.hidden.btn5{
     width: 100%;
     min-width: 1170px;
     position: relative;
-    padding: 30px	0;
+    padding: 10px	0;
     line-height: 150%;
     border-bottom: 1px solid #e0e0e0;
     background-position: center center;
@@ -7230,7 +7258,8 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
 .title{
     text-align: center;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     line-height: 100%;
 }
 .sub_title{ 

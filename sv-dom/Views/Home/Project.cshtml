@@ -3,6 +3,7 @@
 
 @{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
+    var samplesList = MainHelper.GetProjectSamples(Model.Id);
 }
 
 
@@ -125,6 +126,21 @@
                 </div>
                 <div class="clear"></div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="size_450x350 hide_line section " style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="line-bottom line-top" style="text-align:center;">
+            <a href="#" class="btn btn-primary btn-yellow btn_recall">Изменить комплектацию</a>
+            <a href="#" class="btn btn-primary btn-green btn_recall">Изменить планировку</a>
+            @if (samplesList.Count() > 3)
+            {
+            <a href="#" class="btn btn-primary btn-yellow">Фотогаллерея</a>
+            }
+@*<a href="#" class="btn btn-primary btn-yellow">Видеотур по дому</a>
+    <a href="#" class="btn btn-primary btn-green">Отзывы (3)</a>*@
         </div>
     </div>
 </div>
@@ -293,7 +309,7 @@
 @if (!string.IsNullOrEmpty(Model.Description))
 {
 <div class="hide_line style_0 section section132 " style="background-color:#ffffff;">
-    <div class="section_inner">
+    <div class="section_inner line-top">
         <div class="title">Описание</div>
         <div class="sub_title hidden"></div>
         <div class="text" style="text-align:justify; ">
@@ -302,16 +318,19 @@
     </div>
 </div>
 }
+
+@if (samplesList.Any())
+{
 <div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
-    <a name="gallery"></a>
-    <div class="section_inner">
-        <div class="title  ">Построенные дома<br></div>
+    <div class="section_inner line-top">
+        <div class="title">Построенные дома<br></div>
         <div class="sub_title"></div>
         <div class="images project_samples">
-            @foreach (var item in MainHelper.GetProjectSamples(Model.Id))
+            @foreach (var item in samplesList.Take(3))
             {
                 @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", item)
             }
         </div>
     </div>
 </div>
+}
