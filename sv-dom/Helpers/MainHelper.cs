@@ -42,13 +42,13 @@ namespace Helpers
                 return false;
 
 
-            if (filter.Matherial1 && project.Type.Contains("1;"))
+            if (filter.Matherial1 && project.Matherials.Contains(Matherial.ОЦБ))
                 result = true;
 
-            if (filter.Matherial2 && project.Type.Contains("2;"))
+            if (filter.Matherial2 && project.Matherials.Contains(Matherial.КБ))
                 result = true;
 
-            if (filter.Matherial3 && project.Type.Contains("3;"))
+            if (filter.Matherial3 && project.Matherials.Contains(Matherial.КОМБИ))
                 result = true;
 
             if ((filter.Matherial1 || filter.Matherial2 || filter.Matherial3) && !result)

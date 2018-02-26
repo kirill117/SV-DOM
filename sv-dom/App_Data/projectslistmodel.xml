@@ -4,7 +4,10 @@
       <Id>1</Id>
       <Key>krepysh</Key>
       <Name>Крепыш</Name>
-      <Type>1;2;</Type>
+      <Type>1;</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+      </Matherials>
       <Area>156</Area>
       <Size>13x9</Size>
       <RoomCount>4</RoomCount>

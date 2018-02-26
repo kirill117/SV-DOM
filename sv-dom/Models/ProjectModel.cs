@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml.Serialization;
 
 namespace Models
 {
@@ -11,6 +12,8 @@ namespace Models
         public string Key { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
+        public Matherial[] Matherials { get; set; }
+
 
         public int Area { get; set; }
         public int RoomCount { get; set; }
@@ -22,5 +25,18 @@ namespace Models
         public bool ShowOnMain { get; set; }
 
         public string Description { get; set; }
+    }
+
+    [Serializable]
+    public enum Matherial
+    {
+        [XmlEnum("1")]
+        ОЦБ = 1,
+        [XmlEnum("2")]
+        КБ = 2,
+        [XmlEnum("3")]
+        ПБ = 3,
+        [XmlEnum("4")]
+        КОМБИ = 4
     }
 }

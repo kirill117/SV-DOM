@@ -16,7 +16,9 @@ namespace sv_dom.Controllers
         {
             //var p = new ProjectsListModel();
             //p.Projects = new List<ProjectModel>();
-            //p.Projects.Add(new ProjectModel() { Id=1 });
+            //var prj = new ProjectModel() { Id = 1 };
+            //prj.Matherials = new[] { Matherial.ОЦБ };
+            //p.Projects.Add(prj);
             //XMLHelper.Save(p);
 
             //var c = new PriceListModel();
