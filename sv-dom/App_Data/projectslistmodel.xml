@@ -463,5 +463,52 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>30</Id>
+      <Key>yarka</Key>
+      <Name>Ярка</Name>
+      <Type>4;</Type>
+      <Area>128</Area>
+      <Size>16,0x9,0</Size>
+      <RoomCount>3</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>31</Id>
+      <Key>snegiri</Key>
+      <Name>Снегири</Name>
+      <Type>4;</Type>
+      <Area>60</Area>
+      <Size>8,1x8,1</Size>
+      <RoomCount>1</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>32</Id>
+      <Key>vera</Key>
+      <Name>Вера</Name>
+      <Type>4;</Type>
+      <Area>84</Area>
+      <Size>5,7x7,2</Size>
+      <RoomCount>1</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Отличная баня с мансардным этажом и балконом.
+        Небольшие размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
