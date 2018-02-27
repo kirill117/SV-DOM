@@ -660,5 +660,63 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>36</Id>
+      <Key>vesna</Key>
+      <Name>Весна</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials> 
+      <Area>206</Area>
+      <Size>10,8x14,3</Size>
+      <RoomCount>6</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>37</Id>
+      <Key>mayak</Key>
+      <Name>Маяк</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials> 
+      <Area>271</Area>
+      <Size>12,5x17,6</Size>
+      <RoomCount>6</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>38</Id>
+      <Key>victoriya</Key>
+      <Name>Виктория</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials> 
+      <Area>155</Area>
+      <Size>10,0x10,4</Size>
+      <RoomCount>6</RoomCount>
+      <WcCount>2</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+        Дом из оцилиндрованного бревна Виктория. Относительно небольшой, но функциональный дом с интересной архитектурой для круглогодичного проживания семьи из 4-6 человек. На первом этаже расположены большая гостиная с эркером, совмещенная с кухней-столовой, спальня, санузел и вынесенный в отдельное помещение лестничный марш. На втором (мансардном) этаже расположены четыре спальни, одна из которых имеет выход на балкон, санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
