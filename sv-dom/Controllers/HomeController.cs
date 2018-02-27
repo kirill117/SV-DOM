@@ -57,8 +57,8 @@ namespace sv_dom.Controllers
             var filter = new ProjectFilterModel();
             if (type.HasValue)
             {
-                model = model.Where(s => s.Type.Split(new[] { ';' }).Any(x => x == type.ToString())).ToList();
-                switch(type.Value)
+                filter.Type = type.Value < 4 ? 1 : type.Value;
+                switch (type.Value)
                 {
                     case 1:
                         filter.Matherial1 = true;
@@ -70,6 +70,7 @@ namespace sv_dom.Controllers
                         filter.Matherial3 = true;
                         break;
                 }
+                model = model.Where(s => s.Type == filter.Type).ToList().Filter(filter);
             }
 
             ViewBag.ProjectFilter = filter;
@@ -115,7 +116,10 @@ namespace sv_dom.Controllers
 
         public PartialViewResult FilterProjects(ProjectFilterModel filter)
         {
-            return PartialView("~/Views/Shared/_ProjectListPartial.cshtml", MainHelper._projects.Projects.Filter(filter));
+            if (filter.Type < 4)
+                filter.Type = 1;
+
+            return PartialView("~/Views/Shared/_ProjectListPartial.cshtml", MainHelper._projects.Projects.Where(s => filter.Type == 0 || s.Type == filter.Type).ToList().Filter(filter));
         }
     }
 }

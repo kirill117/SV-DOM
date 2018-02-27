@@ -17,6 +17,7 @@
                     url: '/FilterProjects',
                     data:
                     {
+                        Type: @(filterModel.Type) ,
                         Area1: $('.filter-panel').find('#Area1').prop('checked'),
                         Area2: $('.filter-panel').find('#Area2').prop('checked'),
                         Area3: $('.filter-panel').find('#Area3').prop('checked'),

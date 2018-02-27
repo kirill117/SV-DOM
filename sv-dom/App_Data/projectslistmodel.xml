@@ -4,9 +4,10 @@
       <Id>1</Id>
       <Key>krepysh</Key>
       <Name>Крепыш</Name>
-      <Type>1;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials>
       <Area>156</Area>
       <Size>13x9</Size>
@@ -27,7 +28,7 @@
       <Id>2</Id>
       <Key>sv</Key>
       <Name>СВ</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -46,9 +47,10 @@
       <Id>3</Id>
       <Key>vyatich</Key>
       <Name>Вятич</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>188</Area>
       <Size>11,1x13</Size>
@@ -64,7 +66,7 @@
       <Id>4</Id>
       <Key>kapriz</Key>
       <Name>Каприз</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -82,9 +84,10 @@
       <Id>5</Id>
       <Key>pokrov</Key>
       <Name>Покров</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>200</Area>
       <Size>16,2x10</Size>
@@ -101,7 +104,7 @@
       <Id>6</Id>
       <Key>svetliy</Key>
       <Name>Светлый</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -120,7 +123,7 @@
       <Id>7</Id>
       <Key>seneg</Key>
       <Name>Сенеж</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -138,7 +141,7 @@
       <Id>8</Id>
       <Key>aquamarin</Key>
       <Name>Аквамарин</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -156,7 +159,7 @@
       <Id>9</Id>
       <Key>prigorok</Key>
       <Name>Пригорок</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -175,7 +178,7 @@
       <Id>10</Id>
       <Key>elna</Key>
       <Name>Ельня</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -193,7 +196,7 @@
       <Id>11</Id>
       <Key>kanon</Key>
       <Name>Канон</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -211,7 +214,7 @@
       <Id>12</Id>
       <Key>uyut</Key>
       <Name>Уют</Name>
-      <Type>1;2;</Type>
+      <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -230,9 +233,9 @@
       <Id>13</Id>
       <Key>bavaria</Key>
       <Name>Бавария</Name>
-      <Type>3;</Type>
+      <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
+        <Matherial>4</Matherial>
       </Matherials> 
       <Area>235</Area>
       <Size>12,7x12,4</Size>
@@ -248,9 +251,9 @@
       <Id>14</Id>
       <Key>pokrovsky</Key>
       <Name>Покровский</Name>
-      <Type>3;</Type>
+      <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
+        <Matherial>4</Matherial>
       </Matherials> 
       <Area>205</Area>
       <Size>16,2x10,0</Size>
@@ -266,9 +269,9 @@
       <Id>15</Id>
       <Key>palaty</Key>
       <Name>Палаты</Name>
-      <Type>3;</Type>
+      <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
+        <Matherial>4</Matherial>
       </Matherials> 
       <Area>449</Area>
       <Size>19,2x13,3</Size>
@@ -284,9 +287,9 @@
       <Id>16</Id>
       <Key>prime</Key>
       <Name>Прайм</Name>
-      <Type>3;</Type>
+      <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
+        <Matherial>4</Matherial>
       </Matherials> 
       <Area>158</Area>
       <Size>11,9x10,3</Size>
@@ -302,9 +305,9 @@
       <Id>17</Id>
       <Key>volga</Key>
       <Name>Вольга</Name>
-      <Type>3;</Type>
+      <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
+        <Matherial>4</Matherial>
       </Matherials> 
       <Area>179</Area>
       <Size>13,6x10,3</Size>
@@ -320,7 +323,7 @@
       <Id>18</Id>
       <Key>terma</Key>
       <Name>Терма</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -342,7 +345,7 @@
       <Id>19</Id>
       <Key>pogrebok</Key>
       <Name>Погребок</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -362,7 +365,7 @@
       <Id>20</Id>
       <Key>putinka</Key>
       <Name>Путинка</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -383,7 +386,7 @@
       <Id>21</Id>
       <Key>alenushka</Key>
       <Name>Аленушка</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -403,7 +406,7 @@
       <Id>22</Id>
       <Key>dara</Key>
       <Name>Дара</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -422,7 +425,7 @@
       <Id>23</Id>
       <Key>sparta</Key>
       <Name>Спарта</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -440,7 +443,7 @@
       <Id>24</Id>
       <Key>dmitrovka</Key>
       <Name>Дмитровка</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -458,7 +461,7 @@
       <Id>25</Id>
       <Key>korobochka</Key>
       <Name>Коробочка</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -477,7 +480,7 @@
       <Id>26</Id>
       <Key>lira</Key>
       <Name>Лира</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -496,7 +499,7 @@
       <Id>27</Id>
       <Key>marina</Key>
       <Name>Марина</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -514,7 +517,7 @@
       <Id>28</Id>
       <Key>olha</Key>
       <Name>Ольха</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -533,7 +536,7 @@
       <Id>29</Id>
       <Key>soroka</Key>
       <Name>Сорока</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -551,7 +554,7 @@
       <Id>30</Id>
       <Key>yarka</Key>
       <Name>Ярка</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -569,7 +572,7 @@
       <Id>31</Id>
       <Key>snegiri</Key>
       <Name>Снегири</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials> 
@@ -587,7 +590,7 @@
       <Id>32</Id>
       <Key>vera</Key>
       <Name>Вера</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>      
@@ -607,7 +610,7 @@
       <Id>33</Id>
       <Key>janna</Key>
       <Name>Жанна</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>      
@@ -625,7 +628,7 @@
       <Id>34</Id>
       <Key>koyda</Key>
       <Name>Койда</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>      
@@ -643,7 +646,7 @@
       <Id>35</Id>
       <Key>vasylina</Key>
       <Name>Василина</Name>
-      <Type>4;</Type>
+      <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>      

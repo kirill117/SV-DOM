@@ -7,6 +7,7 @@ namespace Models
 {
     public class ProjectFilterModel
     {
+        public int Type { get; set; }
         public bool Area1 { get; set; }
         public bool Area2 { get; set; }
         public bool Area3 { get; set; }
