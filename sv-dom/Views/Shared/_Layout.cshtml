@@ -14,19 +14,19 @@
 
     <script>
         $(document).ready(function () {
-            $(".image_box, .overlay_image_box").click(function () {
-                var this_section = $(this).closest('.section');
-                if (this_section.hasClass('img_zoom')) {
-                    var image_url = $(this).parent().children().attr('src');
-                    var t_arr = image_url.split('/');
-                    if ($('#img_zoomer_bg').size()) {
-                        $('#img_zoomer_bg').remove();
-                    }
-                    $('body').append('<div id="img_zoomer_bg"><div id="img_zoomer" style="background:url(' + image_url + ') no-repeat center; background-size:contain;"></div><div id="img_zoomer_close">X</div></div>');
-                    var p = $('#img_zoomer_close').parent().position().left + $('#img_zoomer_close').parent().width() - 100;
-                    $('#img_zoomer_close').css('left', p);
-                }
-            });
+            //$(".image_box, .overlay_image_box").click(function () {
+            //    var this_section = $(this).closest('.section');
+            //    if (this_section.hasClass('img_zoom')) {
+            //        var image_url = $(this).parent().children().attr('src');
+            //        var t_arr = image_url.split('/');
+            //        if ($('#img_zoomer_bg').size()) {
+            //            $('#img_zoomer_bg').remove();
+            //        }
+            //        $('body').append('<div id="img_zoomer_bg"><div id="img_zoomer" style="background:url(' + image_url + ') no-repeat center; background-size:contain;"></div><div id="img_zoomer_close">X</div></div>');
+            //        var p = $('#img_zoomer_close').parent().position().left + $('#img_zoomer_close').parent().width() - 100;
+            //        $('#img_zoomer_close').css('left', p);
+            //    }
+            //});
 
             $(".btn_recall").on('click', function (e) {
                 e.preventDefault();

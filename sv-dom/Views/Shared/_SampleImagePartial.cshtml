@@ -1,10 +1,12 @@
 ﻿@model Models.SampleImageModel
 
 <div class="image_box arr1">
-    <img src="@(Model.Name)" alt="@Model.Comment" style="max-width:460px;height:auto;">
-    <div class="overlay_image_box" data-link="">
+    <a href="@(Model.Name)" target="_blank">
+        <img src="@(Model.Name)" alt="@Model.Comment" style="max-width:460px;height:auto;">
+    </a>
+    @*<div class="overlay_image_box" data-link="">
         <div class="overlay_image_title"></div>
         <div class="overlay_image_descr"></div>
-    </div>
+    </div>*@
 </div>
 
