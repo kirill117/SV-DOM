@@ -83,6 +83,11 @@ namespace sv_dom.Controllers
             return View(model);
         }
 
+        public ActionResult ShowTour(int? projectid)
+        {
+            return View(projectid);
+        }
+
         public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId)
         {
             var result = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, complectationId));

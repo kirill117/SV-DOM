@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <!-- actions to perform while loading -->
+    <events onxmlcomplete="onxmlcompleteaction();"/>
+    <action name="onxmlcompleteaction">
+		plugin[combobox].selectiditem(combobox6);
+		firstloadcompleteaction();
+	</action>
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Панорама *******************************************************************-->
+    <!-- @File="start6.xml" @PanoName="Кухня" @FilePath="J:/Вольгинский/ДОМ/Кухня/1/DSC_0532 Panorama_cube_equi.jpg" -->
+    <panoview h="127.32" v="0" fov="90"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-180" hlookatmax="180" vlookatmin="-90" vlookatmax="90" fovmin="55.8833" fovmax="90" fov="90" hlookat="127.32" vlookat="0"/>
+    <autorotate horizon="0" tofov="90" waittime="1" speed="3"/>
+    <!-- preview image -->
+    <preview url="startdata/start6/preview.jpg" type="CUBESTRIP" striporder="FRBLUD" details="16"/>
+    <!-- the pano itself -->
+    <image type="CUBE" multires="true" tilesize="1006" baseindex="0">
+        <level tiledimagewidth="2012" tiledimageheight="2012">
+            <left url="startdata/start6/3/1/%v_%u.jpg"/>
+            <front url="startdata/start6/0/1/%v_%u.jpg"/>
+            <right url="startdata/start6/1/1/%v_%u.jpg"/>
+            <back url="startdata/start6/2/1/%v_%u.jpg"/>
+            <up url="startdata/start6/4/1/%v_%u.jpg"/>
+            <down url="startdata/start6/5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1006" tiledimageheight="1006">
+            <left url="startdata/start6/3/0/%v_%u.jpg"/>
+            <front url="startdata/start6/0/0/%v_%u.jpg"/>
+            <right url="startdata/start6/1/0/%v_%u.jpg"/>
+            <back url="startdata/start6/2/0/%v_%u.jpg"/>
+            <up url="startdata/start6/4/0/%v_%u.jpg"/>
+            <down url="startdata/start6/5/0/%v_%u.jpg"/>
+        </level>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <lensflare name="LENS0" set="DEFAULT" visible="true" ath="233.452" atv="-6.82021"/>
+    <hotspot name="spot11" onclick="mainloadpano(start4.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot11,0.1);" onhover="showtext(Выйти);" ath="66.9488" atv="3.87816" width="50" height="50"/>
+    <hotspot name="spot12" onclick="mainloadpano(start10.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot12,0.1);" onhover="showtext(На 2ой этаж);" ath="38.0846" atv="-2.54086"/>
+    <hotspot name="spot13" onclick="mainloadpano(start7.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot13,0.1);" onhover="showtext(Пройти вперёд);" ath="-160.223" atv="3.87816" width="45" height="45"/>
+    <hotspot name="spot14" onclick="mainloadpano(start8.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot14,0.1);" onhover="showtext(Войти);" ath="-72.0267" atv="7.08767" width="45" height="45"/>
+    <hotspot name="spot15" onclick="mainloadpano(start9.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot15,0.1);" onhover="showtext(Войти);" ath="-38.0846" atv="8.95988" width="45" height="45"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot11].visible, false);
+		set(hotspot[spot12].visible, false);
+		set(hotspot[spot13].visible, false);
+		set(hotspot[spot14].visible, false);
+		set(hotspot[spot15].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot11].visible, true);
+		set(hotspot[spot12].visible, true);
+		set(hotspot[spot13].visible, true);
+		set(hotspot[spot14].visible, true);
+		set(hotspot[spot15].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>

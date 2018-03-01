@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <!-- actions to perform while loading -->
+    <events onxmlcomplete="onxmlcompleteaction();"/>
+    <action name="onxmlcompleteaction">
+		firstloadcompleteaction();
+	</action>
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Панорама *******************************************************************-->
+    <!-- @File="start0.xml" @PanoName="[Group 1]-DSC_0317_DSC_0340-24 images_cube_equi" @FilePath="H:/МАКСИМ РИЭЛТОР/бассейн/[Group 1]-DSC_0317_DSC_0340-24 images_cube_equi.jpg" -->
+    <panoview h="0" v="0" fov="90"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-180" hlookatmax="180" vlookatmin="-90" vlookatmax="90" fovmin="1" fovmax="90" fov="90" hlookat="0" vlookat="0"/>
+    <autorotate horizon="0" tofov="90" waittime="2" speed="3"/>
+    <!-- preview image -->
+    <preview url="startdata/start0/preview.jpg" type="CUBESTRIP" striporder="FRBLUD" details="16"/>
+    <!-- the pano itself -->
+    <image type="CUBE" multires="true" tilesize="939" baseindex="0">
+        <level tiledimagewidth="3754" tiledimageheight="3754">
+            <left url="startdata/start0/3/2/%v_%u.jpg"/>
+            <front url="startdata/start0/0/2/%v_%u.jpg"/>
+            <right url="startdata/start0/1/2/%v_%u.jpg"/>
+            <back url="startdata/start0/2/2/%v_%u.jpg"/>
+            <up url="startdata/start0/4/2/%v_%u.jpg"/>
+            <down url="startdata/start0/5/2/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1877" tiledimageheight="1877">
+            <left url="startdata/start0/3/1/%v_%u.jpg"/>
+            <front url="startdata/start0/0/1/%v_%u.jpg"/>
+            <right url="startdata/start0/1/1/%v_%u.jpg"/>
+            <back url="startdata/start0/2/1/%v_%u.jpg"/>
+            <up url="startdata/start0/4/1/%v_%u.jpg"/>
+            <down url="startdata/start0/5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="938" tiledimageheight="938">
+            <left url="startdata/start0/3/0/%v_%u.jpg"/>
+            <front url="startdata/start0/0/0/%v_%u.jpg"/>
+            <right url="startdata/start0/1/0/%v_%u.jpg"/>
+            <back url="startdata/start0/2/0/%v_%u.jpg"/>
+            <up url="startdata/start0/4/0/%v_%u.jpg"/>
+            <down url="startdata/start0/5/0/%v_%u.jpg"/>
+        </level>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <lensflare name="LENS0" set="DEFAULT" visible="true" ath="403.163" atv="-5.48291"/>
+    <hotspot name="spot0" onclick="mainloadpano(start7.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot0,0.1);" onhover="showtext(Комната отдыха);" ath="100.356" atv="4.68053"/>
+    <hotspot name="spot1" onclick="mainloadpano(start9.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot1,0.1);" onhover="showtext(Войти);" ath="163.964" atv="7.89004"/>
+    <hotspot name="spot2" onclick="mainloadpano(start2.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot2,0.1);" onhover="showtext(Тех.помещение);" ath="-158.886" atv="11.6345"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot0].visible, false);
+		set(hotspot[spot1].visible, false);
+		set(hotspot[spot2].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot0].visible, true);
+		set(hotspot[spot1].visible, true);
+		set(hotspot[spot2].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>

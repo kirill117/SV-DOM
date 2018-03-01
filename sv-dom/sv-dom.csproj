@@ -474,6 +474,7 @@
     <Content Include="Views\Home\Project.cshtml" />
     <Content Include="Views\Shared\_ProjectListPartial.cshtml" />
     <Content Include="Views\Shared\_ProjectGalleryPartial.cshtml" />
+    <Content Include="Views\Shared\ShowTour.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\0\Gallery\" />

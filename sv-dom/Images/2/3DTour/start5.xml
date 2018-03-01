@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <!-- actions to perform while loading -->
+    <events onxmlcomplete="onxmlcompleteaction();"/>
+    <action name="onxmlcompleteaction">
+		firstloadcompleteaction();
+	</action>
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Панорама *******************************************************************-->
+    <!-- @File="start5.xml" @PanoName="[Group 1]-DSC_0221_DSC_0232-12 images_cube_equi" @FilePath="H:/МАКСИМ РИЭЛТОР/заддома/[Group 1]-DSC_0221_DSC_0232-12 images_cube_equi.jpg" -->
+    <panoview h="0" v="0" fov="84.94"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-91.2333" hlookatmax="91.2333" vlookatmin="-90" vlookatmax="90" fovmin="47.9463" fovmax="90" fov="84.94" hlookat="0" vlookat="0"/>
+    <autorotate horizon="0" tofov="84.94" waittime="2" speed="3"/>
+    <!-- preview image -->
+    <preview url="startdata/start5/preview.jpg"/>
+    <!-- the pano itself -->
+    <image type="SPHERE" hfov="182.467" vfov="180" voffset="0" multires="true" tilesize="730" baseindex="0">
+        <level tiledimagewidth="5918" tiledimageheight="5838">
+            <sphere url="startdata/start5/3/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="2959" tiledimageheight="2919">
+            <sphere url="startdata/start5/2/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1479" tiledimageheight="1459">
+            <sphere url="startdata/start5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="739" tiledimageheight="729">
+            <sphere url="startdata/start5/0/%v_%u.jpg"/>
+        </level>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <hotspot name="spot11" onclick="mainloadpano(start4.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot11,0.1);" onhover="showtext(Вход на веранду);" ath="33.1644" atv="-1.75"/>
+    <hotspot name="spot12" onclick="mainloadpano(start1.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot12,0.1);" onhover="showtext(К бассейну);" ath="56.9426" atv="0"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot11].visible, false);
+		set(hotspot[spot12].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot11].visible, true);
+		set(hotspot[spot12].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>

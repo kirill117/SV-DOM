@@ -1,0 +1,26 @@
+﻿@using Helpers
+@model int
+
+@{
+    Layout = null;
+    var tourLink = MainHelper.GetProject3DTourLink(Model);
+    var project = MainHelper._projects.Projects.FirstOrDefault(s => s.Id == Model);
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+    <meta name="description" content="Строительство и проектирование домов и бань из оцилиндрованного бревна и клееного бруса. Реконструкция деревянных домов. Внешняя и внутренняя отделка. Инженерные системы и коммуникации.">
+    <meta name="keywords" content="оцилиндрованное бревно,клееный брус,строительство домов,бани,реконструкция домов,проекты коттеджей">
+
+    <title>Видеотур по проекту «@(project.Name)» от компании СВ-СТРОЙ</title>
+</head>
+<body style="position:fixed;top:0;bottom:0;left:0;right:0;">
+    <object width="100%" height="100%">
+        <param name="movie" value="@tourLink">
+        <embed src="@tourLink" width="100%" height="100%"></embed>
+    </object>
+</body>
+</html>

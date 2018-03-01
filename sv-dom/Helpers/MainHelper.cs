@@ -127,6 +127,25 @@ namespace Helpers
             return path;
         }
 
+        public static string GetProject3DTourLink(int projectId)
+        {
+            var path = "";
+            var basePath = $"/Images/{projectId}/3DTour";
+
+            var localPath = HttpContext.Current.Server.MapPath(basePath);
+
+            if (Directory.Exists(localPath))
+            {
+                var files = Directory.GetFiles(localPath, "*.swf", SearchOption.TopDirectoryOnly);
+                if (files.Any())
+                {
+                    path = basePath + "/" + Path.GetFileName(files[0]);
+                }
+            }
+
+            return path;
+        }
+
         public static SampleImageModel[] GetProjectPlanings(int projectId)
         {
             var list = new List<SampleImageModel>();

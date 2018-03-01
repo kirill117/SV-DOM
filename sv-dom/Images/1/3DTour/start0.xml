@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <!-- actions to perform while loading -->
+    <events onxmlcomplete="onxmlcompleteaction();"/>
+    <action name="onxmlcompleteaction">
+		plugin[combobox].selectiditem(combobox0);
+		if(autorotate.enabled==false,set(plugin[autorotationOFF].visible,false); set(plugin[autorotationON].visible,true);,set(plugin[autorotationOFF].visible,true); set(plugin[autorotationON].visible,false););
+		firstloadcompleteaction();
+	</action>
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Панорама *******************************************************************-->
+    <!-- @File="start0.xml" @PanoName="Улица (у бассейна)" @FilePath="J:/Вольгинский/ДОМ/Улица/баня/[Group 4]-DSC_0464_DSC_0475-12 images_cube_equi.jpg" -->
+    <panoview h="21.53" v="0" fov="73.94"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-108.89" hlookatmax="108.89" vlookatmin="-90" vlookatmax="90" fovmin="31.3589" fovmax="90" fov="73.94" hlookat="21.53" vlookat="0"/>
+    <autorotate horizon="0" tofov="73.94" waittime="1" speed="3"/>
+    <!-- preview image -->
+    <preview url="startdata/start0/preview.jpg"/>
+    <!-- the pano itself -->
+    <image type="SPHERE" hfov="217.78" vfov="180" voffset="0" multires="true" tilesize="734" baseindex="0">
+        <level tiledimagewidth="7096" tiledimageheight="5865">
+            <sphere url="startdata/start0/3/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="3548" tiledimageheight="2932">
+            <sphere url="startdata/start0/2/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1774" tiledimageheight="1466">
+            <sphere url="startdata/start0/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="887" tiledimageheight="733">
+            <sphere url="startdata/start0/0/%v_%u.jpg"/>
+        </level>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <hotspot name="spot0" onclick="mainloadpano(start1.xml);" url="startdata/graphics/spots/spot0.png" crop="0|0|64|64" frame="0" lastframe="19" frameheight="64" framewidth="64" onloaded="set(stopSequence,false);animate(spot0,0.1);" onhover="showtext(Пройти вперёд);" ath="20.7237" atv="-1.41956" width="50" height="50"/>
+    <action name="hidepanospotsaction">
+		set(hotspot[spot0].visible, false);
+	</action>
+    <action name="showpanospotsaction">
+		set(hotspot[spot0].visible, true);
+	</action>
+    <!-- close all hotspots -->
+</krpano>
