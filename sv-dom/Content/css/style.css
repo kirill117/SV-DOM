@@ -30,12 +30,18 @@ body{
         display: none;
     }
 
-    #gellery-wrapper {
-        background: rgba(0,0,0,0.8);
+    #gallery-wrapper {
+        background: rgba(0,0,0,0.9);
         z-index:108;
         position:fixed;
         padding-top: 0px;
         padding-bottom:20px;
+    }
+
+    #gallery-wrapper h2 {
+        color: #fff;
+        margin:15px;
+        font-size:32px;
     }
 
     .line-top {

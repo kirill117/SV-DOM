@@ -41,16 +41,19 @@
 
         $('.btn-gallery').on('click', function(e) {
             e.preventDefault();
-            var dialog = $('#gellery-wrapper').dialog();
+            var dialog = $('#gallery-wrapper').dialog();
             
-            var maxWidth = $(document).width()*0.8;
-            $('#gellery-wrapper').css('width', maxWidth);
-            $('#gellery-wrapper').css('left', ($(document).width() - maxWidth)/2);
-            $('#gellery-wrapper').css('top', '100px');
+
+            var maxWidth = $(window).width()*0.8;
+            var maxHeight = $(window).height()*0.8;
+            $('#gallery-wrapper').css('width', maxWidth);
+            $('#gallery-wrapper').css('left', ($(window).width() - maxWidth)/2);
+            $('#gallery-wrapper').css('height', maxHeight);
+            $('#gallery-wrapper').css('top', ($(window).height() - maxHeight)/2);
         });
 
-        $('#gellery-wrapper').on('click', '#img_zoomer_close',function() {
-            $('#gellery-wrapper').dialog('close');
+        $('#gallery-wrapper').on('click', '#img_zoomer_close',function() {
+            $('#gallery-wrapper').dialog('close');
         });
 
     });
@@ -218,9 +221,7 @@
                     <tr>
                         <td class="title1">Перекрытия 1-го этажа</td>
                         <td>
-                            - доска сечение 50x150 мм<br />
-                            - утепление минеральная вата 100 мм<br />
-                            - черновой пол обрезная доска 25х150
+                            - брус сечение 100x150 мм<br />
                         </td>
                         <td>
                             - брус сечение 100x150 мм<br />
@@ -242,9 +243,7 @@
                     <tr>
                         <td class="title1">Перекрытия 2-го этажа</td>
                         <td>
-                            - доска сечение 50x150 мм<br />
-                            - утепление минеральная вата 100 мм<br />
-                            - черновой пол обрезная доска 25х150
+                            - брус сечение 100x150 мм<br />
                         </td>
                         <td>
                             - брус сечение 100x150 мм<br />
@@ -259,7 +258,7 @@
                     </tr>
                     <tr>
                         <td class="title1">Межкомнатные перегородки 2-го этажа</td>
-                        <td>Каркасные, обшивка евровагонка 12х96 мм, неутепленные</td>
+                        <td>-</td>
                         <td>Каркасные, обшивка имитация бруса 20х146 мм, утепление минеральная вата 100мм</td>
                         <td>Оцилиндрованное бревно Ø26 см</td>
                     </tr>
@@ -283,20 +282,17 @@
                     </tr>
                     <tr>
                         <td class="title1">Окна</td>
-                        <td>
-                            - пластиковые, однокамерный стеклопакет<br />
-                            - плоский наличник
-                        </td>
+                        <td>-</td>
                         <td>
                             - пластиковые, двухкамерный стеклопакет, толщина профиля 60мм<br />
-                            - фигурный наличник
+                            - плоский наличник
                         </td>
                         <td>
                             - пластиковые, двухкамерный стеклопакет, толщина профиля 70мм, односторонняя цветная ламинация с декоративной раскладкой<br />
                             - фигурный наличник с декоративными элементами
                         </td>
                     </tr>
-                    <tr>
+                    @*<tr>
                         <td class="title1">Двери</td>
                         <td>
                             - входная дверь деревянная 80х2000 филенчатая<br />
@@ -310,7 +306,7 @@
                             - входная дверь металлическая усиленная, покрытие шпон дерева ценных пород <br />
                             - межкомнатные двери шпон дерева ценных пород
                         </td>
-                    </tr>
+                    </tr>*@
                 </tbody>
                 <tfoot>
                     <tr class="project-summary">
@@ -354,4 +350,4 @@
 </div>
 }
 
-@Html.Partial("~/Views/Shared/_ProjectGalleryPartial.cshtml", samplesList)
+@Html.Partial("~/Views/Shared/_ProjectGalleryPartial.cshtml", new Tuple<string, IEnumerable <Models.SampleImageModel>> (Model.Name,samplesList))
