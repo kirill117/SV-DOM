@@ -7,6 +7,12 @@ using System.IO;
 
 namespace Helpers
 {
+    public enum ProjectCommentType
+    {
+        Project,
+        Sample,
+        Planning
+    }
     public static class MainHelper
     {
         public static ProjectsListModel _projects = XMLHelper.Get<ProjectsListModel>();
@@ -159,7 +165,7 @@ namespace Helpers
                 foreach(var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
-                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                    list.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Planning) });
                 }
             }
 
@@ -179,7 +185,7 @@ namespace Helpers
                 foreach (var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
-                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                    list.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Sample) });
                 }
             }
 
@@ -199,11 +205,71 @@ namespace Helpers
                 foreach (var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
-                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                    list.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Sample) });
                 }
             }
 
             return list.ToArray();
+        }
+
+        public static string GetProjectComment(int projectId, ProjectCommentType type, Matherial? matherial = null)
+        {
+            var result = "";
+            var project = _projects.Projects.FirstOrDefault(s => s.Id == projectId);
+
+            var ht1 = "";
+            var ht2 = "";
+            var mt = "";
+
+            matherial = matherial ?? project.Matherials.FirstOrDefault();
+
+            switch (project.Type)
+            {
+                case 1:
+                case 5:
+                    ht1 = "Дом";
+                    ht2 = "дома";
+                    break;
+                case 4:
+                    ht1 = "Баня";
+                    ht2 = "бани";
+                    break;
+                case 6:
+                    ht1 = "Малая форма";
+                    ht2 = "малой формы";
+                    break;
+            }
+
+            switch(matherial)
+            {
+                case Matherial.КБ:
+                    mt = "клееного бруса";
+                    break;
+                case Matherial.ПБ:
+                    mt = "профилированного бруса";
+                    break;
+                case Matherial.КОМБИ:
+                    mt = "комбинированных материалов";
+                    break;
+                default:
+                    mt = "оцилиндрованного бревна";
+                    break;
+            }
+
+            switch (type)
+            {
+                case ProjectCommentType.Project:
+                    result = $"Проект {ht2} из {mt} «{project.Name}»";
+                    break;
+                case ProjectCommentType.Planning:
+                    result = $"План {ht2} из {mt} «{project.Name}»";
+                    break;
+                case ProjectCommentType.Sample:
+                    result = $"{ht1} из {mt} «{project.Name}»";
+                    break;
+            }
+
+            return result;
         }
     }
 }
