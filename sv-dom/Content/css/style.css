@@ -26,6 +26,11 @@ body{
         font-size:1.2em !important;
     }
 
+    .image_box :hover {
+            opacity: 0.75;
+            cursor:pointer;
+    }
+
     #gellery-wrapper .ui-dialog-titlebar-close {
         display: none;
     }

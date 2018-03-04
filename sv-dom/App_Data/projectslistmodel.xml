@@ -342,23 +342,23 @@
       </Description>
     </ProjectModel>
     <ProjectModel>
-      <Id>19</Id>
-      <Key>pogrebok</Key>
-      <Name>Погребок</Name>
+      <Id>21</Id>
+      <Key>alenushka</Key>
+      <Name>Аленушка</Name>
       <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
-      </Matherials> 
-      <Area>79</Area>
-      <Size>7,0x8,5</Size>
-      <RoomCount>2</RoomCount>
+      </Matherials>
+      <Area>32</Area>
+      <Size>5,0x6,5</Size>
+      <RoomCount>1</RoomCount>
       <WcCount>1</WcCount>
-      <FloorsCount>2</FloorsCount>
+      <FloorsCount>1</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
-        Классическая баня с мансардным этажом.
-        Оптимальны размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
+        Небольшая, уютная банька с оригинальным дизайном.
+        Прекрасно впишется, даже в небольшой дачный участок.
       </Description>
     </ProjectModel>
     <ProjectModel>
@@ -383,23 +383,23 @@
       </Description>
     </ProjectModel>
     <ProjectModel>
-      <Id>21</Id>
-      <Key>alenushka</Key>
-      <Name>Аленушка</Name>
+      <Id>19</Id>
+      <Key>pogrebok</Key>
+      <Name>Погребок</Name>
       <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
-      </Matherials> 
-      <Area>32</Area>
-      <Size>5,0x6,5</Size>
-      <RoomCount>1</RoomCount>
+      </Matherials>
+      <Area>79</Area>
+      <Size>7,0x8,5</Size>
+      <RoomCount>2</RoomCount>
       <WcCount>1</WcCount>
-      <FloorsCount>1</FloorsCount>
+      <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
-        Небольшая, уютная банька с оригинальным дизайном.
-        Прекрасно впишется, даже в небольшой дачный участок.
+        Классическая баня с мансардным этажом.
+        Оптимальны размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
       </Description>
     </ProjectModel>
     <ProjectModel>

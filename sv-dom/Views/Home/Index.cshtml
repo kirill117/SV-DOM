@@ -25,7 +25,7 @@
                     <div><span style="color:#A9A9A9;"><em></em></span></div>
                     Наша компания образована в 1995 году как фирма производитель оцилиндрованного бревна.
                     В процессе развития мы стали не только поставлять бревно, но и предлагать своим клиентам полный комплекс услуг,
-                    от проектирования, до производства и строительства домов из оцилиндрованного бревна, создание инженерных систем, ландшафтного дизайна и строительства бассейнов).
+                    от проектирования, до производства и строительства домов из оцилиндрованного бревна, создание инженерных систем, ландшафтного дизайна и строительства бассейнов.
                     Наработана большая база собственных проектов домов и бань из оцилиндрованного бревна. Из наиболее крупных работ нашей фирмы такие объекты как база отдыха Выксунского Металлургического Завода,
                     несколько коттеджных посёлков в Подмосковье.<br />
                 </div>
@@ -36,7 +36,7 @@
     </div>
 </div>
 
-@if (topProjects.Any())
+@*@if (topProjects.Any())
 {
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
@@ -59,7 +59,17 @@
     </div>
     <div class="clear"></div>
 </div>
-}
+}*@
+
+<div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Выберите свой дом</div>
+        <div class="sub_title"></div>
+        @Html.Partial("~/Views/Shared/_CatalogPartial.cshtml")
+    </div>
+    <div class="clear"></div>
+</div>
+
 <div class="size_350x250 hide_line section section126 " style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Используемые материалы</div>

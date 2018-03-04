@@ -2,54 +2,11 @@
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
 }
 
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('.proj-cart').click(function () {
-                var type = $(this).attr("type");
-                window.location.href = "/projectsList?type="+type;
-            });
-        });
-</script>
-
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Проекты деревянных домов и бань </div>
         <div class="sub_title"></div>
-
-        <div class="arr1">
-            <div class="col_3 proj-cart" type="1">
-                <div class="image1"><img src="/content/img/catalog/house_1.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дома из бревна</span></div>
-                <div class="btn1 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 proj-cart" type="2">
-                <div class="image2"><img src="/content/img/catalog/house_2.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Дома из клееного бруса</span></div>
-                <div class="btn2 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 last proj-cart" type="3">
-                <div class="image2"><img src="/content/img/catalog/house_3.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Комбинированные дома</span></div>
-                <div class="btn2 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="clear"></div>
-            <div class="col_3 proj-cart" type="4">
-                <div class="image2"><img src="/content/img/catalog/house_4.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Бани и SPA-комплексы</span></div>
-                <div class="btn2 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 proj-cart" type="5">
-                <div class="image3"><img src="/content/img/catalog/house_5.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Индивидуальные проекты</span></div>
-                <div class="btn3 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="col_3 last proj-cart" type="6">
-                <div class="image2"><img src="/content/img/catalog/house_6.jpg" alt=""></div>
-                <div class="title1"><span style="font-size:18px">Беседки и гаражи</span></div>
-                <div class="btn2 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
-            </div>
-            <div class="clear"></div>
-        </div>
+        @Html.Partial("~/Views/Shared/_CatalogPartial.cshtml")
     </div>
 </div>
 

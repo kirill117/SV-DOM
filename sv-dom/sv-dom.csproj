@@ -289,6 +289,7 @@
     <Content Include="Content\img\slyder1.jpg" />
     <Content Include="Content\img\tehcontrol.jpg" />
     <Content Include="Content\img\uncheck.png" />
+    <Content Include="Content\js\imgViewer.js" />
     <Content Include="Content\js\inception.js" />
     <Content Include="Content\js\jquery.carousel-3d.js" />
     <Content Include="Content\js\jquery.js" />
@@ -415,6 +416,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -476,6 +478,7 @@
     <Content Include="Views\Shared\_ProjectListPartial.cshtml" />
     <Content Include="Views\Shared\_ProjectGalleryPartial.cshtml" />
     <Content Include="Views\Shared\ShowTour.cshtml" />
+    <Content Include="Views\Shared\_CatalogPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\0\Gallery\" />
