@@ -19,9 +19,9 @@ namespace Helpers
                 var user = ConfigurationManager.AppSettings["MailUser"];
                 var password = ConfigurationManager.AppSettings["MailPassword"];
 
-                SmtpClient client = new SmtpClient(server, 25);
+                SmtpClient client = new SmtpClient(server, 587);
                 client.UseDefaultCredentials = false;
-                client.EnableSsl = true;
+                //client.EnableSsl = true;
                 client.Credentials = new NetworkCredential(user, password);
                 MailAddress from = new MailAddress(user, user, System.Text.Encoding.UTF8);
                 MailAddress to = new MailAddress(email);
