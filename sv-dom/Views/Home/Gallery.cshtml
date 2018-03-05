@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Helpers
+@using Models
+
+@{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
 }
 
@@ -7,8 +10,10 @@
 
 <script type="text/javascript">
          $(window).load(function () {
-             var c0 = initCarousel("#carousel");
-             var c1 = initCarousel("#carousel1");
+             //var c0 = initCarousel("#carousel");
+             //var c1 = initCarousel("#carousel1");
+             //var c2 = initCarousel("#carousel2");
+             //var c3 = initCarousel("#carousel3");
 
              $('.prev').bind('click', function () {
                  var carousel = $(this).parent().attr("numb");
@@ -48,21 +53,70 @@
 </script>
 
 
-<div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title" style="font-size:38px;margin-bottom:40px;">Коллекция построенных объектов</div>
+        <div class="title">Дома из оцилиндрованного бревна<br></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetMainGallery(1))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Дома из клееного бруса<br></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetMainGallery(2))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Интерьеры деревянных домов<br></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetMainGallery(3))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Гаражи, беседки, малые формы<br></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetMainGallery(4))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+@*<div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title" style="font-size:38px;margin-bottom:40px;">Коллекция построенных объектов</div>
         <div class="title">Дома из оцилиндрованного бревна</div>
         <div class="sub_title hidden"></div>
         <div class="text" style="text-align:center; ">
             <div id="carousel">
-                <img src="/content/img/gallery/1/1.jpg" alt="" />
-                <img src="/content/img/gallery/1/2.jpg" alt="" />
-                <img src="/content/img/gallery/1/3.jpg" alt="" />
-                <img src="/content/img/gallery/1/4.jpg" alt="" />
-                <img src="/content/img/gallery/1/5.jpg" alt="" />
-                <img src="/content/img/gallery/1/6.jpg" alt="" />
-                <img src="/content/img/gallery/1/7.jpg" alt="" />
-                <img src="/content/img/gallery/1/8.jpg" alt="" />
+                @foreach (var item in MainHelper.GetMainGallery(1))
+                {
+                    <img src="@item.Name" alt="" />
+                }
             </div>
             <div class="nav" numb="c0">
                 <a href="#" class="prev">Назад</a> | <a href="#" class="next">Вперед</a>
@@ -70,21 +124,17 @@
         </div>
     </div>
 </div>
-
+<div class="clear"></div>
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
-        <div class="title">Гаражи и беседки</div>
+        <div class="title">Дома из клееного бруса</div>
         <div class="sub_title hidden"></div>
         <div class="text" style="text-align:center; ">
             <div id="carousel1">
-                <img src="/content/img/gallery/2/1.jpg" alt="" />
-                <img src="/content/img/gallery/2/2.jpg" alt="" />
-                <img src="/content/img/gallery/2/3.jpg" alt="" />
-                <img src="/content/img/gallery/2/4.jpg" alt="" />
-                <img src="/content/img/gallery/2/5.jpg" alt="" />
-                <img src="/content/img/gallery/2/6.jpg" alt="" />
-                <img src="/content/img/gallery/2/7.jpg" alt="" />
-                <img src="/content/img/gallery/2/8.jpg" alt="" />
+                @foreach (var item in MainHelper.GetMainGallery(2))
+                {
+                    <img src="@item.Name" alt="" />
+                }
             </div>
             <div class="nav" numb="c1">
                 <a href="#" class="prev">Назад</a> | <a href="#" class="next">Вперед</a>
@@ -92,3 +142,40 @@
         </div>
     </div>
 </div>
+<div class="clear"></div>
+<div class="hide_line section section126" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Интерьеры деревянных домов</div>
+        <div class="sub_title hidden"></div>
+        <div class="text" style="text-align:center; ">
+            <div id="carousel2">
+                @foreach (var item in MainHelper.GetMainGallery(3))
+                {
+                    <img src="@item.Name" alt="" />
+                }
+            </div>
+            <div class="nav" numb="c2">
+                <a href="#" class="prev">Назад</a> | <a href="#" class="next">Вперед</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+<div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">Гаражи и беседки</div>
+        <div class="sub_title hidden"></div>
+        <div class="text" style="text-align:center; ">
+            <div id="carousel3">
+                @foreach (var item in MainHelper.GetMainGallery(4))
+                {
+                    <img src="@item.Name" alt="" />
+                }
+            </div>
+            <div class="nav" numb="c3">
+                <a href="#" class="prev">Назад</a> | <a href="#" class="next">Вперед</a>
+            </div>
+        </div>
+    </div>
+</div>*@

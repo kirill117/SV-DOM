@@ -212,6 +212,26 @@ namespace Helpers
             return list.ToArray();
         }
 
+        public static SampleImageModel[] GetMainGallery(int typeId)
+        {
+            var list = new List<SampleImageModel>();
+            var basePath = $"/Content/Img/Gallery/{typeId}";
+
+            var localPath = HttpContext.Current.Server.MapPath(basePath);
+
+            if (Directory.Exists(localPath))
+            {
+                var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+                foreach (var file in files)
+                {
+                    var path = basePath + "/" + Path.GetFileName(file);
+                    list.Add(new SampleImageModel() { Name = path, Comment = "" });
+                }
+            }
+
+            return list.ToArray();
+        }
+
         public static string GetProjectComment(int projectId, ProjectCommentType type, Matherial? matherial = null)
         {
             var result = "";
