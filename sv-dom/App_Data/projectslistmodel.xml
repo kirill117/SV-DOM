@@ -835,5 +835,62 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>45</Id>
+      <Key>prima</Key>
+      <Name>Прима</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>284</Area>
+      <Size>14,5x18,0</Size>
+      <RoomCount>7</RoomCount>
+      <WcCount>3</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>46</Id>
+      <Key>robur</Key>
+      <Name>Робур</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>124</Area>
+      <Size>11,2x11,8</Size>
+      <RoomCount>3</RoomCount>
+      <WcCount>1</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>47</Id>
+      <Key>tauer</Key>
+      <Name>Тауэр</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>446</Area>
+      <Size>14,5x16,7</Size>
+      <RoomCount>12</RoomCount>
+      <WcCount>4</WcCount>
+      <FloorsCount>3</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
