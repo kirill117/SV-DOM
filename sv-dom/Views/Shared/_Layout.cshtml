@@ -70,6 +70,9 @@
                         email: frm.find('.input-mail').val()
                 },
                     success: function (content) {
+                        try {
+                            yaCounter47921396.reachGoal('recall');
+                        } catch (e) { }
                     },
                     traditional: true,
                     dataType: 'json'
