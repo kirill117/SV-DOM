@@ -780,8 +780,8 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
     min-height: 70px;
 }
 .field input[type="submit"]{
-    padding: 15px 10px;
-    font-size: 24px;
+    padding: 10px 10px;
+    font-size: 20px;
     background-repeat: repeat-x;
 
 }

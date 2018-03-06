@@ -19,9 +19,16 @@ namespace Helpers
                 var user = ConfigurationManager.AppSettings["MailUser"];
                 var password = ConfigurationManager.AppSettings["MailPassword"];
 
+                //var server = "smtp.yandex.ru";
+                //var user = "kirill117@yandex.ru";
+                //var password = "Inga30031";
+                //email = "baranovka@quarta.su";
+
+                //SmtpClient client = new SmtpClient(server, 25);
+                //client.EnableSsl = true;
+
                 SmtpClient client = new SmtpClient(server, 587);
                 client.UseDefaultCredentials = false;
-                //client.EnableSsl = true;
                 client.Credentials = new NetworkCredential(user, password);
                 MailAddress from = new MailAddress(user, user, System.Text.Encoding.UTF8);
                 MailAddress to = new MailAddress(email);

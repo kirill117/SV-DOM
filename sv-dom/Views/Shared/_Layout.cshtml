@@ -34,6 +34,10 @@
 
             $.bindViewer(".sample-image");
 
+            $('body').on('click', '.section116 .menu-toogler', function () {
+                $(this).parent().children('.menu1').toggle();
+            })
+
             $(".btn_recall").on('click', function (e) {
                 e.preventDefault();
                 $('.popup_form').show();
@@ -58,8 +62,14 @@
             });
 
             $('.form-get-recall, .form-get-info').on('click', '.submit_btn', function () {
-                $('.popup_form').hide();
                 var frm = $(this).parent().parent().parent();
+
+                if (frm.find('.input-phone').val().length == 0 && frm.find('.input-mail').val() == 0) {
+                    frm.find('.input-mail').focus();
+                    return;
+                }
+
+                $('.popup_form').hide();
                 $.ajax({
                     type: 'POST',
                     url: '/GetRecall',
@@ -67,8 +77,9 @@
                     {
                         name: frm.find('.input-name').val(),
                         phone: frm.find('.input-phone').val(),
-                        email: frm.find('.input-mail').val()
-                },
+                        email: frm.find('.input-mail').val(),
+                        comment: frm.find('.input-comment').val()
+                    },
                     success: function (content) {
                         try {
                             yaCounter47921396.reachGoal('recall');
@@ -78,7 +89,7 @@
                     dataType: 'json'
                 });
 
-                    frm.find('input[type="text"], input[type="email"]').each(function () {
+                    frm.find('input[type="text"], input[type="email"], textarea').each(function () {
                     $(this).val('');
                 });
 
@@ -146,7 +157,7 @@
                     <li class="level0"><a href="/index" title="">О компании</a></li>
                     <li class="level0"><a href="/catalog" title="">Проекты</a></li>
                     <li class="level0"><a href="/services" title="">Услуги</a></li>
-                    <li class="level0"><a href="/gallery" title="">Примеры работ</a></li>
+                    <li class="level0"><a href="/gallery" title="">Портфолио</a></li>
                     <li class="level0"><a href="/price" title="">Стоимость</a></li>
                     <li class="level0"><a href="/contacts" title="">Контакты</a></li>
                 </ul>
@@ -165,22 +176,41 @@
                 <div><div class="sub_title">По любым &nbsp;вопросам проконсультируйтесь по телефону<br>+7 495 783-83-89 или оставьте заявку на сайте.&nbsp;Наш специалист ответит на все Ваши вопросы!</div></div>
             </div>
             <div class="form_wrapper revers">
-                <div class="form_title">Бесплатная консультация</div>
-                <div class="form_sub_title">Оставьте заявку прямо сейчас и специалист позвонит вам!<br></div>
+                <div class="form_title">Консультация специалиста</div>
+                <div class="form_sub_title">Оставьте заявку и наш специалист свяжется с вами<br></div>
                 <div class="form-get-info">
                     <input name="Консультация специалиста" value="" type="hidden">
-                    <div class="field"><div class="field_title">Введите имя</div><div class="field_description"></div>
+                    <div class="field">
+                        @*<div class="field_title">Введите имя</div>*@
+                        <div class="field_description"></div>
                         <div class="field_input">
-                            <input class="input-name" required="required" name="Введите имя" placeholder="Введите имя" type="text">
+                            <input class="input-name" required="required" name="Ваше имя" placeholder="Ваше имя" type="text">
                         </div>
                     </div>
-                    <div class="field"><div class="field_title">Введите номер телефона</div>
-                        <div class="field_description">Наш менеджер Вам перезвонит</div>
+                    <div class="field">
+                        @*<div class="field_title">Введите E-mail</div>*@
+                        <div class="field_description"></div>
+                        <div class="field_input">
+                            <input class="input-mail" required="required" name="Введите E-mail" placeholder="Введите E-mail" type="email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        @*<div class="field_title">Введите номер телефона</div>*@
+                        <div class="field_description"></div>
                         <div class="field_input">
                             <input class="input-phone" required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="Введите номер телефона" type="text">
                         </div>
                     </div>
-                    <div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Получить консультацию!" style="background-color:#3F7B16;border-radius: 1em;" type="submit"></div></div>
+                    <div class="field">
+                        @*<div class="field_title">Ваш вопрос</div>*@
+                        <div class="field_description"></div>
+                        <div class="field_input">
+                            @*<input class="input-comment" name="" placeholder="Введите E-mail" type="text">*@
+                            <textarea class="input-comment" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field"><div class="field_input"><input class="submit_btn surround" data-action="thanks" data-url="" data-amount="0" value="Задать вопрос" style="background-color:#3F7B16;border-radius: 1em;" type="submit"></div></div>
                 </div>
                 <div class="form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.<br></div>
             </div>
