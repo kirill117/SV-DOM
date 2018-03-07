@@ -7,7 +7,8 @@ font-family: 'Russo One', sans-serif;
 
 
 
-@import 'https://fonts.googleapis.com/css?family=Comfortaa:300|Cormorant+Garamond|Cormorant+Infant|Cormorant+SC|Cormorant+Unicase|EB+Garamond|El+Messiri|Forum|Jura|Lobster|Neucha|Open+Sans+Condensed:300|PT+Sans|PT+Sans+Narrow|Philosopher|Playfair+Display+SC|Poiret+One|Ruslan+Display|Russo+One|Ubuntu&subset=cyrillic';
+/*@import 'https://fonts.googleapis.com/css?family=Comfortaa:300|Cormorant+Garamond|Cormorant+Infant|Cormorant+SC|Cormorant+Unicase|EB+Garamond|El+Messiri|Forum|Jura|Lobster|Neucha|Open+Sans+Condensed:300|PT+Sans|PT+Sans+Narrow|Philosopher|Playfair+Display+SC|Poiret+One|Ruslan+Display|Russo+One|Ubuntu&subset=cyrillic';*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body{
     height: 100%;
@@ -15,7 +16,7 @@ html, body{
 
 body{
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
     body.modal {
@@ -38,7 +39,7 @@ body{
     margin-bottom:5px !important;
 }
 
-    #gellery-wrapper .ui-dialog-titlebar-close {
+    /*#gellery-wrapper .ui-dialog-titlebar-close {
         display: none;
     }
 
@@ -54,7 +55,7 @@ body{
         color: #fff;
         margin:15px;
         font-size:32px;
-    }
+    }*/
 
     .line-top {
         padding-bottom:20px;
@@ -211,8 +212,8 @@ body{
 
         .filter-panel .col_3 {
             float:left;
-            width: 205px;
-            margin-right:20px;
+            width: 212px;
+            margin-right:13px;
         }
 
         .filter-panel .col_3 label {
@@ -226,7 +227,7 @@ body{
 
         .filter-panel .title1 {
             font-weight:600;
-            width:200px;
+            width:210px;
             font-size: 18px;
             text-align:left;
             border-bottom: 1px solid #dedede;
@@ -5877,7 +5878,7 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
     padding: 0 10px;
     border: solid 2px;
     color:#fff;
-    width: 180px;
+    width: 190px;
     max-width: 250px;
     min-width: 130px;
     text-align: center;
