@@ -33,60 +33,62 @@ namespace Helpers
             if (filter.IsEmpty())
                 return true;
 
-            var result = false;
+            //var result = false;
 
+            var areaResult = false;
             if (filter.Area1 && project.Area <= 100)
-                result = true;
+                areaResult = true;
 
             if (filter.Area2 && project.Area > 100 && project.Area <= 200)
-                result = true;
+                areaResult = true;
 
             if (filter.Area3 && project.Area > 200)
-                result = true;
+                areaResult = true;
 
-            if ((filter.Area1 || filter.Area2 || filter.Area3) && !result)
+            if ((filter.Area1 || filter.Area2 || filter.Area3) && !areaResult)
                 return false;
 
-
+            var matherialResult = false;
             if (filter.Matherial1 && project.Matherials.Contains(Matherial.ОЦБ))
-                result = true;
+                matherialResult = true;
 
             if (filter.Matherial2 && project.Matherials.Contains(Matherial.КБ))
-                result = true;
+                matherialResult = true;
 
             if (filter.Matherial3 && project.Matherials.Contains(Matherial.КОМБИ))
-                result = true;
+                matherialResult = true;
 
-            if ((filter.Matherial1 || filter.Matherial2 || filter.Matherial3) && !result)
+            if ((filter.Matherial1 || filter.Matherial2 || filter.Matherial3) && !matherialResult)
                 return false;
 
+            var cost = GetProjectMinCost(project.Id);
+            var priceResult = false;
+            if (filter.Price1 && (cost <= 1000000 || cost == 0))
+                priceResult = true;
 
-            if (filter.Price1 && GetProjectMinCost(project.Id) <= 1000000)
-                result = true;
+            if (filter.Price2 && (cost == 0 || (cost > 1000000 && cost <= 2000000)))
+                priceResult = true;
 
-            if (filter.Price2 && GetProjectMinCost(project.Id) > 1000000 && project.Area <= 2000000)
-                result = true;
+            if (filter.Price3 && (cost > 2000000 || cost == 0))
+                priceResult = true;
 
-            if (filter.Price3 && GetProjectMinCost(project.Id) > 2000000)
-                result = true;
-
-            if ((filter.Price1 || filter.Price2 || filter.Price2) && !result)
+            if ((filter.Price1 || filter.Price2 || filter.Price3) && !priceResult)
                 return false;
 
-
+            var floorResult = false;
             if (filter.Floor1 && project.FloorsCount == 1)
-                result = true;
+                floorResult = true;
 
             if (filter.Floor2 && project.FloorsCount == 2)
-                result = true;
+                floorResult = true;
 
             if (filter.Floor3 && project.FloorsCount > 2)
-                result = true;
+                floorResult = true;
 
-            if ((filter.Floor1 || filter.Floor2 || filter.Floor3) && !result)
+            if ((filter.Floor1 || filter.Floor2 || filter.Floor3) && !floorResult)
                 return false;
 
-            return result;
+            return areaResult || matherialResult || priceResult || floorResult;
         }
 
         public static string FormatPrice(decimal price)

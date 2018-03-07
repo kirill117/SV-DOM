@@ -6,40 +6,65 @@
 @{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
     var filterModel = (ProjectFilterModel)ViewBag.ProjectFilter;
+    var type = int.Parse(HttpContext.Current.Request.QueryString["type"] ?? "0");
+    var pageTitle = "Типовые проекты";
+
+    switch (type)
+    {
+        case 1:
+        case 2:
+        case 3:
+            pageTitle += " деревянных домов";
+            break;
+        case 4:
+            pageTitle += " бань и СПА-комплексов";
+            break;
+        case 5:
+            pageTitle = "Индивидуальнве проекты";
+            break;
+        case 6:
+            pageTitle = "Гаражи, беседки, малые формы";
+            break;
+    }
 }
 
-
 <script type="text/javascript">
-        $(document).ready(function() {
-            $('.filter-panel input[type="checkbox"]').click(function () {
-                $.ajax({
-                    type: 'GET',
-                    url: '/FilterProjects',
-                    data:
-                    {
-                        Type: @(filterModel.Type) ,
-                        Area1: $('.filter-panel').find('#Area1').prop('checked'),
-                        Area2: $('.filter-panel').find('#Area2').prop('checked'),
-                        Area3: $('.filter-panel').find('#Area3').prop('checked'),
-                        Matherial1: $('.filter-panel').find('#Matherial1').prop('checked'),
-                        Matherial2: $('.filter-panel').find('#Matherial2').prop('checked'),
-                        Matherial3: $('.filter-panel').find('#Matherial3').prop('checked'),
-                        Price1: $('.filter-panel').find('#Price1').prop('checked'),
-                        Price2: $('.filter-panel').find('#Price2').prop('checked'),
-                        Price3: $('.filter-panel').find('#Price3').prop('checked'),
-                        Floor1: $('.filter-panel').find('#Floor1').prop('checked'),
-                        Floor2: $('.filter-panel').find('#Floor2').prop('checked'),
-                        Floor3: $('.filter-panel').find('#Floor3').prop('checked')
-                    },
-                    success: function (content) {
-                        $('.project-list-container').html(content);
-                    },
-                    traditional: true,
-                    dataType: 'html'
-                });
+    $(document).ready(function() {
+        $('.filter-panel input[type="checkbox"]').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: '/FilterProjects',
+                data:
+                {
+                    Type: @(filterModel.Type) ,
+                    Area1: $('.filter-panel').find('#Area1').prop('checked'),
+                    Area2: $('.filter-panel').find('#Area2').prop('checked'),
+                    Area3: $('.filter-panel').find('#Area3').prop('checked'),
+                    Matherial1: $('.filter-panel').find('#Matherial1').prop('checked'),
+                    Matherial2: $('.filter-panel').find('#Matherial2').prop('checked'),
+                    Matherial3: $('.filter-panel').find('#Matherial3').prop('checked'),
+                    Price1: $('.filter-panel').find('#Price1').prop('checked'),
+                    Price2: $('.filter-panel').find('#Price2').prop('checked'),
+                    Price3: $('.filter-panel').find('#Price3').prop('checked'),
+                    Floor1: $('.filter-panel').find('#Floor1').prop('checked'),
+                    Floor2: $('.filter-panel').find('#Floor2').prop('checked'),
+                    Floor3: $('.filter-panel').find('#Floor3').prop('checked')
+                },
+                success: function (content) {
+                    $('.project-list-container').html(content);
+                },
+                traditional: true,
+                dataType: 'html'
             });
         });
+    });
 </script>
+
+<div class="hide_line section" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title">@pageTitle</div>
+    </div>
+</div>
 
 @Html.Partial("~/Views/Shared/_ProjectFilterPartial.cshtml", filterModel)
 
