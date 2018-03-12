@@ -9,47 +9,6 @@
 <link rel="stylesheet" href="/content/css/carusel/jquery.carousel-3d.default.css">
 
 <script type="text/javascript">
-         $(window).load(function () {
-             //var c0 = initCarousel("#carousel");
-             //var c1 = initCarousel("#carousel1");
-             //var c2 = initCarousel("#carousel2");
-             //var c3 = initCarousel("#carousel3");
-
-             $('.prev').bind('click', function () {
-                 var carousel = $(this).parent().attr("numb");
-                eval(carousel+ '.prev()');
-                return false
-            });
-
-            $('.next').bind('click', function () {
-                var carousel = $(this).parent().attr("numb");
-                eval(carousel + '.next()');
-                return false;
-            });
-         });
-
-         function initCarousel(id) {
-             return $(id).waterwheelCarousel({
-                 flankingItems: 3,
-                 forcedImageWidth: 550,
-                 forcedImageHeight: 400,
-                 movingToCenter: function ($item) {
-                     $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-                 },
-                 movedToCenter: function ($item) {
-                     $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-                 },
-                 movingFromCenter: function ($item) {
-                     $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-                 },
-                 movedFromCenter: function ($item) {
-                     $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-                 },
-                 clickedCenter: function ($item) {
-                     $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-                 }
-             });
-         };
 </script>
 
 

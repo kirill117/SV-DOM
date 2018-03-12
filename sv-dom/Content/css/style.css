@@ -27,6 +27,11 @@ body{
         font-size:1.2em !important;
     }
 
+ul {
+    padding: 0 20px;
+    margin:0;
+}
+
     .image_box :hover {
             opacity: 0.75;
             cursor:pointer;
@@ -82,6 +87,10 @@ body{
         font-weight:200 !important;
         margin-right:12px;
         font-size:15px;
+    }
+
+    .complectation-table tr td {
+        vertical-align:top;
     }
 
     .project-summary {
@@ -176,7 +185,7 @@ body{
         }
 
         .project_description .cost {
-            font-size: 34px !important; 
+            font-size: 32px !important; 
             line-height: 1;
             text-align: left;
             color: #c8821c;
