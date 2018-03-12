@@ -892,5 +892,62 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>48</Id>
+      <Key>mihaylov</Key>
+      <Name>Михайлов</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>246</Area>
+      <Size>13,1x20,1</Size>
+      <RoomCount>6</RoomCount>
+      <WcCount>3</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>49</Id>
+      <Key>shell</Key>
+      <Name>Шелл</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>357</Area>
+      <Size>14x10</Size>
+      <RoomCount>12</RoomCount>
+      <WcCount>5</WcCount>
+      <FloorsCount>3</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>50</Id>
+      <Key>yamal</Key>
+      <Name>Ямал</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>305</Area>
+      <Size>13,4x15</Size>
+      <RoomCount>8</RoomCount>
+      <WcCount>4</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
