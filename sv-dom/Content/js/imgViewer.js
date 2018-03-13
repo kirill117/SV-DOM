@@ -33,17 +33,18 @@
             $img.appendTo("body").load(function () {
                 var img_w = $(this).width(),
                     img_h = $(this).height();
-                if(win_h*0.8<img_h||win_w*0.8<img_w){ //处理图片大过屏幕的问题
+                var koef = 0.95;
+                if(win_h*koef<img_h||win_w*koef<img_w){ 
                     var win_scale = win_w/win_h,
                         img_scale = img_w/img_h,
                         temp = 0;
-                    if(win_scale>img_scale){ //由图片高度着手处理
+                    if(win_scale>img_scale){ 
                         temp = img_h;
-                        img_h = win_h*0.8;
+                        img_h = win_h*koef;
                         img_w = img_w*img_h/temp;
-                    }else{  //由图片宽度着手处理
+                    }else{  
                         temp = img_w;
-                        img_w = win_w*0.8;
+                        img_w = win_w*koef;
                         img_h = img_w*img_h/temp;
                     }
                 }

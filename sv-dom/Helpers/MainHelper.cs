@@ -27,7 +27,7 @@ namespace Helpers
         {
             list.ForEach(x =>
             {
-                if (filter.Matherial2 && new int[] { 37, 46, 48 }.Contains(x.Id))
+                if (filter.Matherial2 && new int[] { 37, 46, 48, 51 }.Contains(x.Id))
                 {
                     x.Index = -1;
                 }

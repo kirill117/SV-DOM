@@ -31,6 +31,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>243</Area>
       <Size>15x13,5</Size>
@@ -87,6 +88,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials>
       <Area>156</Area>
       <Size>9,9x10,5</Size>
@@ -105,6 +107,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials>
       <Area>126</Area>
       <Size>7,7x9,7</Size>
@@ -124,6 +127,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>184</Area>
       <Size>12x11,4</Size>
@@ -162,6 +166,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials>
       <Area>95</Area>
       <Size>8,8x8,8</Size>
@@ -181,6 +186,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>245</Area>
       <Size>15x13,5</Size>
@@ -937,12 +943,29 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
       </Matherials>
       <Area>305</Area>
       <Size>13,4x15</Size>
       <RoomCount>8</RoomCount>
       <WcCount>4</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>51</Id>
+      <Key>maxim</Key>
+      <Name>Максим</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>159</Area>
+      <Size>11,6x10,6</Size>
+      <RoomCount>5</RoomCount>
+      <WcCount>2</WcCount>
       <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
