@@ -7,6 +7,7 @@ using Models;
 using Helpers;
 using System.Text;
 using System.Configuration;
+using System.Web.Helpers;
 
 namespace sv_dom.Controllers
 {
@@ -123,13 +124,22 @@ namespace sv_dom.Controllers
             }
             return Json(result);
         }
-
         public PartialViewResult FilterProjects(ProjectFilterModel filter)
         {
             if (filter.Type < 4)
                 filter.Type = 1;
 
             return PartialView("~/Views/Shared/_ProjectListPartial.cshtml", MainHelper._projects.Projects.Where(s => filter.Type == 0 || s.Type == filter.Type).ToList().Filter(filter));
+        }
+
+        public void GetPhotoThumbnail(string filename, int width = 300, int height = 220)
+        {
+            var serverfilepath = Server.MapPath(filename);
+            new WebImage(serverfilepath)
+                .Resize(width, height, false, true) 
+                .AddTextWatermark("SV-DOM.RU", verticalAlign: "Top", opacity: 30)
+                .Crop(1, 1) 
+                .Write();
         }
     }
 }

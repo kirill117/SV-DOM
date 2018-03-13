@@ -1,12 +1,8 @@
 ﻿@model Models.SampleImageModel
 
 <div class="image_box arr1">
-    @*<a href="@(Model.Name)" target="_blank">*@
-        <img class="sample-image" src="@(Model.Name)" alt="@Model.Comment" style="max-width:460px;height:auto;">
-    @*</a>
-    <div class="overlay_image_box" data-link="">
-        <div class="overlay_image_title"></div>
-        <div class="overlay_image_descr"></div>
-    </div>*@
+    <img class="sample-image" src="@Url.Action("GetPhotoThumbnail", new { filename = Model.Name })" 
+         src-big="@Url.Action("GetPhotoThumbnail", new { filename = Model.Name, width = 800, height = 600 })" 
+         alt="@Model.Comment" style="max-width:460px;height:auto;">
 </div>
 

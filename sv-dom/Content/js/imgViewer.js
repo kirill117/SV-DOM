@@ -15,7 +15,7 @@
 
         function viewImg() {
             var $obj = $(this),
-                src = $obj.attr("src"),
+                src = $obj.attr("src-big"),
                 win_h = window.innerHeight || document.documentElement.clientHeight,
                 win_w = window.innerWidth || document.documentElement.clientWidth,
                 sroll_t = $win.scrollTop(),

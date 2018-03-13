@@ -103,10 +103,10 @@ ul {
         text-align:center;
     }
 
-    .project_samples .image_box img{
+    /*.project_samples .image_box img{
         width:300px !important; 
         height:220px !important;
-    }
+    }*/
 
         .project_description  input[type=radio], .project-compl-header  input[type=radio] {
            display: none;
