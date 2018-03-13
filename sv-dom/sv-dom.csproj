@@ -184,6 +184,7 @@
     <Compile Include="Models\ProjectFilterModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
     <Compile Include="Models\ProjectsListModel.cs" />
+    <Compile Include="Models\ProjectSorter.cs" />
     <Compile Include="Models\SampleImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

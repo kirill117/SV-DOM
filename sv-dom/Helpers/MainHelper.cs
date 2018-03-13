@@ -25,15 +25,24 @@ namespace Helpers
 
         public static List<ProjectModel> Filter(this List<ProjectModel> list, ProjectFilterModel filter)
         {
-            return list.Where(s => FilteredProject(s, filter)).ToList();
+            list.ForEach(x =>
+            {
+                if (filter.Matherial2 && new int[] { 37, 46, 48 }.Contains(x.Id))
+                {
+                    x.Index = -1;
+                }
+                else
+                {
+                    x.Index = 0;
+                }
+            });
+            return list.Where(s => FilteredProject(s, filter)).OrderBy(x => x.Index).ToList();
         }
 
         private static bool FilteredProject(ProjectModel project, ProjectFilterModel filter)
         {
             if (filter.IsEmpty())
                 return true;
-
-            //var result = false;
 
             var areaResult = false;
             if (filter.Area1 && project.Area <= 100)
