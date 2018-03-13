@@ -175,6 +175,8 @@
         <div class="images">
             @foreach (var item in MainHelper.GetProjectPlanings(Model.Id))
             {
+                item.Width = 460;
+                item.Height = 340;
                 @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", item)
             }
         </div>

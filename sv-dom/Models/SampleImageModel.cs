@@ -9,5 +9,8 @@ namespace Models
     {
         public string Name { get; set; }
         public string Comment { get; set; }
+        public int? Width { get; set; }
+        public int? Height { get; set; }
+
     }
 }
