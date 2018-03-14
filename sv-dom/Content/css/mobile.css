@@ -1716,8 +1716,8 @@
         height: auto;
         margin-bottom: 3%;
     }
-    .section143 .section_inner .image_box img{
-        width: 100%;
+    .section_inner .image_box img{
+        max-width: 300px;
         height: auto;
         display: block;
     }    
