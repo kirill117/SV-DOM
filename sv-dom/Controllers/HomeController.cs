@@ -44,6 +44,10 @@ namespace sv_dom.Controllers
         {
             return View();
         }
+        public ActionResult Credit()
+        {
+            return View();
+        }
         public ActionResult Gallery()
         {
             return View();

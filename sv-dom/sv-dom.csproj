@@ -227,6 +227,7 @@
     <Content Include="Content\img\catalog\house_5.jpg" />
     <Content Include="Content\img\catalog\house_6.jpg" />
     <Content Include="Content\img\check.png" />
+    <Content Include="Content\img\credit-loko.jpg" />
     <Content Include="Content\img\design.jpg" />
     <Content Include="Content\img\green.jpg" />
     <Content Include="Content\img\index_logo.jpg" />
@@ -430,6 +431,7 @@
     <Content Include="Views\Shared\_ProjectGalleryPartial.cshtml" />
     <Content Include="Views\Shared\ShowTour.cshtml" />
     <Content Include="Views\Shared\_CatalogPartial.cshtml" />
+    <Content Include="Views\Home\Credit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
