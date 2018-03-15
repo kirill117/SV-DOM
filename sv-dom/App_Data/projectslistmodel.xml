@@ -7,7 +7,6 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
       </Matherials>
       <Area>156</Area>
       <Size>13x9</Size>
@@ -30,8 +29,7 @@
       <Name>СВ</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>243</Area>
       <Size>15x13,5</Size>
@@ -50,8 +48,7 @@
       <Name>Вятич</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials> 
       <Area>188</Area>
       <Size>11,1x13</Size>
@@ -87,8 +84,7 @@
       <Name>Канон</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials>
       <Area>156</Area>
       <Size>9,9x10,5</Size>
@@ -106,8 +102,7 @@
       <Name>Уют</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials>
       <Area>126</Area>
       <Size>7,7x9,7</Size>
@@ -126,8 +121,7 @@
       <Name>Сенеж</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>184</Area>
       <Size>12x11,4</Size>
@@ -145,8 +139,7 @@
       <Name>Виктория</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials>
       <Area>155</Area>
       <Size>10,0x10,4</Size>
@@ -165,8 +158,7 @@
       <Name>Пригорок</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>      
       </Matherials>
       <Area>95</Area>
       <Size>8,8x8,8</Size>
@@ -185,8 +177,7 @@
       <Name>Каприз</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials> 
       <Area>245</Area>
       <Size>15x13,5</Size>
@@ -204,8 +195,7 @@
       <Name>Покров</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials> 
       <Area>200</Area>
       <Size>16,2x10</Size>
@@ -692,8 +682,7 @@
       <Name>Весна</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>206</Area>
       <Size>10,8x14,3</Size>
@@ -711,8 +700,7 @@
       <Name>Маяк</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>2</Matherial>       
       </Matherials> 
       <Area>271</Area>
       <Size>12,5x17,6</Size>
@@ -730,8 +718,7 @@
       <Name>Барса</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>178</Area>
       <Size>13,9x12,9</Size>
@@ -749,8 +736,7 @@
       <Name>Бэлла</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>245</Area>
       <Size>11,6x16,4</Size>
@@ -768,8 +754,7 @@
       <Name>Ника</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>178</Area>
       <Size>11,5x11,4</Size>
@@ -788,8 +773,7 @@
       <Name>Заря</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials> 
       <Area>160</Area>
       <Size>11,3x12,2</Size>
@@ -809,7 +793,6 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
       </Matherials> 
       <Area>167</Area>
       <Size>11,9x18,2</Size>
@@ -828,8 +811,7 @@
       <Name>Хантер</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials> 
       <Area>215</Area>
       <Size>16,1x16,2</Size>
@@ -847,8 +829,7 @@
       <Name>Прима</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials>
       <Area>284</Area>
       <Size>14,5x18,0</Size>
@@ -866,8 +847,7 @@
       <Name>Робур</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>2</Matherial>       
       </Matherials>
       <Area>124</Area>
       <Size>11,2x11,8</Size>
@@ -883,10 +863,9 @@
       <Id>47</Id>
       <Key>tauer</Key>
       <Name>Тауэр</Name>
-      <Type>1</Type>
+      <Type>5</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>       
       </Matherials>
       <Area>446</Area>
       <Size>14,5x16,7</Size>
@@ -904,8 +883,7 @@
       <Name>Михайлов</Name>
       <Type>1</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>2</Matherial>       
       </Matherials>
       <Area>246</Area>
       <Size>13,1x20,1</Size>
@@ -921,10 +899,9 @@
       <Id>49</Id>
       <Key>shell</Key>
       <Name>Шелл</Name>
-      <Type>1</Type>
+      <Type>5</Type>
       <Matherials>
-        <Matherial>1</Matherial>
-        <Matherial>2</Matherial>
+        <Matherial>1</Matherial>        
       </Matherials>
       <Area>357</Area>
       <Size>14x10</Size>
@@ -940,7 +917,7 @@
       <Id>50</Id>
       <Key>yamal</Key>
       <Name>Ямал</Name>
-      <Type>1</Type>
+      <Type>5</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>
@@ -967,6 +944,42 @@
       <RoomCount>5</RoomCount>
       <WcCount>2</WcCount>
       <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>52</Id>
+      <Key>razdory</Key>
+      <Name>Раздоры</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>345</Area>
+      <Size>15,8x15,7</Size>
+      <RoomCount>5</RoomCount>
+      <WcCount>4</WcCount>
+      <FloorsCount>2</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
+    <ProjectModel>
+      <Id>53</Id>
+      <Key>penza</Key>
+      <Name>Пенза</Name>
+      <Type>1</Type>
+      <Matherials>
+        <Matherial>2</Matherial>
+      </Matherials>
+      <Area>615</Area>
+      <Size>27,9x28</Size>
+      <RoomCount>11</RoomCount>
+      <WcCount>4</WcCount>
+      <FloorsCount>1</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>

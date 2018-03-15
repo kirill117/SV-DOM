@@ -25,17 +25,17 @@ namespace Helpers
 
         public static List<ProjectModel> Filter(this List<ProjectModel> list, ProjectFilterModel filter)
         {
-            list.ForEach(x =>
-            {
-                if (filter.Matherial2 && new int[] { 37, 46, 48, 51 }.Contains(x.Id))
-                {
-                    x.Index = -1;
-                }
-                else
-                {
-                    x.Index = 0;
-                }
-            });
+            //list.ForEach(x =>
+            //{
+            //    if (filter.Matherial2 && new int[] { 37, 46, 48, 51 }.Contains(x.Id))
+            //    {
+            //        x.Index = -1;
+            //    }
+            //    else
+            //    {
+            //        x.Index = 0;
+            //    }
+            //});
             return list.Where(s => FilteredProject(s, filter)).OrderBy(x => x.Index).ToList();
         }
 
