@@ -226,6 +226,12 @@
     <Content Include="Content\img\catalog\house_4.jpg" />
     <Content Include="Content\img\catalog\house_5.jpg" />
     <Content Include="Content\img\catalog\house_6.jpg" />
+    <Content Include="Content\img\certificates\001.JPG" />
+    <Content Include="Content\img\certificates\002.JPG" />
+    <Content Include="Content\img\certificates\003.JPG" />
+    <Content Include="Content\img\certificates\004.JPG" />
+    <Content Include="Content\img\certificates\005.jpg" />
+    <Content Include="Content\img\certificates\006.jpg" />
     <Content Include="Content\img\check.png" />
     <Content Include="Content\img\credit-loko.jpg" />
     <Content Include="Content\img\design.jpg" />
