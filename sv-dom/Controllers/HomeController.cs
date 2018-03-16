@@ -142,7 +142,7 @@ namespace sv_dom.Controllers
             var serverfilepath = Server.MapPath(filename);
             new WebImage(serverfilepath)
                 .Resize(width, height, false, true) 
-                .AddTextWatermark("SV-DOM.RU", verticalAlign: "Top", opacity: 30)
+                //.AddTextWatermark("SV-DOM.RU", verticalAlign: "Top", opacity: 30)
                 .Crop(1, 1) 
                 .Write();
         }

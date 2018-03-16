@@ -177,7 +177,7 @@
             {
                 item.Width = 460;
                 item.Height = 340;
-                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", item)
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<Models.SampleImageModel, string>(item,"planing"))
             }
         </div>
         <div class="clear"></div>

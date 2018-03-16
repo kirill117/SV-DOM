@@ -78,6 +78,7 @@ ul {
         margin-right:12px;
         font-size:15px;
         line-height:50px;
+        white-space:nowrap;
     }
 
     .btn-yellow {
@@ -88,6 +89,7 @@ ul {
         margin-right:12px;
         font-size:15px;
         line-height:50px;
+        white-space:nowrap;
     }
 
     .complectation-table tr td {
