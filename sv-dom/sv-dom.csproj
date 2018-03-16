@@ -432,6 +432,7 @@
     <Content Include="Views\Shared\ShowTour.cshtml" />
     <Content Include="Views\Shared\_CatalogPartial.cshtml" />
     <Content Include="Views\Home\Credit.cshtml" />
+    <Content Include="Views\Shared\_SampleImageGroupPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />

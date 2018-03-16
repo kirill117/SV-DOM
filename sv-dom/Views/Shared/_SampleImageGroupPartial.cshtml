@@ -1,0 +1,8 @@
+﻿@model Tuple<Models.SampleImageModel, string>
+
+<div class="image_box arr1">
+    <a href="@Url.Action("GetPhotoThumbnail", new { filename = Model.Item1.Name, width = 800, height = 600 })" data-fancybox="@Model.Item2" data-caption="@Model.Item1.Comment">
+        <img class="sample-image" src="@Url.Action("GetPhotoThumbnail", new { filename = Model.Item1.Name, width = Model.Item1.Width, height = Model.Item1.Height })" alt="@Model.Item1.Comment">
+    </a>
+</div>
+

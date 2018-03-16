@@ -7,7 +7,7 @@
     <meta name="keywords" content="оцилиндрованное бревно,клееный брус,строительство домов,бани,реконструкция домов,проекты коттеджей">
 
     <title>Дома из оцилиндрованного бревна - строительство деревянных домов ПСК СВ-Строй</title>
-    @*@Styles.Render("~/Content/css")*@
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -16,10 +16,13 @@
     <link rel="stylesheet" type="text/css" href="~/content/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/content/css/mobile.css">
 
+    <script type='text/javascript' src='/content/fancybox/jquery.fancybox.min.js'></script>
+    <link rel='stylesheet' href='/content/fancybox/jquery.fancybox.min.css' type='text/css' />
+
     <script>
         $(document).ready(function () {
 
-            $.bindViewer(".sample-image");
+            //$.bindViewer(".sample-image");
 
             $('body').on('click', '.section116 .menu-toogler', function () {
                 $(this).parent().children('.menu1').toggle();

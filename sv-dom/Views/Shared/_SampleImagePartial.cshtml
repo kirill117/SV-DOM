@@ -1,8 +1,4 @@
 ﻿@model Models.SampleImageModel
 
-<div class="image_box arr1">
-    <img class="sample-image" src="@Url.Action("GetPhotoThumbnail", new { filename = Model.Name, width = Model.Width, height = Model.Height })" 
-         src-big="@Url.Action("GetPhotoThumbnail", new { filename = Model.Name, width = 800, height = 600 })" 
-         alt="@Model.Comment">
-</div>
 
+@Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<Models.SampleImageModel, string>(Model, ""))

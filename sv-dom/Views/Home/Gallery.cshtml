@@ -19,7 +19,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(1))
             {
-                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "ocb"))
             }
             <div class="clear"></div>
         </div>
@@ -32,7 +32,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(2))
             {
-                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "brus"))
             }
             <div class="clear"></div>
         </div>
@@ -45,7 +45,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(3))
             {
-                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "interier"))
             }
             <div class="clear"></div>
         </div>
@@ -58,7 +58,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(4))
             {
-                @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = item.Name, Comment = item.Comment })
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "smallForms"))
             }
             <div class="clear"></div>
         </div>

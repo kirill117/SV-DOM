@@ -150,15 +150,15 @@
             <a href="~/ShowTour/?projectid=2" target="_blank" class="btn btn-primary btn-yellow">Видеотур дом «СВ» и баня «Терма»</a>
         </div>
         <div class="images project_samples">
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/1.jpg", Comment = MainHelper.GetProjectComment(1, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/2.jpg", Comment = MainHelper.GetProjectComment(2, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/3.jpg", Comment = MainHelper.GetProjectComment(3, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/4.jpg", Comment = MainHelper.GetProjectComment(4, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/5.jpg", Comment = MainHelper.GetProjectComment(5, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/6.jpg", Comment = MainHelper.GetProjectComment(6, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/7.jpg", Comment = MainHelper.GetProjectComment(7, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/8.jpg", Comment = MainHelper.GetProjectComment(8, ProjectCommentType.Sample) })
-            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/Content/img/gallery/0/9.jpg", Comment = MainHelper.GetProjectComment(11, ProjectCommentType.Sample) })
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/1.jpg", Comment = "Дом из оцилиндрованного бревна «Крепыш»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/2.jpg", Comment = "Дом из оцилиндрованного бревна «СВ»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/3.jpg", Comment = "Дом из оцилиндрованного бревна" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/4.jpg", Comment = "Баня из оцилиндрованного бревна «Путинка»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/5.jpg", Comment = "Дом из оцилиндрованного бревна" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/6.jpg", Comment = "Баня из оцилиндрованного бревна «Терма»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/7.jpg", Comment = "Дом из клееного бруса «Максим»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/8.jpg", Comment = "СПА-комплекс из клееного бруса «Пенза»" }, "samples"))
+            @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = "/Content/img/gallery/0/9.jpg", Comment = "Дом из клееного бруса «Раздоры»" }, "samples"))
             <div class="clear"></div>
         </div>
     </div>
