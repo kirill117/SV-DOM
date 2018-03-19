@@ -28,6 +28,14 @@ namespace sv_dom.Controllers
             //c.Prices.Add(new PriceModel() { ProjectID = 1 });
             //XMLHelper.Save(c);
 
+            //экспорт списка проектов
+            //var sb = new StringBuilder();
+            //foreach (var item in MainHelper._projects.Projects.OrderBy(s => s.Id))
+            //{
+            //    sb.AppendLine($"{item.Id} {item.Name}");
+            //}
+            //System.IO.File.WriteAllText("d:\\projects.txt", sb.ToString());
+
             return View();
         }
 
