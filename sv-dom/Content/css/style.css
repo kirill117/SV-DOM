@@ -37,6 +37,12 @@ ul {
             cursor:pointer;
     }
 
+.slider-wrapper {
+    float:left;
+    width:640px;
+    max-width:640px;
+}
+
 .title-gallery {
     padding: 10px;
     background: rgba(200,200,200,0.3);

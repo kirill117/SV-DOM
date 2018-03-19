@@ -525,6 +525,12 @@
     .section155 .sub_title, .section155 .sub_title span {
     font-size: 24px !important;
 }
+
+.slider-wrapper {
+    width:auto;
+    margin-bottom:5px;
+}
+
     
 .section .title, .section .title span{
     font-size: 24px !important;
@@ -534,7 +540,7 @@
 .section154 .title, .section154 .title span,
 .section156 .title, .section156 .title span,
 .section153 .title, .section153 .title span{
-    font-size: 28px !important;
+    font-size: 18px !important;
 }
 .section .sub_title, .section .sub_title span {
     font-size: 14px !important;
@@ -544,7 +550,7 @@
 .section154 .sub_title, .section154 .sub_title span,
 .section156 .sub_title, .section156 .sub_title span,
 .section153 .sub_title, .section153 .sub_title span   {
-    font-size: 18px !important;
+    font-size: 14px !important;
 }
     .section .btn_descr, .section .btn_descr span {
     font-size: 14px !important;
@@ -2725,7 +2731,7 @@
     
     
     .section128 .image1, .section128 .image2, .section128 .image3{
-        width: 200px;
+        width: 250px;
         text-align: center;
     }
     
