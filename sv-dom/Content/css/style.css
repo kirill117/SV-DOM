@@ -43,6 +43,11 @@ ul {
     max-width:640px;
 }
 
+.map_wrapper {
+    float:left;
+    margin-right:50px;
+}
+
 .title-gallery {
     padding: 10px;
     background: rgba(200,200,200,0.3);
