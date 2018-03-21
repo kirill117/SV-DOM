@@ -11,6 +11,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
 
+    @*<link rel="stylesheet" type="text/css" href="~/content/css/jquery-ui.css">*@
     <link rel="stylesheet" type="text/css" href="~/content/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="~/content/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="~/content/css/style.css">
@@ -21,8 +22,6 @@
 
     <script>
         $(document).ready(function () {
-
-            //$.bindViewer(".sample-image");
 
             $('body').on('click', '.section116 .menu-toogler', function () {
                 $(this).parent().children('.menu1').toggle();

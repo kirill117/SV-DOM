@@ -179,6 +179,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PlanningModel.cs" />
     <Compile Include="Models\PriceListModel.cs" />
     <Compile Include="Models\PriceModel.cs" />
     <Compile Include="Models\ProjectFilterModel.cs" />
@@ -201,6 +202,20 @@
     <Content Include="Content\css\carusel\jquery.carousel-3d.default.css" />
     <Content Include="Content\css\css.css" />
     <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\css\mobile.css" />
     <Content Include="Content\css\nivo\arrows.png" />
     <Content Include="Content\css\nivo\bullets.png" />
@@ -379,6 +394,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -439,6 +455,7 @@
     <Content Include="Views\Shared\_CatalogPartial.cshtml" />
     <Content Include="Views\Home\Credit.cshtml" />
     <Content Include="Views\Shared\_SampleImageGroupPartial.cshtml" />
+    <Content Include="Views\Shared\_PlanningImageGroupPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />

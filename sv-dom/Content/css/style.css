@@ -54,23 +54,23 @@ ul {
     margin-bottom:5px !important;
 }
 
-    /*#gellery-wrapper .ui-dialog-titlebar-close {
-        display: none;
-    }
+#planning-tabs li {
+    float:left;
+    padding-right:20px;
+    list-style-type: none;
+    font-size:18px;
+    border:none;
+    outline:none !important;
+}
 
-    #gallery-wrapper {
-        background: rgba(0,0,0,0.9);
-        z-index:108;
-        position:fixed;
-        padding-top: 0px;
-        padding-bottom:20px;
-    }
+a{
+    border:none;
+    outline:none !important;
+}
 
-    #gallery-wrapper h2 {
-        color: #fff;
-        margin:15px;
-        font-size:32px;
-    }*/
+#planning-tabs .ui-tabs-active a {
+    color: #b68600;
+}
 
     .line-top {
         padding-bottom:20px;

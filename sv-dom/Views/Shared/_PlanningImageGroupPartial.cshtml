@@ -1,0 +1,14 @@
+﻿@using Models
+
+@model IEnumerable<SampleImageModel>
+
+<div class="images">
+    @foreach (var item in Model)
+            {
+                item.Width = 460;
+                item.Height = 340;
+        @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(item, "planing"))
+    }
+</div>
+
+

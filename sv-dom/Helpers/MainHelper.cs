@@ -163,9 +163,9 @@ namespace Helpers
             return path;
         }
 
-        public static SampleImageModel[] GetProjectPlanings(int projectId)
+        public static PlanningModel[] GetProjectPlanings(int projectId)
         {
-            var list = new List<SampleImageModel>();
+            var list = new List<PlanningModel>();
             var basePath = $"/Images/{projectId}/Planing";
 
             var localPath = HttpContext.Current.Server.MapPath(basePath);
@@ -173,10 +173,28 @@ namespace Helpers
             if (Directory.Exists(localPath))
             {
                 var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
-                foreach(var file in files)
+                var model = new PlanningModel() { Name = "Вариант #1" };
+                foreach (var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
-                    list.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Planning) });
+                    model.Images.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Planning) });
+                }
+                list.Add(model);
+
+                var i = 2;
+                var subDirs = Directory.GetDirectories(localPath);
+                foreach(var dir in subDirs)
+                {
+                    var subfiles = Directory.GetFiles(dir, "*.jpg", SearchOption.TopDirectoryOnly);
+                    var submodel = new PlanningModel() { Name = "Вариант #" + i };
+                    foreach (var file in subfiles)
+                    {
+                        var path = basePath + "/" + Path.GetFileName(dir) + "/" + Path.GetFileName(file);
+                        submodel.Images.Add(new SampleImageModel() { Name = path, Comment = GetProjectComment(projectId, ProjectCommentType.Planning) });
+                    }
+                    list.Add(submodel);
+
+                    i++;
                 }
             }
 

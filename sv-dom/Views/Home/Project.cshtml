@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
     var samplesList = MainHelper.GetProjectSamples(Model.Id);
     var tourLink = MainHelper.GetProject3DTourLink(Model.Id);
+    var plannings = MainHelper.GetProjectPlanings(Model.Id);
 }
 
 
@@ -39,23 +40,12 @@
             changeCompl($(this).val());
         });
 
-        //$('.btn-gallery').on('click', function(e) {
-        //    e.preventDefault();
-        //    var dialog = $('#gallery-wrapper').dialog();
-            
-
-        //    var maxWidth = $(window).width()*0.8;
-        //    var maxHeight = $(window).height()*0.8;
-        //    $('#gallery-wrapper').css('width', maxWidth);
-        //    $('#gallery-wrapper').css('left', ($(window).width() - maxWidth)/2);
-        //    $('#gallery-wrapper').css('height', maxHeight);
-        //    $('#gallery-wrapper').css('top', ($(window).height() - maxHeight)/2);
-        //});
-
-        //$('#gallery-wrapper').on('click', '#img_zoomer_close',function() {
-        //    $('#gallery-wrapper').dialog('close');
-        //});
-
+        @if(plannings.Count() > 1)
+        {
+            <text>
+        $("#planning-tabs").tabs();
+            </text>
+        }
     });
 
     function changeCompl(comp) {
@@ -167,23 +157,45 @@
     </div>
 </div>
 
-<div class="hide_line section img_zoom" style="background-color:#FFFFFF;" data-id="49555" id="b_49555">
+@if (plannings.Any())
+{
+<div class="hide_line section img_zoom">
     <a name="plan"></a>
     <div class="section_inner">
         <div class="title">Планировки<br></div>
         <div class="sub_title"></div>
-        <div class="images">
-            @foreach (var item in MainHelper.GetProjectPlanings(Model.Id))
-            {
-                item.Width = 460;
-                item.Height = 340;
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<Models.SampleImageModel, string>(item,"planing"))
-            }
-        </div>
+        @if (plannings.Count() > 1)
+        {
+            var i = 1;
+            <div id="planning-tabs">
+                <ul>
+                    @foreach (var item in plannings)
+                    {
+                        <li><a href="#planning-tab-@i">@item.Name</a></li>
+                        i++;
+                    }
+                </ul>
+                <div class="clear line-top"></div>
+                @{
+                    i = 1;
+                }
+                @foreach (var item in plannings)
+                {
+                <div id="planning-tab-@i">
+                    @Html.Partial("~/Views/Shared/_PlanningImageGroupPartial.cshtml", item.Images)
+                </div>
+                    i++;
+                }
+            </div>
+        }
+        else
+        {
+            @Html.Partial("~/Views/Shared/_PlanningImageGroupPartial.cshtml", plannings.First().Images)
+        }
         <div class="clear"></div>
     </div>
 </div>
-
+}
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div id="complectation" class="title">Комплектация</div>
