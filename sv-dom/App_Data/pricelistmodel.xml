@@ -32,7 +32,7 @@
     
     <PriceModel ProjectID="11" MatherialID="1" ConfigurationID="1" Cost="1499000" />
     
-    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="1" Cost="926000" />
+    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="1" Cost="985000" />
     <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="2" Cost="1391000" />
     <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="3" Cost="1713000" />
 
