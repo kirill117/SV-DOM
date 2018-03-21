@@ -540,6 +540,12 @@
     width:100%;
     height:auto;
 }
+
+.phone1 {
+    border-bottom: dashed 1px;
+    width: max-content !important;
+    margin: auto;
+}
     
 .section .title, .section .title span{
     font-size: 24px !important;
