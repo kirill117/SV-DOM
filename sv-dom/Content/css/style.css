@@ -9613,8 +9613,8 @@ body.editor_true .section157 .form_wrapper.replace_form_html{
 }
 .section126 .image1,
 .section126 .video1{
-    width: 450px;
-    height: 350px;
+    height: auto;
+    max-width:450px;
 }
 .section126 .image1.size_350x250,
 .section126 .video1.size_350x250{
