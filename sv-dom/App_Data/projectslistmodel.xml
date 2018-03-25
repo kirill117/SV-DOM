@@ -399,23 +399,23 @@
       </Description>
     </ProjectModel>
     <ProjectModel>
-      <Id>19</Id>
-      <Key>pogrebok</Key>
-      <Name>Погребок</Name>
+      <Id>32</Id>
+      <Key>vera</Key>
+      <Name>Вера</Name>
       <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
       </Matherials>
-      <Area>79</Area>
-      <Size>7,0x8,5</Size>
-      <RoomCount>2</RoomCount>
+      <Area>84</Area>
+      <Size>5,7x7,2</Size>
+      <RoomCount>1</RoomCount>
       <WcCount>1</WcCount>
       <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
-        Классическая баня с мансардным этажом.
-        Оптимальны размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
+        Отличная баня с мансардным этажом и балконом.
+        Небольшие размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
       </Description>
     </ProjectModel>
     <ProjectModel>
@@ -603,23 +603,23 @@
       </Description>
     </ProjectModel>
     <ProjectModel>
-      <Id>32</Id>
-      <Key>vera</Key>
-      <Name>Вера</Name>
+      <Id>19</Id>
+      <Key>pogrebok</Key>
+      <Name>Погребок</Name>
       <Type>4</Type>
       <Matherials>
         <Matherial>1</Matherial>
-      </Matherials>      
-      <Area>84</Area>
-      <Size>5,7x7,2</Size>
-      <RoomCount>1</RoomCount>
+      </Matherials>
+      <Area>79</Area>
+      <Size>7,0x8,5</Size>
+      <RoomCount>2</RoomCount>
       <WcCount>1</WcCount>
       <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
-        Отличная баня с мансардным этажом и балконом.
-        Небольшие размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
+        Классическая баня с мансардным этажом.
+        Оптимальны размеры, тщательно продуманная планировка, идеальное соотношение строительных объёмов и площади – делают эту баню хитом продаж.
       </Description>
     </ProjectModel>
     <ProjectModel>
@@ -634,7 +634,7 @@
       <Size>13,7x18,3</Size>
       <RoomCount>3</RoomCount>
       <WcCount>1</WcCount>
-      <FloorsCount>1</FloorsCount>
+      <FloorsCount>2</FloorsCount>
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
