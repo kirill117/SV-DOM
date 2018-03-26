@@ -1,4 +1,5 @@
 ﻿@using Helpers
+@using Models
 @model Models.ProjectModel
 
 @{
@@ -17,7 +18,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        changeCompl(1);
+        $('.matSel[value="@((int)Model.Matherials.First())"]').attr('checked',true);
+        changePrice(@((int)Model.Matherials.First()), 1);
 
         $('#slider').nivoSlider({
             directionNav: true,
@@ -31,14 +33,11 @@
         });
 
         $('.complSel').click(function () {
-            $('.complSel1').attr("checked",false);
-            $('.complSel2').attr("checked",false);
-            $('.complSel3').attr("checked",false);
             changePrice($('body').find('.matSel:checked').val(), $(this).val());
         });
 
         $('.complTbl').on('click', function() {
-            changeCompl($(this).val());
+            changePrice($('body').find('.matSel:checked').val(), $(this).val());
         });
 
         @if(plannings.Count() > 1)
@@ -51,6 +50,14 @@
 
     function changeCompl(comp) {
         var colIndex = comp;
+
+        $('.complSel[value="'+comp+'"]').attr('checked', true);
+
+        var mat = $('body').find('.matSel:checked').val();
+        $('.tblCompl1').hide();
+        $('.tblCompl2').hide();
+        $('.tblCompl'+mat).show();
+        
         $('.complectation-table tbody tr').find('td').css("background-color","white");
         $('.complectation-table tbody tr').each(function(){
             $('td:eq(' + colIndex + ')', this).css("background-color","aliceblue");
@@ -59,7 +66,7 @@
 
     function changePrice(mat, comp) {
         var val = 'Цена по запросу';
-        $('.complSel'+comp).click();
+        changeCompl(comp);
         $.ajax({
             type: 'POST',
             url: '/GetProjectCost',
@@ -107,14 +114,14 @@
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Метериал стен</span></div>
                 <div class="txt1" style="text-align:justify;font-size:16px;">
-                    <input type="radio" class="matSel" id="brevno" name="material" value="1" checked>
+                    <input type="radio" class="matSel" id="brevno" name="material" value="1">
                     <label for="brevno">Оцилиндрованное бревно</label>
                     <br />
-                    <input type="radio" class="matSel" id="profbrus" name="material" value="2">
-                    <label for="profbrus">Профилированный брус</label>
-                    <br />
-                    <input type="radio" class="matSel" id="brus" name="material" value="3">
+                    <input type="radio" class="matSel" id="brus" name="material" value="2">
                     <label for="brus">Клееный брус</label>
+                    <br />
+                    <input type="radio" class="matSel" id="profbrus" name="material" value="3">
+                    <label for="profbrus">Профилированный брус</label>
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Комплектация</span></div>
                 <div class="txt1" style="text-align:justify;font-size:16px;">
@@ -207,16 +214,19 @@
                     <tr class="project-compl-header">
                         <td class="" style="min-width:130px;">Комплектация</td>
                         <td class="title1" style="width:30%;">
-                            <input type="radio" class="complTbl complSel1" id="base1" name="compl1" value="1" checked>
-                            <label for="base1">Базовая</label>
+                            @*<input type="radio" class="complTbl complSel1" id="base1" name="compl1" value="1" checked>
+                            <label for="base1">Базовая</label>*@
+                            Базовая
                         </td>
                         <td class="title1" style="width:30%;">
-                            <input type="radio" class="complTbl complSel2" id="mid1" name="compl1" value="2">
-                            <label for="mid1">Стандарт</label>
+                            @*<input type="radio" class="complTbl complSel2" id="mid1" name="compl1" value="2">
+                            <label for="mid1">Стандарт</label>*@
+                            Стандарт
                         </td>
                         <td class="title1" style="width:30%;">
-                            <input type="radio" class="complTbl complSel3" id="high1" name="compl1" value="3">
-                            <label for="high1">Премиум</label>
+                            @*<input type="radio" class="complTbl complSel3" id="high1" name="compl1" value="3">
+                            <label for="high1">Премиум</label>*@
+                            Премиум
                         </td>
                     </tr>
                 </thead>
@@ -248,7 +258,7 @@
                     <tr>
                         <td class="title1">Стены</td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
                                 <li>
                                     оцилиндрованное бревно Ø@(dd) см (сосна-ель) естественной влажности<br />
                                 </li>
@@ -256,24 +266,72 @@
                                     сборка на сухие березовые нагеля с прокладкой льноволокна
                                 </li>
                             </ul>
-                        </td>
-                        <td>
-                            <ul>
+                            <ul class="tblCompl2" style="display:none;">
                                 <li>
-                                    оцилиндрованное бревно Ø@(dd+2) см (сосна-ель) естественной влажности<br />
+                                    брус клееный 185(h)х160 мм (сосна или ель)<br />
                                 </li>
                                 <li>
-                                    сборка на сухие березовые нагеля с прокладкой синтетического материала
+                                    сборка на шпилечную систему Ø 16 мм
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                </li>
+                                <li>
+                                    сборка на сухие березовые нагеля с прокладкой льноволокна
                                 </li>
                             </ul>
                         </td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
+                                <li>
+                                    оцилиндрованное бревно Ø@(dd+2) см (сосна-ель) естественной влажности<br />
+                                </li>
+                                <li>
+                                    сборка на сухие березовые нагеля с прокладкой льноволокна
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 185(h)х202 мм (сосна или ель)<br />
+                                </li>
+                                <li>
+                                    сборка на шпилечную систему Ø 16 мм
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                </li>
+                                <li>
+                                    сборка на сухие березовые нагеля с прокладкой льноволокна
+                                </li>
+                            </ul>                        
+                        </td>
+                        <td>
+                            <ul class="tblCompl1">
                                 <li>
                                     оцилиндрованное бревно Ø@(dd+4) см (сосна-ель) естественной влажности<br />
                                 </li>
                                 <li>
-                                    сборка на сухие березовые нагеля с прокладкой синтетического материала
+                                    сборка на сухие березовые нагеля с прокладкой льноволокна
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 240(h)х202 мм (сосна или ель)<br />
+                                </li>
+                                <li>
+                                    сборка на шпилечную систему Ø 16 мм
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                </li>
+                                <li>
+                                    сборка на сухие березовые нагеля с прокладкой льноволокна
                                 </li>
                             </ul>
                         </td>
@@ -305,23 +363,53 @@
                     <tr>
                         <td class="title1">Межкомнатные перегородки 1-го этажа</td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
                                 <li>
-                                    оцилиндрованное бревно Ø@(dd) см
+                                    оцилиндрованное бревно Ø@(dd) см (сосна-ель) естественной влажности<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 185(h)х160 мм (сосна или ель)<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
                                 </li>
                             </ul>
                         </td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
                                 <li>
-                                    оцилиндрованное бревно Ø@(dd+2) см
+                                    оцилиндрованное бревно Ø@(dd + 2) см (сосна-ель) естественной влажности<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 185(h)х202 мм (сосна или ель)<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
                                 </li>
                             </ul>
                         </td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
                                 <li>
-                                    оцилиндрованное бревно Ø@(dd+4) см
+                                    оцилиндрованное бревно Ø@(dd + 4) см (сосна-ель) естественной влажности<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 240(h)х202 мм (сосна или ель)<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
                                 </li>
                             </ul>
                         </td>
@@ -353,23 +441,53 @@
                     <tr>
                         <td class="title1">Межкомнатные перегородки 2-го этажа</td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
+                                <li>
+                                    не устанавливаются
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 185(h)х160 мм (сосна или ель)
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
                                 <li>
                                     не устанавливаются
                                 </li>
                             </ul>
                         </td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
+                                <li>
+                                    каркас из доски 50х100 мм
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 185(h)х202 мм (сосна или ель)<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
                                 <li>
                                     каркас из доски 50х100 мм
                                 </li>
                             </ul>
                         </td>
                         <td>
-                            <ul>
+                            <ul class="tblCompl1">
                                 <li>
-                                    оцилиндрованное бревно Ø@(dd+4) см
+                                    оцилиндрованное бревно Ø@(dd + 4) см (сосна-ель) естественной влажности
+                                </li>
+                            </ul>
+                            <ul class="tblCompl2" style="display:none;">
+                                <li>
+                                    брус клееный 240(h)х202 мм (сосна или ель)<br />
+                                </li>
+                            </ul>
+                            <ul class="tblCompl3" style="display:none;">
+                                <li>
+                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности
                                 </li>
                             </ul>
                         </td>
