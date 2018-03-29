@@ -8,6 +8,9 @@
     var tourLink = MainHelper.GetProject3DTourLink(Model.Id);
     var plannings = MainHelper.GetProjectPlanings(Model.Id);
     var dd = Model.Type == 4 ? 20 : 22;
+    var matherial = (int)Model.Matherials.First();
+    matherial = matherial == 4 ? 1 : matherial;
+
 }
 
 
@@ -18,8 +21,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        $('.matSel[value="@((int)Model.Matherials.First())"]').attr('checked',true);
-        changePrice(@((int)Model.Matherials.First()), 1);
+        $('.matSel[value="@(matherial)"]').attr('checked',true);
+        changePrice(@(matherial), 1);
 
         $('#slider').nivoSlider({
             directionNav: true,
@@ -414,6 +417,8 @@
                             </ul>
                         </td>
                     </tr>
+                    @if (Model.FloorsCount > 1)
+                    {
                     <tr>
                         <td class="title1">Перекрытия 2-го этажа</td>
                         <td>
@@ -492,6 +497,7 @@
                             </ul>
                         </td>
                     </tr>
+                    }
                     <tr>
                         <td class="title1">Крыша</td>
                         <td>
