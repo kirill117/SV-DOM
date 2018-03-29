@@ -11,7 +11,7 @@
             <li style="text-align:left"><p>Размеры:&nbsp;<strong>@Model.Size&nbsp;м</strong></p></li>
         </ul>
     </div>
-    <div class="price1"><span style="font-size:22px;">@MainHelper.FormatPrice(MainHelper.GetProjectMinCost(Model.Id))</span></div>
+    <div class="price1"><span style="font-size:22px;">@MainHelper.FormatPrice(MainHelper.GetProjectCost(Model.Id, (int)Model.Matherials.First(), 1))</span></div>
     <div class="btn1 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
 </div>
 
