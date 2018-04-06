@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Models
+
+@{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
 }
 
@@ -19,8 +21,10 @@
                 или воспользоваться <a class="btn_recall">формой обратной связи</a>
             </p>
         </div>
-        <div class="arr1">
-            <img style="width:100%;" src="~/content/img/s-berega.jpg" />
+        <div class="images">
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/s-berega.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/s-berega1.jpg" })
+            @Html.Partial("~/Views/Shared/_SampleImagePartial.cshtml", new SampleImageModel() { Name = "/content/img/s-berega2.jpg" })
         </div>
     </div>
 </div>
