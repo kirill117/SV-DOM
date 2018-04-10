@@ -3,6 +3,19 @@
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
 }
 
+<script>
+    $(document).ready(function () {
+
+        $('body').on('click', '.service-cart', function () {
+            var id = $(this).attr('item');
+            if (id && id.length > 0) {
+                window.location.href = "service/" + id;
+            }
+        });
+
+    });
+</script>
+
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div class="title">Наши услуги</div>
@@ -13,10 +26,10 @@
                 <div class="title1"><span style="font-size:18px">Архитектурное проектирование и дизайн</span></div>
                 <div class="btn1 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
             </div>
-            <div class="col_3 proj-cart">
+            <div class="col_3 proj-cart service-cart" item="2">
                 <div class="image2"><img src="/content/img/building.jpg" alt=""></div>
                 <div class="title1"><span style="font-size:18px">Строительство деревянных домов</span></div>
-                <div class="btn2 surround  " style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
+                <div class="btn2 surround" style="background-color:#3F7B16;  border-radius: 1em;">Подробнее</div>
             </div>
             <div class="col_3 last proj-cart">
                 <div class="image2"><img src="/content/img/brevno.jpg" alt=""></div>

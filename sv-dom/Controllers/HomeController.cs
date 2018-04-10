@@ -97,6 +97,20 @@ namespace sv_dom.Controllers
             return View(model);
         }
 
+        public ActionResult Service(int id)
+        {
+            var name = "Services";
+
+            switch(id)
+            {
+                case 2:
+                    name += "\\Construction";
+                    break;
+            }
+
+            return View(name);
+        }
+
         public ActionResult ShowTour(int? projectid)
         {
             return View(projectid);

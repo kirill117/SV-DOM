@@ -457,6 +457,7 @@
     <Content Include="Views\Home\Credit.cshtml" />
     <Content Include="Views\Shared\_SampleImageGroupPartial.cshtml" />
     <Content Include="Views\Shared\_PlanningImageGroupPartial.cshtml" />
+    <Content Include="Views\Home\Services\Construction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
