@@ -103,6 +103,9 @@ namespace sv_dom.Controllers
 
             switch(id)
             {
+                case 1:
+                    name += "\\Architecture";
+                    break;
                 case 2:
                     name += "\\Construction";
                     break;
