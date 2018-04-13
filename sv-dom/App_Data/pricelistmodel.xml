@@ -23,7 +23,7 @@
     <PriceModel ProjectID="40" MatherialID="1" ConfigurationID="1" Cost="2740000" />
     
     <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="1" Cost="2330000" />
-    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="1" Cost="3195000" />
+    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="2" Cost="3194000" />
 
     <PriceModel ProjectID="37" MatherialID="1" ConfigurationID="1" Cost="3099000" />
     <PriceModel ProjectID="8" MatherialID="1" ConfigurationID="1" Cost="2750000" />
