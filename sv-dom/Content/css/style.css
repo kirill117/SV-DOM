@@ -68,6 +68,12 @@ a{
     outline:none !important;
 }
 
+.btn1 a {
+    color:#fff !important;
+    font-size: 17px !important;
+    font-weight:200 !important;
+}
+
 #planning-tabs .ui-tabs-active a {
     color: #b68600;
 }
