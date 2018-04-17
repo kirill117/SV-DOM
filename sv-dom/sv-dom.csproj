@@ -459,6 +459,7 @@
     <Content Include="Views\Shared\_PlanningImageGroupPartial.cshtml" />
     <Content Include="Views\Home\Services\Construction.cshtml" />
     <Content Include="Views\Home\Services\Architecture.cshtml" />
+    <Content Include="Views\Home\Services\Timber.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
