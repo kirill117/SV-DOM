@@ -94,8 +94,8 @@
 
     @if (!HttpContext.Current.Request.Url.Host.Contains("localhost"))
     {
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
@@ -103,7 +103,8 @@
                     id:47921396,
                     clickmap:true,
                     trackLinks:true,
-                    accurateTrackBounce:true
+                    accurateTrackBounce:true,
+                    webvisor:true
                 });
             } catch(e) { }
         });
@@ -119,9 +120,9 @@
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/47921396" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/47921396" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     }
 </head>
 
