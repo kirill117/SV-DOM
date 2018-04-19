@@ -6,7 +6,20 @@
     var topProjects = MainHelper.GetProjectsForMainPage();
 }
 
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/default.css">
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/nivo-slider.css">
+<script src="/content/js/jquery.nivo.slider.js"></script>
+
 <script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').nivoSlider({
+            directionNav: true,
+            directionNavHide: false,
+            controlNav: false,
+            controlNavThumbs: false,
+            pauseTime: 5000
+        });
+    });
 </script>
 
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
@@ -18,7 +31,15 @@
             архитекторами. Ждем Вас!
         </div>
         <div class="arr1 ">
-            <div class="image1 size_450x350"><img style="width:100%;height:100%;" src="/content/img/index_logo.jpg" alt=""></div>
+            <div class="image1 size_450x350">
+                <div class="slider-wrapper" style="max-width:480px;height:100%;">
+                    <div id="slider" class="theme-default nivoSlider">
+                        <a href="project/1"><img src="/Content/img/gallery/main/1.jpg" alt="Дом из оцилиндрованого бревна"></a>
+                        <a href="project/2"><img src="/Content/img/gallery/main/2.jpg" alt="Дом из оцилиндрованого бревна"></a>
+                        <a href="project/20"><img src="/Content/img/gallery/main/20.jpg" alt="Баня из оцилиндрованого бревна"></a>
+                    </div>
+                </div>
+            </div>
             <div class="right size_450x350" style="text-align:center;">
                 <div class="title1"><span style="font-size:18px;">В НАШЕЙ КОМПАНИИ ВЫ МОЖЕТЕ ЗАКАЗАТЬ ДОМА ИЗ ОЦИЛИНДРОВАННОГО БРЕВНА ИЛИ КЛЕНОГО БРУСА ПО ДОСТУПНЫМ ЦЕНАМ</span></div>
                 <div class="txt1" style="text-align:justify;">
@@ -31,37 +52,11 @@
                     Из наиболее крупных работ нашей фирмы такие объекты как база отдыха Выксунского Металлургического Завода,
                     несколько коттеджных посёлков в Подмосковье. <a href="/service/2"> Далее...</a>
                 </div>
-                @*<div class="btn_recall btn1 surround" style="background-color:#3F7B16; border-radius: 1em;margin: 20px auto 0;">Расчет стоимости</div>*@
             </div>
             <div class="clear"></div>
         </div>
     </div>
 </div>
-
-@*@if (topProjects.Any())
-{
-<div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title">Выберите свой дом</div>
-        <div class="sub_title">Ниже представлены цены на строительство самых популярных проектов домов <strong>"под ключ"</strong></div>
-        <div class="arr1">
-            @{int i = 1;}
-            @foreach (var project in topProjects.Take(6))
-            {
-                <div class="col_3 @(i == 3 || i == 6 ? "last" : "")">
-                    @Html.Partial("~/Views/Shared/_ProjectCartPartial.cshtml", project)
-                </div>
-                if (i % 3 == 0)
-                {
-                    <div class="clear"></div>
-                }
-                i++;
-            }
-        </div>
-    </div>
-    <div class="clear"></div>
-</div>
-}*@
 
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
