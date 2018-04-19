@@ -6,7 +6,20 @@
     var topProjects = MainHelper.GetProjectsForMainPage();
 }
 
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/default.css">
+<link rel="stylesheet" type="text/css" href="/content/css/nivo/nivo-slider.css">
+<script src="/content/js/jquery.nivo.slider.js"></script>
+
 <script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').nivoSlider({
+            directionNav: true,
+            directionNavHide: false,
+            controlNav: false,
+            controlNavThumbs: false,
+            pauseTime: 5000
+        });
+    });
 </script>
 
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
@@ -18,7 +31,15 @@
             архитекторами. Ждем Вас!
         </div>
         <div class="arr1 ">
-            <div class="image1 size_450x350"><img style="width:100%;height:100%;" src="/content/img/index_logo.jpg" alt=""></div>
+            <div class="image1 size_450x350">
+                <div class="slider-wrapper" style="max-width:480px;height:100%;">
+                    <div id="slider" class="theme-default nivoSlider">
+                        <a href="project/1"><img src="/Content/img/gallery/main/1.jpg" alt="Дом из оцилиндрованого бревна"></a>
+                        <a href="project/2"><img src="/Content/img/gallery/main/2.jpg" alt="Дом из оцилиндрованого бревна"></a>
+                        <a href="project/20"><img src="/Content/img/gallery/main/20.jpg" alt="Баня из оцилиндрованого бревна"></a>
+                    </div>
+                </div>
+            </div>
             <div class="right size_450x350" style="text-align:center;">
                 <div class="title1"><span style="font-size:18px;">В НАШЕЙ КОМПАНИИ ВЫ МОЖЕТЕ ЗАКАЗАТЬ ДОМА ИЗ ОЦИЛИНДРОВАННОГО БРЕВНА ИЛИ КЛЕНОГО БРУСА ПО ДОСТУПНЫМ ЦЕНАМ</span></div>
                 <div class="txt1" style="text-align:justify;">
@@ -31,37 +52,11 @@
                     Из наиболее крупных работ нашей фирмы такие объекты как база отдыха Выксунского Металлургического Завода,
                     несколько коттеджных посёлков в Подмосковье. <a href="/service/2"> Далее...</a>
                 </div>
-                @*<div class="btn_recall btn1 surround" style="background-color:#3F7B16; border-radius: 1em;margin: 20px auto 0;">Расчет стоимости</div>*@
             </div>
             <div class="clear"></div>
         </div>
     </div>
 </div>
-
-@*@if (topProjects.Any())
-{
-<div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title">Выберите свой дом</div>
-        <div class="sub_title">Ниже представлены цены на строительство самых популярных проектов домов <strong>"под ключ"</strong></div>
-        <div class="arr1">
-            @{int i = 1;}
-            @foreach (var project in topProjects.Take(6))
-            {
-                <div class="col_3 @(i == 3 || i == 6 ? "last" : "")">
-                    @Html.Partial("~/Views/Shared/_ProjectCartPartial.cshtml", project)
-                </div>
-                if (i % 3 == 0)
-                {
-                    <div class="clear"></div>
-                }
-                i++;
-            }
-        </div>
-    </div>
-    <div class="clear"></div>
-</div>
-}*@
 
 <div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
@@ -83,6 +78,7 @@
                 <div class="txt1" style="text-align:justify;">
                     <span style="font-size:16px;">
                         Оцилиндрованное бревно имеет неповторимый колорит. Этот материал естественной влажности,  длина стеновых элементов составляет не более 6 метров. По этим причинам он требует грамотного подхода к проектированию домов из него и соблюдения технологий строительства. С точки зрения комфортного круглогодичного проживания дома из оцилиндрованного бревна ничем не уступают домам из клееного бруса. Современные лакокрасочные материалы и герметики обеспечивают привлекательный внешний вид и долгий срок службы домов из оцилиндрованного бревна.
+                        <a href="/articles/1">Подробнее...</a>
                     </span>
                 </div>
             </div>
@@ -95,6 +91,7 @@
                 <div class="txt1" style="text-align:justify;">
                     <span style="font-size:16px;">
                         Клееный брус это современный технологичный материал. Он имеет влажность 10-12% и длину стеновых и конструктивных элементов до 12 м. Эти его характеристики позволяют реализовывать из данного материала проекты домов со сложной архитектурой, большими жилыми пространствами и большой площадью остекления. Строгий отбор заготовок и их склейка по длине на внешних ламелях обеспечивают однородную привлекательную поверхность стены дома из клееного бруса. Кроме того, клееный брус позволяет построить дом «под ключ» в течение одного строительного сезона.
+                        <a href="/articles/2">Подробнее...</a>
                     </span>
                 </div>
             </div>
@@ -107,6 +104,7 @@
                 <div class="txt1" style="text-align:justify;">
                     <span style="font-size:16px;">
                         Профилированный брус является популярным материалом. Он имеет влажность 18-22% и длину стеновых элементов до 6 м. Поверхность стены дома из профилированного бруса не будет столь привлекательна и однородна как в случае с клееным брусом, да и максимальная длина стеновых элементов будет накладывать ограничения при проектировании. По стоимости строительства это средний вариант между клееным брусом и оцилиндрованным бревном.                    
+                        <a href="/articles/3">Подробнее...</a>
                     </span>
                 </div>
             </div>

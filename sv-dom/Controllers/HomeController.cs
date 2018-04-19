@@ -109,11 +109,33 @@ namespace sv_dom.Controllers
                 case 2:
                     name += "\\Construction";
                     break;
+                case 3:
+                    name += "\\Timber";
+                    break;
             }
 
             return View(name);
         }
 
+        public ActionResult Articles(int id)
+        {
+            var name = "Articles";
+
+            switch (id)
+            {
+                case 1:
+                    name += "\\Timber";
+                    break;
+                case 2:
+                    name += "\\Gluedbeam";
+                    break;
+                case 3:
+                    name += "\\Profiledbeam";
+                    break;
+            }
+
+            return View(name);
+        }
         public ActionResult ShowTour(int? projectid)
         {
             return View(projectid);
