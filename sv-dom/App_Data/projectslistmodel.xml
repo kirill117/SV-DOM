@@ -1003,5 +1003,23 @@
       <Description>
       </Description>
     </ProjectModel>
+    <ProjectModel>
+      <Id>55</Id>
+      <Key>chinahouse</Key>
+      <Name>Чайный домик</Name>
+      <Type>6</Type>
+      <Matherials>
+        <Matherial>1</Matherial>
+      </Matherials>
+      <Area>25</Area>
+      <Size>6x5</Size>
+      <RoomCount>1</RoomCount>
+      <WcCount>0</WcCount>
+      <FloorsCount>1</FloorsCount>
+      <Index>0</Index>
+      <ShowOnMain>false</ShowOnMain>
+      <Description>
+      </Description>
+    </ProjectModel>
   </Projects>
 </ProjectsListModel>
