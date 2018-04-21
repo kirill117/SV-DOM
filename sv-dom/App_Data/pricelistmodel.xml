@@ -2,7 +2,7 @@
   <Prices>
     <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="1" Cost="1414000" />
     <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="2" Cost="1947000" />
-    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="3" Cost="2336000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="3" Cost="2436000" />
 
     <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="1" Cost="2840000" />
     <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="2" Cost="3930000" />
