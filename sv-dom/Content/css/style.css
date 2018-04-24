@@ -204,13 +204,20 @@ a{
             text-align:center;
         }
 
-        .project_description .cost {
+        .project_description .cost-wrapper {
             font-size: 32px !important; 
             line-height: 1;
             text-align: left;
             color: #c8821c;
         }
 
+        .project_description .room-wrapper {
+            font-size: 24px !important; 
+            line-height: 1;
+            text-align: left;
+            color: #587640;
+            font-weight:600;
+        }
         .nivo-controlNav {
             background: #fafafa;
         }
@@ -9567,6 +9574,7 @@ body.editor_true .section157 .form_wrapper.replace_form_html{
 
 .section126 .title1{
     font-weight: bold;
+    color: RGB(80,80,80);
 }
 
 

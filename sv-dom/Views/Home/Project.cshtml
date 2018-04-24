@@ -113,7 +113,7 @@
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Планировка</span></div>
                 <div class="txt1" style="text-align:justify;font-size:18px;">
-                    Комнат - @Model.RoomCount  Санузлов - @Model.WcCount
+                    Комнат - <span class="room-wrapper">@Model.RoomCount</span>  Санузлов - <span class="room-wrapper">@Model.WcCount</span>
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Метериал стен</span></div>
                 <div class="txt1" style="text-align:justify;font-size:16px;">
@@ -138,7 +138,7 @@
                     <label for="high">Премиум</label>
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Цена</span></div>
-                <div class="txt1 cost">
+                <div class="txt1 cost cost-wrapper">
                     @MainHelper.FormatPrice(MainHelper.GetProjectMinCost(Model.Id))
                 </div>
                 <div class="info">
@@ -162,6 +162,10 @@
             @if (!string.IsNullOrEmpty(tourLink))
             { 
             <a href="~/ShowTour/?projectid=@Model.Id" target="_blank" class="btn btn-primary @(samplesList.Count() > 3 ? "btn-green" : "btn-yellow")">Видеотур по дому</a>
+            }
+            @if (new int[] { 1 }.Contains(Model.Id))
+            {
+                <a href="~/Contacts/#showtour" target="_blank" style="background-color:lightcoral;" class="btn btn-primary @(string.IsNullOrEmpty(tourLink) ? "btn-green" : "btn-yellow")">Посмотреть готовый дом</a>
             }
     @*<a href="#" class="btn btn-primary btn-green">Отзывы (3)</a>*@
         </div>
