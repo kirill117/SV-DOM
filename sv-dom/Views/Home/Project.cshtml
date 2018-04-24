@@ -4,6 +4,7 @@
 
 @{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
+
     var samplesList = MainHelper.GetProjectSamples(Model.Id);
     var tourLink = MainHelper.GetProject3DTourLink(Model.Id);
     var plannings = MainHelper.GetProjectPlanings(Model.Id);
@@ -11,6 +12,7 @@
     var matherial = (int)Model.Matherials.First();
     matherial = matherial == 4 ? 1 : matherial;
 
+    ViewBag.Title = "Строительство деревянных домов - " + MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First());
 }
 
 
@@ -109,7 +111,7 @@
             <div class="project_description">
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Площадь</span></div>
                 <div class="txt1" style="text-align:justify;font-size:18px;">
-                    @Model.Area кв.м.
+                    <span class="room-wrapper">@Model.Area</span>&nbsp;м<sup>2</sup>
                 </div>
                 <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Планировка</span></div>
                 <div class="txt1" style="text-align:justify;font-size:18px;">
