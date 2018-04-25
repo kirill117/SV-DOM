@@ -104,7 +104,7 @@
                 <div id="slider" class="theme-default nivoSlider">
                     @foreach (var item in MainHelper.GetProjectGallery(Model.Id))
                     {
-                    <img src="@item.Name" alt="@item.Comment">
+                        <img src="@item.Name" alt="@item.Comment">
                     }
                 </div>
             </div>
@@ -160,14 +160,14 @@
             @if (samplesList.Count() > 3)
             {
             <a href="#" class="btn btn-primary btn-yellow btn-gallery">Фотогалерея</a>
-            }
+                            }
             @if (!string.IsNullOrEmpty(tourLink))
             { 
             <a href="~/ShowTour/?projectid=@Model.Id" target="_blank" class="btn btn-primary @(samplesList.Count() > 3 ? "btn-green" : "btn-yellow")">Видеотур по дому</a>
-            }
+                        }
             @if (new int[] { 1 }.Contains(Model.Id))
             {
-                <a href="~/Contacts/#showtour" target="_blank" style="background-color:lightcoral;" class="btn btn-primary @(string.IsNullOrEmpty(tourLink) ? "btn-green" : "btn-yellow")">Посмотреть готовый дом</a>
+                <a href="~/contacts/#showtour" target="_blank" style="background-color:lightcoral;" class="btn btn-primary @(string.IsNullOrEmpty(tourLink) ? "btn-green" : "btn-yellow")">Посмотреть готовый дом</a>
             }
     @*<a href="#" class="btn btn-primary btn-green">Отзывы (3)</a>*@
         </div>
@@ -213,6 +213,7 @@
     </div>
 </div>
 }
+
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
         <div id="complectation" class="title">Комплектация</div>
