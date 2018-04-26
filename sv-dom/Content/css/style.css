@@ -93,7 +93,8 @@ a{
         padding:12px;
         color:#fff !important;
         font-weight:200 !important;
-        margin-right:12px;
+        margin-left:6px;
+        margin-right:6px;
         font-size:15px;
         line-height:50px;
         white-space:nowrap;
@@ -104,7 +105,8 @@ a{
         padding:12px;
         color:#fff !important;
         font-weight:200 !important;
-        margin-right:12px;
+        margin-left:6px;
+        margin-right:6px;
         font-size:15px;
         line-height:50px;
         white-space:nowrap;
@@ -194,6 +196,11 @@ a{
             background: #fafafa;
             border: 1px solid #dedede;
             width:260px;
+        }
+
+        .project_description .left
+        {
+            margin-right:20px;
         }
 
         .project_description .title1 {

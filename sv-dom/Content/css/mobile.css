@@ -531,6 +531,12 @@
     margin-bottom:5px;
 }
 
+.project_description
+{
+    width:auto;
+    margin:0;
+}
+
 .map_wrapper {
     margin-right: 0px;
     width:100%;

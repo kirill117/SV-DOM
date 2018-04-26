@@ -12,7 +12,7 @@
     var matherial = (int)Model.Matherials.First();
     matherial = matherial == 4 ? 1 : matherial;
 
-    ViewBag.Title = "Строительство деревянных домов - " + MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First());
+    ViewBag.Title = "Строительство деревянных домов ПСК СВ-Строй - " + MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First());
 }
 
 
@@ -109,40 +109,51 @@
                 </div>
             </div>
             <div class="project_description">
-                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Площадь</span></div>
-                <div class="txt1" style="text-align:justify;font-size:18px;">
-                    <span class="room-wrapper">@Model.Area</span>&nbsp;м<sup>2</sup>
+                <div class="left">
+                    <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Площадь</span></div>
+                    <div class="txt1" style="text-align:justify;font-size:18px;">
+                        <span class="room-wrapper">@Model.Area</span>&nbsp;м<sup>2</sup>
+                    </div>
                 </div>
-                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Планировка</span></div>
-                <div class="txt1" style="text-align:justify;font-size:18px;">
-                    Комнат - <span class="room-wrapper">@Model.RoomCount</span>  Санузлов - <span class="room-wrapper">@Model.WcCount</span>
+                <div class="left">
+                    <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Планировка</span></div>
+                    <div class="txt1" style="text-align:justify;font-size:18px;">
+                        Комнат - <span class="room-wrapper">@Model.RoomCount</span>  Санузлов - <span class="room-wrapper">@Model.WcCount</span>
+                    </div>
                 </div>
-                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Метериал стен</span></div>
-                <div class="txt1" style="text-align:justify;font-size:16px;">
-                    <input type="radio" class="matSel" id="brevno" name="material" value="1">
-                    <label for="brevno">Оцилиндрованное бревно</label>
-                    <br />
-                    <input type="radio" class="matSel" id="brus" name="material" value="2">
-                    <label for="brus">Клееный брус</label>
-                    <br />
-                    <input type="radio" class="matSel" id="profbrus" name="material" value="3">
-                    <label for="profbrus">Профилированный брус</label>
+                <div class="left">
+                    <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Метериал стен</span></div>
+                    <div class="txt1" style="text-align:justify;font-size:16px;">
+                        <input type="radio" class="matSel" id="brevno" name="material" value="1">
+                        <label for="brevno">Оцилиндрованное бревно</label>
+                        <br />
+                        <input type="radio" class="matSel" id="brus" name="material" value="2">
+                        <label for="brus">Клееный брус</label>
+                        <br />
+                        <input type="radio" class="matSel" id="profbrus" name="material" value="3">
+                        <label for="profbrus">Профилированный брус</label>
+                    </div>
                 </div>
-                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Комплектация</span></div>
-                <div class="txt1" style="text-align:justify;font-size:16px;">
-                    <input type="radio" class="complSel" id="base" name="compl" value="1" checked>
-                    <label for="base">База</label>
-                    <br />
-                    <input type="radio" class="complSel" id="mid" name="compl" value="2">
-                    <label for="mid">Стандарт</label>
-                    <br />
-                    <input type="radio" class="complSel" id="high" name="compl" value="3">
-                    <label for="high">Премиум</label>
+                <div class="left">
+                    <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Комплектация</span></div>
+                    <div class="txt1" style="text-align:justify;font-size:16px;">
+                        <input type="radio" class="complSel" id="base" name="compl" value="1" checked>
+                        <label for="base">База</label>
+                        <br />
+                        <input type="radio" class="complSel" id="mid" name="compl" value="2">
+                        <label for="mid">Стандарт</label>
+                        <br />
+                        <input type="radio" class="complSel" id="high" name="compl" value="3">
+                        <label for="high">Премиум</label>
+                    </div>
                 </div>
-                <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Цена</span></div>
-                <div class="txt1 cost cost-wrapper">
-                    @MainHelper.FormatPrice(MainHelper.GetProjectMinCost(Model.Id))
+                <div class="left">
+                    <div class="title1" style="font-size:22px;"><span style="font-size:18px;">Цена</span></div>
+                    <div class="txt1 cost cost-wrapper">
+                        @MainHelper.FormatPrice(MainHelper.GetProjectMinCost(Model.Id))
+                    </div>
                 </div>
+                <div class="clear"></div>
                 <div class="info">
                     <a href="#complectation">подробнее</a>
                 </div>
