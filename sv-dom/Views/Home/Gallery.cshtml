@@ -19,7 +19,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(1))
             {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "ocb"))
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Дом из оцилиндрованного бревна" }, "ocb"))
             }
             <div class="clear"></div>
         </div>
@@ -32,7 +32,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(2))
             {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "brus"))
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Дом из клееного бруса" }, "brus"))
             }
             <div class="clear"></div>
         </div>
@@ -45,7 +45,7 @@
         <div class="images project_samples">
             @foreach (var item in MainHelper.GetMainGallery(3))
             {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "interier"))
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Интерьер деревянного дома" }, "interier"))
             }
             <div class="clear"></div>
         </div>
@@ -65,4 +65,12 @@
     </div>
 </div>
 
+<div class="hide_line section section143" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        <div class="title title-gallery">Еще больше фотографий<br></div>
+        <div>
+            <a href="https://www.instagram.com/psk_sv_stroy/" target="_blank"><img style="width:100%" src="~/Content/img/insta.jpg" /></a>
+        </div>
+    </div>
+</div>
 
