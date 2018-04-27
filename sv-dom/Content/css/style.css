@@ -214,10 +214,11 @@ a{
         }
 
         .project_description .cost-wrapper {
-            font-size: 32px !important; 
+            font-size: 30px !important; 
             line-height: 1;
             text-align: left;
             color: #c8821c;
+            white-space:nowrap;
         }
 
         .project_description .room-wrapper {
