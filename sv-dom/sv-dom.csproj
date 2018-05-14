@@ -250,11 +250,6 @@
     <Content Include="Content\img\check.png" />
     <Content Include="Content\img\credit-loko.jpg" />
     <Content Include="Content\img\design.jpg" />
-    <Content Include="Content\img\gallery\99\0.jpg" />
-    <Content Include="Content\img\gallery\99\1.jpg" />
-    <Content Include="Content\img\gallery\99\2.jpg" />
-    <Content Include="Content\img\gallery\99\3.JPG" />
-    <Content Include="Content\img\gallery\99\4.JPG" />
     <Content Include="Content\img\gallery\Main\1.jpg" />
     <Content Include="Content\img\gallery\Main\2.jpg" />
     <Content Include="Content\img\gallery\Main\20.JPG" />

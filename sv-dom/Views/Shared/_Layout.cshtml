@@ -30,6 +30,13 @@
 
             $(".btn_recall").on('click', function (e) {
                 e.preventDefault();
+                var txt = $(this).attr("subcomment");
+                if (txt && txt.length > 0) {
+                    $('.popup_form').find(".input-hidden-comment").val(txt);
+                }
+                else {
+                    $('.popup_form').find(".input-hidden-comment").val('');
+                }
                 $('.popup_form').show();
             });
 
@@ -68,7 +75,8 @@
                         name: frm.find('.input-name').val(),
                         phone: frm.find('.input-phone').val(),
                         email: frm.find('.input-mail').val(),
-                        comment: frm.find('.input-comment').val()
+                        comment: frm.find('.input-comment').val(),
+                        subcomment: frm.find('.input-hidden-comment').val()
                     },
                     success: function (content) {
                         try {
@@ -259,7 +267,7 @@
             <div class="popup_form_close">X</div>
             <div class="popup_form_title"><span style="font-size:20px">Оставьте заявку и наши менеджеры с вами свяжутся</span></div>
                 <div class="form-get-recall">
-                    <input name="Расчет стоимости" value="Расчет стоимости строительства дома" type="hidden" />
+                    <input class="input-hidden-comment" value="" type="hidden" />
                     <div class="field">
                         <div class="field_title">Введите имя</div>
                         <div class="field_description"></div>

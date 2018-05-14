@@ -690,7 +690,7 @@ a.hidden.btn5{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    z-index: 108;
+    z-index: 9998;
     color: #333;
 }
 
@@ -725,7 +725,7 @@ a.hidden.btn5{
     height: 100%;
     background: rgba(0,0,0,0.5);
     
-    z-index: 108;
+    z-index: 9998;
     
     overflow-y: scroll;
 }
