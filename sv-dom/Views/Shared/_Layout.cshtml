@@ -33,9 +33,11 @@
                 var txt = $(this).attr("subcomment");
                 if (txt && txt.length > 0) {
                     $('.popup_form').find(".input-hidden-comment").val(txt);
+                    $('.popup_form').find(".popup_form_title span").text(txt);                   
                 }
                 else {
                     $('.popup_form').find(".input-hidden-comment").val('');
+                    $('.popup_form').find(".popup_form_title span").text('Оставьте заявку и наши менеджеры с Вами свяжутся');
                 }
                 $('.popup_form').show();
             });

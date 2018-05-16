@@ -1,0 +1,21 @@
+<OptionsListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Options>
+    <OptionModel ID="EC73F4A4-DCD2-4D29-88FD-B85987D40FBE" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="-172000">
+      <Name>Дом без фундамента</Name>
+    </OptionModel>
+    <OptionModel ID="13709068-26FE-4587-8D5E-5CC02BDF4568" ProjectID="1" MatherialID="0" ConfigurationID="2" Cost="-378000">
+      <Name>Дом без фундамента</Name>
+    </OptionModel>
+    <OptionModel ID="DE9A2212-79ED-4D45-BD03-D99ACD8A8214" ProjectID="1" MatherialID="0" ConfigurationID="3" Cost="-378000">
+      <Name>Дом без фундамента</Name>
+    </OptionModel>
+    <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="525000">
+      <Name>Покрытие крыши металлочерепицей</Name>
+    </OptionModel>
+    <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="77000">
+      <Name>Устройство черновых полов</Name>
+    </OptionModel>
+    <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="2" Cost="77000">
+      <Name>Устройство черновых полов</Name>
+    </OptionModel>  </Options>
+</OptionsListModel>

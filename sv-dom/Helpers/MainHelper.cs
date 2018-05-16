@@ -13,10 +13,12 @@ namespace Helpers
         Sample,
         Planning
     }
+
     public static class MainHelper
     {
         public static ProjectsListModel _projects = XMLHelper.Get<ProjectsListModel>();
         public static PriceListModel _prices = XMLHelper.Get<PriceListModel>();
+        public static OptionsListModel _options = XMLHelper.Get<OptionsListModel>();
 
         public static List<ProjectModel> GetProjectsForMainPage()
         {
@@ -25,17 +27,6 @@ namespace Helpers
 
         public static List<ProjectModel> Filter(this List<ProjectModel> list, ProjectFilterModel filter)
         {
-            //list.ForEach(x =>
-            //{
-            //    if (filter.Matherial2 && new int[] { 37, 46, 48, 51 }.Contains(x.Id))
-            //    {
-            //        x.Index = -1;
-            //    }
-            //    else
-            //    {
-            //        x.Index = 0;
-            //    }
-            //});
             return list.Where(s => FilteredProject(s, filter)).OrderBy(x => x.Index).ToList();
         }
 

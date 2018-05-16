@@ -180,7 +180,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PlanningModel.cs" />
+    <Compile Include="Models\OptionsListModel.cs" />
     <Compile Include="Models\PriceListModel.cs" />
+    <Compile Include="Models\OptionModel.cs" />
     <Compile Include="Models\PriceModel.cs" />
     <Compile Include="Models\ProjectFilterModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\optionslistmodel.xml" />
     <Content Include="App_Data\pricelistmodel.xml" />
     <Content Include="App_Data\projectslistmodel.xml">
       <SubType>Designer</SubType>
