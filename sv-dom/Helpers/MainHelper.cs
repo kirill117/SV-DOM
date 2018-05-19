@@ -25,6 +25,12 @@ namespace Helpers
             return _projects.Projects.Where(s => s.ShowOnMain).ToList();
         }
 
+        public static List<OptionModel> GetOptionsList(int ProjectID, int MatherialID, int ConfigurationID)
+        {
+            return _options.Options.Where(s => s.ProjectID == ProjectID && ((s.MatherialID == MatherialID || s.MatherialID == 0) 
+                                           && (s.ConfigurationID == ConfigurationID || s.ConfigurationID == 0))).ToList();
+        }
+
         public static List<ProjectModel> Filter(this List<ProjectModel> list, ProjectFilterModel filter)
         {
             return list.Where(s => FilteredProject(s, filter)).OrderBy(x => x.Index).ToList();

@@ -610,13 +610,13 @@
                         <td class="title1">Дополнительные опции</td>
                         <td>
                             <div></div>
-                            <div><a>Выбрать</a></div>                           
+                            <div><a class="get-options" onclick="$('.popup_form_options').show()">Выбрать</a></div>                           
                         </td>
                         <td>
-                            <a>Выбрать</a>
+                            <a class="get-options">Выбрать</a>
                         </td>
                         <td>
-                            <a>Выбрать</a>
+                            <a class="get-options">Выбрать</a>
                         </td>
                     </tr>
                 </tbody>
@@ -687,3 +687,38 @@
 }
 
 @Html.Partial("~/Views/Shared/_ProjectGalleryPartial.cshtml", samplesList)
+
+
+
+<div class="popup_form popup_form_options">
+    <div class="popup_form_inner">
+        <div class="popup_form_close">X</div>
+        <div class="popup_form_title"><span style="font-size:20px">Дополнительные опции</span></div>
+        <div class="">
+            <div class="field">
+                <table>
+                @foreach(var item in MainHelper.GetOptionsList(Model.Id, 0, 1))
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @MainHelper.FormatPrice(item.Cost)
+                        </td>
+                    </tr>
+                }
+                </table>
+            </div>
+            <div class="field">
+                <div class="field_input">
+                    <input class="submit_btn surround" data-action="" data-url="" data-amount="0" value="Выбрать" style="background-color:#3F7B16;border-radius: 1.5em" type="submit">
+                </div>
+            </div>
+        </div>
+        <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.</div>
+    </div>
+</div>
