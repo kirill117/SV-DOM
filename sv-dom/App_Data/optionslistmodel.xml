@@ -12,10 +12,10 @@
     <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="525000">
       <Name>Покрытие крыши металлочерепицей</Name>
     </OptionModel>
-    <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="77000">
+    <OptionModel ID="752FA7C6-B210-4B2C-AF0D-BB5B6FEC7DC4" ProjectID="1" MatherialID="0" ConfigurationID="1" Cost="77000">
       <Name>Устройство черновых полов</Name>
     </OptionModel>
-    <OptionModel ID="93A14DC5-C8DD-433F-9691-3AC4F7E978C0" ProjectID="1" MatherialID="0" ConfigurationID="2" Cost="77000">
+    <OptionModel ID="25942021-6D0B-451D-B518-C100C7E1291F" ProjectID="1" MatherialID="0" ConfigurationID="2" Cost="77000">
       <Name>Устройство черновых полов</Name>
     </OptionModel>  </Options>
 </OptionsListModel>

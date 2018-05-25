@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Models.OptionModel>
+
+<ul>
+    @foreach(var item in Model)
+    {
+        <li class="options-item" cost="@item.Cost">@item.Name</li>
+    }
+</ul>

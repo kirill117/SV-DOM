@@ -762,10 +762,20 @@ a.hidden.btn5{
     margin-left: -175px;
 }
 
+.popup_form_options td {
+    font-size:14px;
+}
+
+.popup_form_options .popup_form_inner{
+    width: 500px;
+    margin-left: -250px;
+}
+
 .popup_form.html_popup .popup_form_inner{
     background: transparent;
     padding: 0;
 }
+
 body.editor_true .popup_form.html_popup .popup_form_inner{
     background: rgba(255,255,255,1);
     border: dashed 1px red;
@@ -836,7 +846,7 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
 .field select,
 .field input[type="radio"]{
 
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
 
 }
 

@@ -97,9 +97,9 @@ namespace Helpers
             return areaResult || matherialResult || priceResult || floorResult;
         }
 
-        public static string FormatPrice(decimal price)
+        public static string FormatPrice(decimal price, bool ifPositive = true)
         {
-            return (price <= 0 ? "Цена по запросу" : price.ToString("### ### ##0") + " ₽");
+            return (price > 0 || !ifPositive? price.ToString("### ### ##0") + " ₽" : "Цена по запросу");
         }
 
         public static decimal GetProjectMinCost(int projectId)

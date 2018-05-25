@@ -189,6 +189,12 @@ namespace sv_dom.Controllers
             return PartialView("~/Views/Shared/_ProjectListPartial.cshtml", MainHelper._projects.Projects.Where(s => filter.Type == 0 || s.Type == filter.Type).ToList().Filter(filter));
         }
 
+        public PartialViewResult GetOptionsPartial(Guid[] list)
+        {
+            var model = MainHelper._options.Options.Where(s => list.Contains(s.ID)).ToList();
+            return PartialView("~/Views/Shared/_OptionsPartial.cshtml", model);
+        }
+
         public void GetPhotoThumbnail(string filename, int width = 300, int height = 220)
         {
             var serverfilepath = Server.MapPath(filename);

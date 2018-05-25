@@ -45,6 +45,37 @@
             changePrice($('body').find('.matSel:checked').val(), $(this).val());
         });
 
+        
+        $('.select-options').on('click', function() {
+            $('.popup_form_options').hide();
+
+            var col = $(this).attr('data-action');
+            var oc = ".options-container" + col;
+            $(oc).text('');
+
+            var arr = [];
+
+            $(this).parent().parent().parent().find('table').find('input:checked').each(function() {
+                arr.push($(this).attr('item'));
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/GetOptionsPartial',
+                data:
+                {
+                    list: arr
+                },
+                success: function (result) {
+                    $(oc).html(result);
+                },
+                traditional: true,
+                dataType: 'html'
+            });
+
+
+        });
+
         @if(plannings.Count() > 1)
         {
             <text>
@@ -91,6 +122,12 @@
             dataType: 'json'
         });
     };
+
+    function get_options(complectationId) {
+        var o = $('.popup_form_options');
+        o.find(".popup_form_title span").text('Дополнительные опции');
+        o.show();
+    }
 </script>
 
 @Html.HiddenFor(m => m.Id)
@@ -609,8 +646,8 @@
                     <tr>
                         <td class="title1">Дополнительные опции</td>
                         <td>
-                            <div></div>
-                            <div><a class="get-options" onclick="$('.popup_form_options').show()">Выбрать</a></div>                           
+                            <div class="options-container1"></div>
+                            <div><a class="get-options" onclick="get_options(1)">Выбрать</a></div>                           
                         </td>
                         <td>
                             <a class="get-options">Выбрать</a>
@@ -696,29 +733,28 @@
         <div class="popup_form_title"><span style="font-size:20px">Дополнительные опции</span></div>
         <div class="">
             <div class="field">
-                <table>
+                <table style="width:100%;">
                 @foreach(var item in MainHelper.GetOptionsList(Model.Id, 0, 1))
                 {
                     <tr>
                         <td>
-                            <input type="checkbox" />
+                            <input type="checkbox" item="@item.ID" />
                         </td>
                         <td>
                             @item.Name
                         </td>
-                        <td>
-                            @MainHelper.FormatPrice(item.Cost)
+                        <td style="text-align:right;">
+                            @MainHelper.FormatPrice(item.Cost, false)
                         </td>
                     </tr>
                 }
                 </table>
             </div>
             <div class="field">
-                <div class="field_input">
-                    <input class="submit_btn surround" data-action="" data-url="" data-amount="0" value="Выбрать" style="background-color:#3F7B16;border-radius: 1.5em" type="submit">
+                <div class="field_input" style="text-align:center;margin-top:10px;">
+                    <input class="submit_btn surround select-options" data-action="1" value="Выбрать" style="background-color:#3F7B16;border-radius: 1.5em;width:150px;padding:5px;font-size:16px;" type="submit">
                 </div>
             </div>
         </div>
-        <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.</div>
     </div>
 </div>

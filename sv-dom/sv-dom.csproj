@@ -472,6 +472,7 @@
     <Content Include="Views\Home\Articles\Timber.cshtml" />
     <Content Include="Views\Home\Articles\Gluedbeam.cshtml" />
     <Content Include="Views\Home\Articles\Profiledbeam.cshtml" />
+    <Content Include="Views\Shared\_OptionsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
