@@ -68,6 +68,7 @@
                 },
                 success: function (result) {
                     $(oc).html(result);
+                    changePrice($('body').find('.matSel:checked').val(), $('body').find('.complSel:checked').val());
                 },
                 traditional: true,
                 dataType: 'html'
@@ -102,7 +103,13 @@
 
     function changePrice(mat, comp) {
         var val = 'Цена по запросу';
+        var opt = [];
         changeCompl(comp);
+
+        $(".options-container"+comp).find('.options-item').each(function() {
+            opt.push($(this).attr("item"));
+        });
+
         $.ajax({
             type: 'POST',
             url: '/GetProjectCost',
@@ -110,13 +117,22 @@
             {
                 projectId: @Model.Id,
                 matherialId: mat,
-                complectationId: comp
+                complectationId: comp,
+                options: opt
             },
             success: function (result) {
                 $('.cost').text(result.cost);
-                $('.project-summary-cost1').text(result.cost1);
-                $('.project-summary-cost2').text(result.cost2);
-                $('.project-summary-cost3').text(result.cost3);
+                switch(comp) {
+                    case '1':
+                        $('.project-summary-cost1').text(result.cost1);
+                        break;
+                    case '2':
+                        $('.project-summary-cost2').text(result.cost2);
+                        break;
+                    case '3':
+                        $('.project-summary-cost3').text(result.cost3);
+                        break;
+                }
             },
             traditional: true,
             dataType: 'json'
@@ -124,7 +140,8 @@
     };
 
     function get_options(complectationId) {
-        var o = $('.popup_form_options');
+        changeCompl(complectationId);
+        var o = $('.popup_form_options[data-action="'+ complectationId +'"]');
         o.find(".popup_form_title span").text('Дополнительные опции');
         o.show();
     }
@@ -650,10 +667,12 @@
                             <div><a class="get-options" onclick="get_options(1)">Выбрать</a></div>                           
                         </td>
                         <td>
-                            <a class="get-options">Выбрать</a>
+                            <div class="options-container2"></div>
+                            <a class="get-options" onclick="get_options(2)">Выбрать</a>
                         </td>
                         <td>
-                            <a class="get-options">Выбрать</a>
+                            <div class="options-container3"></div>
+                            <a class="get-options" onclick="get_options(3)">Выбрать</a>
                         </td>
                     </tr>
                 </tbody>
@@ -725,36 +744,7 @@
 
 @Html.Partial("~/Views/Shared/_ProjectGalleryPartial.cshtml", samplesList)
 
+@Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 1))
+@Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 2))
+@Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 3))
 
-
-<div class="popup_form popup_form_options">
-    <div class="popup_form_inner">
-        <div class="popup_form_close">X</div>
-        <div class="popup_form_title"><span style="font-size:20px">Дополнительные опции</span></div>
-        <div class="">
-            <div class="field">
-                <table style="width:100%;">
-                @foreach(var item in MainHelper.GetOptionsList(Model.Id, 0, 1))
-                {
-                    <tr>
-                        <td>
-                            <input type="checkbox" item="@item.ID" />
-                        </td>
-                        <td>
-                            @item.Name
-                        </td>
-                        <td style="text-align:right;">
-                            @MainHelper.FormatPrice(item.Cost, false)
-                        </td>
-                    </tr>
-                }
-                </table>
-            </div>
-            <div class="field">
-                <div class="field_input" style="text-align:center;margin-top:10px;">
-                    <input class="submit_btn surround select-options" data-action="1" value="Выбрать" style="background-color:#3F7B16;border-radius: 1.5em;width:150px;padding:5px;font-size:16px;" type="submit">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

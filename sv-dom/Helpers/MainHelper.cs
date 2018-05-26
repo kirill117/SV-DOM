@@ -107,7 +107,7 @@ namespace Helpers
             return GetProjectCost(projectId, 1, 1);
         }
 
-        public static decimal GetProjectCost(int projectId, int matherialId, int complectationId)
+        public static decimal GetProjectCost(int projectId, int matherialId, int complectationId, Guid[] options = null)
         {
             var result = 0m;
             var prc = _prices.Prices.Where(s => s.ProjectID == projectId && s.ConfigurationID == complectationId && s.MatherialID == matherialId);
@@ -115,7 +115,14 @@ namespace Helpers
             {
                 var price = prc.Min(x => x.Cost);
                 if (price > 0)
+                {
                     result = price;
+
+                    if (options != null && options.Any())
+                    {
+                        result += _options.Options.Where(s => options.Contains(s.ID)).Sum(x => x.Cost);
+                    }
+                }
             }
             return result;
         }

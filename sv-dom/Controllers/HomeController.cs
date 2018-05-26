@@ -141,12 +141,12 @@ namespace sv_dom.Controllers
             return View(projectid);
         }
 
-        public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId)
+        public JsonResult GetProjectCost(int projectId, int matherialId, int complectationId, Guid[] options)
         {
             var result = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, complectationId));
-            var result1 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 1));
-            var result2 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 2));
-            var result3 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 3));
+            var result1 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 1, (complectationId == 1 ? options : null)));
+            var result2 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 2, (complectationId == 2 ? options : null)));
+            var result3 = MainHelper.FormatPrice(MainHelper.GetProjectCost(projectId, matherialId, 3, (complectationId == 3 ? options : null)));
 
             return Json(new { cost = result, cost1 = result1, cost2 = result2, cost3 = result3  });
         }
