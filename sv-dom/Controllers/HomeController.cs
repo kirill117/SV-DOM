@@ -151,7 +151,7 @@ namespace sv_dom.Controllers
             return Json(new { cost = result, cost1 = result1, cost2 = result2, cost3 = result3  });
         }
 
-        public JsonResult GetRecall(string name, string phone, string email, string comment, string subcomment)
+        public JsonResult GetRecall(string name, string phone, string email, string comment, string subcomment, string textbody)
         {
             var result = false;
             var user = ConfigurationManager.AppSettings["MailUserTarget"];
@@ -170,6 +170,12 @@ namespace sv_dom.Controllers
                 {
                     body.AppendLine("");
                     body.AppendLine(subcomment.Trim());
+                }
+                if (!string.IsNullOrEmpty(textbody))
+                {
+                    body.AppendLine("");
+                    body.AppendLine(textbody.Trim());
+                    body.AppendLine("");
                 }
                 if (!string.IsNullOrEmpty(comment))
                 {

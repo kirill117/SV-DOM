@@ -32,14 +32,19 @@
                 e.preventDefault();
                 var txt = $(this).attr("subcomment");
                 if (txt && txt.length > 0) {
-                    $('.popup_form').find(".input-hidden-comment").val(txt);
-                    $('.popup_form').find(".popup_form_title span").text(txt);                   
+                    $('.popup_form_recall').find(".popup_form_title span").text(txt);                   
                 }
                 else {
-                    $('.popup_form').find(".input-hidden-comment").val('');
-                    $('.popup_form').find(".popup_form_title span").text('Оставьте заявку и наши менеджеры с Вами свяжутся');
+                    $('.popup_form_recall').find(".popup_form_title span").text('Оставьте заявку и наши менеджеры с Вами свяжутся');
                 }
-                $('.popup_form').show();
+                txt = $(this).attr("textbody");
+                if (txt && txt.length > 0) {
+                    $('.popup_form_recall').find(".input-hidden-comment").val(txt);
+                }
+                else {
+                    $('.popup_form_recall').find(".input-hidden-comment").val('');
+                }
+                $('.popup_form_recall').show();
             });
 
             $(".popup_form_close").on('click', function () {
@@ -78,7 +83,8 @@
                         phone: frm.find('.input-phone').val(),
                         email: frm.find('.input-mail').val(),
                         comment: frm.find('.input-comment').val(),
-                        subcomment: frm.find('.input-hidden-comment').val()
+                        subcomment: frm.parent().find(".popup_form_title span").text(),
+                        textbody: frm.find(".input-hidden-comment").val()
                     },
                     success: function (content) {
                         try {
@@ -264,7 +270,7 @@
         </div>
     </div>
 
-    <div class="popup_form">
+    <div class="popup_form popup_form_recall">
         <div class="popup_form_inner">
             <div class="popup_form_close">X</div>
             <div class="popup_form_title"><span style="font-size:20px">Оставьте заявку и наши менеджеры с вами свяжутся</span></div>

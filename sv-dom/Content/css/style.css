@@ -628,7 +628,9 @@ a.hidden.btn5{
 }
 
 
-
+.addi-options, .get-smeta1, .get-smeta2, .get-smeta3 {
+    display: none;
+}
 
 .section{
     width: 100%;
