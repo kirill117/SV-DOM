@@ -481,6 +481,7 @@
     <Folder Include="Content\img\gallery\2\" />
     <Folder Include="Content\img\gallery\3\" />
     <Folder Include="Content\img\gallery\4\" />
+    <Folder Include="Content\img\gallery\99\" />
     <Folder Include="Images\0\Gallery\" />
     <Folder Include="Images\0\Planing\" />
     <Folder Include="Images\0\Samples\" />
