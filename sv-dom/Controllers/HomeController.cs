@@ -112,6 +112,9 @@ namespace sv_dom.Controllers
                 case 3:
                     name += "\\Timber";
                     break;
+                case 4:
+                    name += "\\Gluedbeam";
+                    break;
             }
 
             return View(name);
@@ -131,6 +134,9 @@ namespace sv_dom.Controllers
                     break;
                 case 3:
                     name += "\\Profiledbeam";
+                    break;
+                case 4:
+                    name += "\\Construction";
                     break;
             }
 

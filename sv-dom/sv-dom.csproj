@@ -258,6 +258,7 @@
     <Content Include="Content\img\gallery\Main\1.jpg" />
     <Content Include="Content\img\gallery\Main\2.jpg" />
     <Content Include="Content\img\gallery\Main\20.JPG" />
+    <Content Include="Content\img\gallery\Main\21.jpg" />
     <Content Include="Content\img\green.jpg" />
     <Content Include="Content\img\index_logo.jpg" />
     <Content Include="Content\img\insta.jpg" />
@@ -478,6 +479,8 @@
     <Content Include="Views\Home\Articles\Profiledbeam.cshtml" />
     <Content Include="Views\Shared\_OptionsPartial.cshtml" />
     <Content Include="Views\Shared\_OptionsPopupPartial.cshtml" />
+    <Content Include="Views\Home\Articles\Construction.cshtml" />
+    <Content Include="Views\Home\Services\Gluedbeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
