@@ -104,13 +104,16 @@ namespace Helpers
 
         public static decimal GetProjectMinCost(int projectId)
         {
-            return GetProjectCost(projectId, 1, 1);
+            return GetProjectCost(projectId, 1, 0);
         }
 
         public static decimal GetProjectCost(int projectId, int matherialId, int complectationId, Guid[] options = null)
         {
             var result = 0m;
-            var prc = _prices.Prices.Where(s => s.ProjectID == projectId && s.ConfigurationID == complectationId && s.MatherialID == matherialId);
+            if (matherialId == 4)   //комби
+                matherialId = 0;
+
+            var prc = _prices.Prices.Where(s => s.ProjectID == projectId && s.Cost > 0 && (complectationId == 0 || s.ConfigurationID == complectationId) && (matherialId == 0 || s.MatherialID == matherialId));
             if (prc != null && prc.Any())
             {
                 var price = prc.Min(x => x.Cost);
