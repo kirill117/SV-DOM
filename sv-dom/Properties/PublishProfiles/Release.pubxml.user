@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/optionslistmodel.xml">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="App_Data/pricelistmodel.xml">
       <publishTime>05/16/2018 15:58:26</publishTime>
@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2013 09:43:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/30/2018 10:06:17</publishTime>
+      <publishTime>05/31/2018 18:53:46</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/30/2018 10:06:17</publishTime>
+      <publishTime>05/31/2018 18:53:46</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -118,7 +118,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/sv-dom.dll">
-      <publishTime>05/30/2018 10:06:12</publishTime>
+      <publishTime>05/31/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -229,7 +229,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 15:18:15</publishTime>
     </File>
     <File Include="Content/css/style.css">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="Content/FancyBox/jquery.fancybox.css">
       <publishTime>11/27/2017 22:38:18</publishTime>
@@ -351,6 +351,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/brevno.jpg">
       <publishTime>01/25/2018 19:46:00</publishTime>
     </File>
+    <File Include="Content/img/brus-building.jpg">
+      <publishTime>05/31/2018 12:19:24</publishTime>
+    </File>
     <File Include="Content/img/brus1.jpg">
       <publishTime>03/16/2018 15:44:07</publishTime>
     </File>
@@ -420,6 +423,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/fd68439fd657b94331215a172a4c3663.jpg">
       <publishTime>01/19/2018 15:18:14</publishTime>
     </File>
+    <File Include="Content/img/fund.jpg">
+      <publishTime>05/31/2018 12:02:08</publishTime>
+    </File>
     <File Include="Content/img/gallery/1/1.jpg">
       <publishTime>01/24/2018 18:32:36</publishTime>
     </File>
@@ -477,6 +483,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/gallery/Main/20.JPG">
       <publishTime>04/24/2018 15:39:35</publishTime>
     </File>
+    <File Include="Content/img/gallery/Main/21.jpg">
+      <publishTime>04/24/2018 15:39:35</publishTime>
+    </File>
     <File Include="Content/img/green.jpg">
       <publishTime>01/25/2018 20:05:35</publishTime>
     </File>
@@ -525,6 +534,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/production.jpeg">
       <publishTime>03/02/2018 14:16:55</publishTime>
     </File>
+    <File Include="Content/img/roof.jpg">
+      <publishTime>05/31/2018 11:59:20</publishTime>
+    </File>
     <File Include="Content/img/s-berega.jpg">
       <publishTime>04/10/2018 13:50:56</publishTime>
     </File>
@@ -536,6 +548,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/img/slyder1.jpg">
       <publishTime>01/19/2018 16:25:12</publishTime>
+    </File>
+    <File Include="Content/img/supercena.png">
+      <publishTime>03/21/2018 18:05:22</publishTime>
     </File>
     <File Include="Content/img/tehcontrol.jpg">
       <publishTime>01/25/2018 20:00:48</publishTime>
@@ -907,7 +922,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/31/2018 10:31:41</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/30/2018 10:06:13</publishTime>
+      <publishTime>05/31/2018 18:53:42</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/31/2018 10:31:36</publishTime>
@@ -990,8 +1005,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
       <publishTime>01/31/2018 10:31:39</publishTime>
     </File>
+    <File Include="Views/Home/Articles/Construction.cshtml">
+      <publishTime>05/31/2018 15:00:26</publishTime>
+    </File>
     <File Include="Views/Home/Articles/Gluedbeam.cshtml">
-      <publishTime>04/18/2018 16:50:51</publishTime>
+      <publishTime>05/31/2018 15:06:24</publishTime>
     </File>
     <File Include="Views/Home/Articles/Profiledbeam.cshtml">
       <publishTime>04/18/2018 16:31:06</publishTime>
@@ -1012,25 +1030,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/26/2018 14:20:21</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>04/25/2018 10:33:41</publishTime>
+      <publishTime>05/31/2018 14:18:37</publishTime>
     </File>
     <File Include="Views/Home/Price.cshtml">
       <publishTime>01/31/2018 12:26:20</publishTime>
     </File>
     <File Include="Views/Home/Project.cshtml">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="Views/Home/ProjectsList.cshtml">
       <publishTime>03/07/2018 11:58:57</publishTime>
     </File>
     <File Include="Views/Home/Services.cshtml">
-      <publishTime>04/17/2018 14:23:52</publishTime>
+      <publishTime>05/31/2018 18:37:03</publishTime>
     </File>
     <File Include="Views/Home/Services/Architecture.cshtml">
       <publishTime>04/12/2018 10:17:48</publishTime>
     </File>
     <File Include="Views/Home/Services/Construction.cshtml">
       <publishTime>04/10/2018 14:30:51</publishTime>
+    </File>
+    <File Include="Views/Home/Services/Fond.cshtml">
+      <publishTime>05/31/2018 18:51:38</publishTime>
+    </File>
+    <File Include="Views/Home/Services/Gluedbeam.cshtml">
+      <publishTime>05/31/2018 15:12:17</publishTime>
+    </File>
+    <File Include="Views/Home/Services/Roof.cshtml">
+      <publishTime>05/31/2018 18:33:38</publishTime>
     </File>
     <File Include="Views/Home/Services/Timber.cshtml">
       <publishTime>04/18/2018 16:31:26</publishTime>
@@ -1069,7 +1096,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/17/2018 17:46:44</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>01/31/2018 10:31:39</publishTime>
@@ -1078,10 +1105,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2018 13:37:07</publishTime>
     </File>
     <File Include="Views/Shared/_OptionsPartial.cshtml">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="Views/Shared/_OptionsPopupPartial.cshtml">
-      <publishTime>05/30/2018 09:52:00</publishTime>
+      <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="Views/Shared/_PlanningImageGroupPartial.cshtml">
       <publishTime>03/21/2018 10:51:05</publishTime>

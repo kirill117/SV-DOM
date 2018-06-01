@@ -115,6 +115,12 @@ namespace sv_dom.Controllers
                 case 4:
                     name += "\\Gluedbeam";
                     break;
+                case 5:
+                    name += "\\Fond";
+                    break;
+                case 6:
+                    name += "\\Roof";
+                    break;
             }
 
             return View(name);

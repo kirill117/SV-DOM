@@ -481,6 +481,8 @@
     <Content Include="Views\Shared\_OptionsPopupPartial.cshtml" />
     <Content Include="Views\Home\Articles\Construction.cshtml" />
     <Content Include="Views\Home\Services\Gluedbeam.cshtml" />
+    <Content Include="Views\Home\Services\Roof.cshtml" />
+    <Content Include="Views\Home\Services\Fond.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
