@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/31/2018 11:42:08</publishTime>
     </File>
     <File Include="App_Data/pricelistmodel.xml">
-      <publishTime>05/16/2018 15:58:26</publishTime>
+      <publishTime>06/01/2018 10:49:24</publishTime>
     </File>
     <File Include="App_Data/projectslistmodel.xml">
       <publishTime>04/25/2018 10:49:08</publishTime>
@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2013 09:43:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/31/2018 18:53:46</publishTime>
+      <publishTime>06/01/2018 10:59:16</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/31/2018 18:53:46</publishTime>
+      <publishTime>06/01/2018 10:59:16</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -118,7 +118,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/sv-dom.dll">
-      <publishTime>05/31/2018 18:53:41</publishTime>
+      <publishTime>06/01/2018 10:59:11</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -922,7 +922,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/31/2018 10:31:41</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/31/2018 18:53:42</publishTime>
+      <publishTime>06/01/2018 10:59:13</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/31/2018 10:31:36</publishTime>
@@ -1042,7 +1042,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/07/2018 11:58:57</publishTime>
     </File>
     <File Include="Views/Home/Services.cshtml">
-      <publishTime>05/31/2018 18:37:03</publishTime>
+      <publishTime>06/01/2018 10:49:25</publishTime>
     </File>
     <File Include="Views/Home/Services/Architecture.cshtml">
       <publishTime>04/12/2018 10:17:48</publishTime>
@@ -1051,13 +1051,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/10/2018 14:30:51</publishTime>
     </File>
     <File Include="Views/Home/Services/Fond.cshtml">
-      <publishTime>05/31/2018 18:51:38</publishTime>
+      <publishTime>06/01/2018 10:49:25</publishTime>
     </File>
     <File Include="Views/Home/Services/Gluedbeam.cshtml">
       <publishTime>05/31/2018 15:12:17</publishTime>
     </File>
     <File Include="Views/Home/Services/Roof.cshtml">
-      <publishTime>05/31/2018 18:33:38</publishTime>
+      <publishTime>06/01/2018 10:49:25</publishTime>
     </File>
     <File Include="Views/Home/Services/Timber.cshtml">
       <publishTime>04/18/2018 16:31:26</publishTime>
@@ -1114,7 +1114,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/21/2018 10:51:05</publishTime>
     </File>
     <File Include="Views/Shared/_ProjectCartPartial.cshtml">
-      <publishTime>04/17/2018 15:17:28</publishTime>
+      <publishTime>06/01/2018 10:49:25</publishTime>
     </File>
     <File Include="Views/Shared/_ProjectFilterPartial.cshtml">
       <publishTime>03/07/2018 11:49:59</publishTime>
