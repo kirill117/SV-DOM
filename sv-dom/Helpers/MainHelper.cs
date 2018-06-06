@@ -56,10 +56,16 @@ namespace Helpers
 
             var matherialResult = false;
             if (filter.Matherial1 && project.Matherials.Contains(Matherial.ОЦБ))
+            {
                 matherialResult = true;
+                project.CurrentMatherial = Matherial.ОЦБ;
+            }
 
             if (filter.Matherial2 && project.Matherials.Contains(Matherial.КБ))
+            { 
                 matherialResult = true;
+                project.CurrentMatherial = Matherial.КБ;
+            }
 
             if (filter.Matherial3 && project.Matherials.Contains(Matherial.КОМБИ))
                 matherialResult = true;
@@ -130,10 +136,12 @@ namespace Helpers
             return result;
         }
 
-        public static string GetProjectTopPicture(int projectId)
+        public static string GetProjectTopPicture(int projectId, Matherial? mat = null)
         {
             var path = "";
             var basePath = $"/Images/{projectId}";
+
+            var fileName = "00" + (mat != null ? (int)mat : 1) + ".jpg";
 
             var localPath = HttpContext.Current.Server.MapPath(basePath);
 
@@ -142,7 +150,14 @@ namespace Helpers
                 var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
                 if (files.Any())
                 {
-                    path = basePath + "/" + Path.GetFileName(files[0]);
+                    if (files.Any(s => s.Contains(fileName)))
+                    {
+                        path = basePath + "/" + Path.GetFileName(files.Single(s => s.Contains(fileName)));
+                    }
+                    else
+                    {
+                        path = basePath + "/" + Path.GetFileName(files[0]);
+                    }
                 }
             }
 

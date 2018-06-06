@@ -13,7 +13,7 @@ namespace Models
         public string Name { get; set; }
         public int Type { get; set; }
         public Matherial[] Matherials { get; set; }
-
+        public Matherial CurrentMatherial { get; set; }
 
         public int Area { get; set; }
         public int RoomCount { get; set; }

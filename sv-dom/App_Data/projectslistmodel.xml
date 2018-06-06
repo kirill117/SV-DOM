@@ -7,6 +7,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials>
       <Area>156</Area>
       <Size>13x9</Size>
@@ -51,6 +52,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>       
+        <Matherial>2</Matherial>       
       </Matherials> 
       <Area>188</Area>
       <Size>11,1x13</Size>
@@ -217,6 +219,7 @@
       <Type>1</Type>
       <Matherials>
         <Matherial>1</Matherial>
+        <Matherial>2</Matherial>
       </Matherials> 
       <Area>216</Area>
       <Size>12,1x13,5</Size>
