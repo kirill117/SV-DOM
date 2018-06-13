@@ -8,12 +8,18 @@ namespace Models
 {
     public class ProjectModel
     {
+        public ProjectModel()
+        {
+            if (Matherials != null)
+                CurrentMatherial = Matherials.FirstOrDefault();
+        }
+
         public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
         public int Type { get; set; }
         public Matherial[] Matherials { get; set; }
-        public Matherial CurrentMatherial { get; set; }
+        public Matherial? CurrentMatherial { get; set; }
 
         public int Area { get; set; }
         public int RoomCount { get; set; }

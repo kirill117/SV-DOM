@@ -9,7 +9,7 @@
     var tourLink = MainHelper.GetProject3DTourLink(Model.Id);
     var plannings = MainHelper.GetProjectPlanings(Model.Id);
     var dd = Model.Type == 4 || Model.Type == 6 ? 20 : 22;
-    var matherial = (int)Model.Matherials.First();
+    var matherial = (int)(Model.CurrentMatherial ?? Model.Matherials.First());
     matherial = matherial == 4 ? 1 : matherial;
 
     ViewBag.Title = "Строительство деревянных домов ПСК СВ-Строй - " + MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First());
@@ -169,7 +169,7 @@
         <div class="">
             <div class="slider-wrapper">
                 <div id="slider" class="theme-default nivoSlider">
-                    @foreach (var item in MainHelper.GetProjectGallery(Model.Id))
+                    @foreach (var item in MainHelper.GetProjectGallery(Model.Id, (Matherial)matherial))
                     {
                         <img src="@item.Name" alt="@item.Comment">
                     }

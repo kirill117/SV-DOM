@@ -243,7 +243,7 @@ namespace Helpers
             return list.ToArray();
         }
 
-        public static SampleImageModel[] GetProjectGallery(int projectId)
+        public static SampleImageModel[] GetProjectGallery(int projectId, Matherial? matherial = null)
         {
             var list = new List<SampleImageModel>();
             var basePath = $"/Images/{projectId}/Gallery";
@@ -253,6 +253,12 @@ namespace Helpers
             if (Directory.Exists(localPath))
             {
                 var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+
+                if (matherial != null)
+                {
+                    Array.Sort(files, new GelleryMatherialComparer((int)matherial));
+                }
+
                 foreach (var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
@@ -261,6 +267,23 @@ namespace Helpers
             }
 
             return list.ToArray();
+        }
+
+        public class GelleryMatherialComparer : IComparer<string>
+        {
+            int _matherial;
+            public GelleryMatherialComparer(int matherial)
+            {
+                _matherial = matherial;
+            }
+            public int Compare(string x, string y)
+            {
+                if (x.EndsWith("_" + _matherial.ToString() + ".jpg"))
+                {
+                    return y.CompareTo(x);
+                }
+                return x.CompareTo(y);
+            }
         }
 
         public static SampleImageModel[] GetMainGallery(int typeId)
