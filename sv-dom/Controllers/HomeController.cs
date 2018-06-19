@@ -121,6 +121,9 @@ namespace sv_dom.Controllers
                 case 6:
                     name += "\\Roof";
                     break;
+                case 7:
+                    name += "\\Engineering";
+                    break;
             }
 
             return View(name);
