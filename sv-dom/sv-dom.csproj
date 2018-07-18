@@ -233,6 +233,9 @@
     <Content Include="Content\FancyBox\jquery.fancybox.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\architect.jpg" />
+    <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\background1.jpg" />
+    <Content Include="Content\img\background3.jpg" />
     <Content Include="Content\img\bass.jpg" />
     <Content Include="Content\img\brevno.jpg" />
     <Content Include="Content\img\brus-building.jpg" />
