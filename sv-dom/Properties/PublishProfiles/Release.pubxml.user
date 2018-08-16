@@ -16,16 +16,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/01/2018 10:49:24</publishTime>
     </File>
     <File Include="App_Data/projectslistmodel.xml">
-      <publishTime>07/12/2018 10:40:20</publishTime>
+      <publishTime>08/16/2018 17:53:16</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 09:43:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>07/18/2018 11:56:19</publishTime>
+      <publishTime>08/16/2018 18:00:56</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>07/18/2018 11:56:19</publishTime>
+      <publishTime>08/16/2018 18:00:55</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -118,7 +118,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/sv-dom.dll">
-      <publishTime>07/18/2018 11:56:12</publishTime>
+      <publishTime>08/16/2018 18:00:49</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -229,7 +229,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 15:18:15</publishTime>
     </File>
     <File Include="Content/css/style.css">
-      <publishTime>07/18/2018 11:51:45</publishTime>
+      <publishTime>08/16/2018 17:03:37</publishTime>
     </File>
     <File Include="Content/FancyBox/jquery.fancybox.css">
       <publishTime>11/27/2017 22:38:18</publishTime>
@@ -934,7 +934,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/31/2018 10:31:41</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>07/18/2018 11:56:14</publishTime>
+      <publishTime>08/16/2018 18:00:52</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/31/2018 10:31:36</publishTime>
@@ -1051,7 +1051,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/18/2018 11:03:14</publishTime>
     </File>
     <File Include="Views/Home/ProjectsList.cshtml">
-      <publishTime>03/07/2018 11:58:57</publishTime>
+      <publishTime>08/16/2018 17:26:55</publishTime>
     </File>
     <File Include="Views/Home/Services.cshtml">
       <publishTime>06/19/2018 12:47:01</publishTime>
@@ -1132,7 +1132,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/09/2018 10:15:23</publishTime>
     </File>
     <File Include="Views/Shared/_ProjectFilterPartial.cshtml">
-      <publishTime>03/07/2018 11:49:59</publishTime>
+      <publishTime>08/16/2018 17:17:33</publishTime>
     </File>
     <File Include="Views/Shared/_ProjectGalleryPartial.cshtml">
       <publishTime>03/16/2018 10:07:52</publishTime>

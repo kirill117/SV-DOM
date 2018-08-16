@@ -279,10 +279,12 @@ a{
             margin-right:13px;
         }
 
-        .filter-panel .col_3 label {
+        .filter-panel .col_3 label, 
+        .filter-panel .col_1  label {
             cursor:pointer;
         }
 
+        .filter-panel .col_1 label:hover,
         .filter-panel .col_3 label:hover {
             cursor:pointer;
             color: #ccc;

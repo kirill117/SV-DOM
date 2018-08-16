@@ -20,10 +20,16 @@ namespace Models
         public bool Floor1 { get; set; }
         public bool Floor2 { get; set; }
         public bool Floor3 { get; set; }
+        public bool HasSecondLight { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasTerrace { get; set; }
+        public bool HasErker { get; set; }
+
 
         public bool IsEmpty()
         {
-            return !Area1 && !Area2 && !Area3 && !Matherial1 && !Matherial2 && !Matherial3 && !Price1 && !Price2 && !Price3 && !Floor1 && !Floor2 && !Floor3;
+            return !Area1 && !Area2 && !Area3 && !Matherial1 && !Matherial2 && !Matherial3 && !Price1 && !Price2 && !Price3 && !Floor1 && !Floor2 && !Floor3 &&
+                !HasBalcony && !HasErker && !HasSecondLight && !HasTerrace;
         }
 
     }

@@ -48,7 +48,11 @@
                     Price3: $('.filter-panel').find('#Price3').prop('checked'),
                     Floor1: $('.filter-panel').find('#Floor1').prop('checked'),
                     Floor2: $('.filter-panel').find('#Floor2').prop('checked'),
-                    Floor3: $('.filter-panel').find('#Floor3').prop('checked')
+                    Floor3: $('.filter-panel').find('#Floor3').prop('checked'),
+                    HasSecondLight: $('.filter-panel').find('#HasSecondLight').prop('checked'),
+                    HasBalcony: $('.filter-panel').find('#HasBalcony').prop('checked'),
+                    HasTerrace: $('.filter-panel').find('#HasTerrace').prop('checked'),
+                    HasErker: $('.filter-panel').find('#HasErker').prop('checked')
                 },
                 success: function (content) {
                     $('.project-list-container').html(content);

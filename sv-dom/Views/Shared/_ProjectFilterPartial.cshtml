@@ -56,6 +56,27 @@
                 </div>
             </div>
             <div class="clear"></div>
+            <div class="col_1">
+                <div class="title1" style="width:99%;"></div>
+                <div class="txt1" style="font-size:16px;">
+                    <div class="left" style="margin-right: 24px;">
+                        @Html.CheckBoxFor(m => m.HasSecondLight)
+                        <label for="HasSecondLight"> второй свет</label>
+                    </div>
+                    <div class="left" style="margin-right: 24px;">
+                        @Html.CheckBoxFor(m => m.HasBalcony)
+                        <label for="HasBalcony"> балкон</label>
+                    </div>
+                    <div class="left" style="margin-right: 24px;">
+                        @Html.CheckBoxFor(m => m.HasTerrace)
+                        <label for="HasTerrace"> терраса</label>
+                    </div>
+                    <div class="left">
+                        @Html.CheckBoxFor(m => m.HasErker)
+                        <label for="HasErker"> эркер</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

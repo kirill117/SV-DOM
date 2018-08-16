@@ -26,6 +26,10 @@ namespace Models
         public int WcCount { get; set; }
         public int FloorsCount { get; set; }
         public string Size { get; set; }
+        public bool HasSecondLight { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasTerrace { get; set; }
+        public bool HasErker { get; set; }
 
         public int Index { get; set; }
         public bool ShowOnMain { get; set; }

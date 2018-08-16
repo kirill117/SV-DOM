@@ -24,6 +24,10 @@
         Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста. По желанию Заказчика, планировка данного проекта может быть дополнена балконом, вторым светом
         или более просторной террасой.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>2</Id>
@@ -44,6 +48,10 @@
 	        Загородный дом площадью более 240 квадратных метров. Два этажа, веранда. Просторные внутренние помещения, удобная планировка. Предназначен для постоянного проживания семьи 4-5 человек. 
           Удачно располагается на участках разной формы и площади. Имеет интересные внешние архитектурные решения.      
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>3</Id>
@@ -66,6 +74,10 @@
         Особого внимания достойно остекление, по принципу «второй свет» которое делает более солнечной не только гостиную, но и галерею на втором этаже. Дом имеет большое количество удобных вспомогательных и технических помещений: тамбур, топочная, гардеробная.
         Есть большая терраса с собственным выходом в сад и балкон.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>10</Id>
@@ -84,6 +96,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>11</Id>
@@ -102,6 +118,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>12</Id>
@@ -119,8 +139,15 @@
       <Index>0</Index>
       <ShowOnMain>false</ShowOnMain>
       <Description>
-        Дом из оцилиндрованного бревна "Уют". Небольшой традиционный дом для круглогодичного проживания семьи из 4-6 человек. Планировка первого этажа предполагает кухню-столовую, гостиную, санузел, техническое помещение и вынесенный в отдельное помещение лестничный марш. На втором (мансардном) этаже расположены четыре одинаковые спальни и санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
+        Дом из оцилиндрованного бревна "Уют". Небольшой традиционный дом для круглогодичного проживания семьи из 4-6 человек. 
+        Планировка первого этажа предполагает кухню-столовую, гостиную, санузел, техническое помещение и вынесенный в отдельное помещение лестничный марш. 
+        На втором (мансардном) этаже расположены четыре одинаковые спальни и санузел. 
+        Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>7</Id>
@@ -139,6 +166,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>38</Id>
@@ -158,6 +189,10 @@
       <Description>
         Дом из оцилиндрованного бревна Виктория. Относительно небольшой, но функциональный дом с интересной архитектурой для круглогодичного проживания семьи из 4-6 человек. На первом этаже расположены большая гостиная с эркером, совмещенная с кухней-столовой, спальня, санузел и вынесенный в отдельное помещение лестничный марш. На втором (мансардном) этаже расположены четыре спальни, одна из которых имеет выход на балкон, санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>9</Id>
@@ -177,6 +212,10 @@
       <Description>
         Дом из оцилиндрованного бревна «Пригорок» - небольшой, но уютный дом для круглогодичного проживания семьи из 3-4 человек. Несмотря на небольшие размеры, всё необходимое для комфортного проживания современного человека в нём учтено. На первом этаже расположены функциональная кухня-столовая, совмещенная с гостиной, главным элементом которой является камин. Также на первом этаже расположены светлый и просторный санузел и терраса, размер которой можно при желании увеличить. На втором (мансардном) этаже расположены две спальни, одна из которых, по задумке архитектора детская. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>4</Id>
@@ -198,6 +237,10 @@
         Все пазы и «чаши» вырезаны на специальном оборудовании и имеют стандартные размеры. Фундамент дома буронабивной, с ростверком из железобетона. Кровля металлическая — металлочерепица.
         Основаниеили цокольное перекрытие, может быть сделано из дерева или бетона. Так же в доме предусмотрен небольшой зимний сад и камин впросторной гостиной с вторым светом. На втором этаже три спальни и большой холл.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>5</Id>
@@ -217,6 +260,10 @@
       <Description>
         Дом из оцилиндрованного бревна Покров. Просторный современный дом, который удачно вписывается в большинство загородных участков, за счет своих габаритов и планировочных решений. Дом имеет вытянутую форму, позволяющую максимально сместив его к одной из границ участка, выгодно использовать оставшуюся площадь участка. Причем зона жизнедеятельности дома: гостиная, столовая, веранда при этом обращены в глубь участка. На первом этаже расположены большая и светлая гостиная со вторым светом и камином, совмещенная с кухней-столовой, имеющей выход на уютную террасу, а также спальня, светлый и функциональный санузел, гардероб и техническое помещение. На втором (мансардном) этаже расположены две детские комнаты и хозяйская спальня с выходом на балкон, санузел. Высоты мансардного этажа дома из оцилиндрованного бревна достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>  
     <ProjectModel>
       <Id>6</Id>
@@ -237,6 +284,10 @@
       <Description>
         Дом из оцилиндрованного бревна Светлый. Очень просторный современный дом с изящной архитектурой, главной особенностью которого является отсутствие перегородок на первом этаже, что в сочетании с большими окнами создает очень большое светлое пространство. Вместе с тем, с конструктивной точки зрения, дом очень рациональный. На первом этаже расположены гостиная со вторым светом и камином, кухня-столовая с выходом на уютную террасу, а также санузел и техническое помещение. На втором (мансардном) этаже дома из оцилиндрованного бревна расположены три спальни с выходами на балконы и просторный санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>8</Id>
@@ -258,6 +309,10 @@
         Учитывая все это, оптимальным основанием под этот дом является свайный буронабивной фундамент, с железобетонным ростверком. В качестве кровли, можно использовать мягкую черепицу или ее металлический аналог.
         На первом этаже совмещены холл, гостиная и столовая. Отдельно есть две комнаты и кухня, помимо подсобных помещений. Выше этажом расположены две большие спальни и холл.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>13</Id>
@@ -731,6 +786,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>37</Id>
@@ -767,6 +826,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>40</Id>
@@ -785,6 +848,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>41</Id>
@@ -804,6 +871,10 @@
       <Description>
         Дом из оцилиндрованного бревна "Ника". Дом со сложной, интересной архитектурой, не похожий на большинство домов. На первом этаже расположены просторные гостиная с двумя эркерами и камином и кухня-столовая, имеющая светлый эркер и выход на террасу, а также холл, санузел и вынесенный в отдельное помещение лестничный марш. На втором (мансардном) этаже расположены две просторные спальни, одна из которых имеет эркер, рабочий кабинет и санузел. Высоты мансардного этажа дома из оцилиндрованного бревна Ника достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>42</Id>
@@ -823,6 +894,10 @@
       <Description>
         Дом со сложной, интересной архитектурой, не похожий на большинство домов. На первом этаже расположены просторная гостиная с камином и выходом на веранду, кухня-столовая со вторым светом, имеющая светлый эркер, в котором располагается уютная обеденная зона, а также санузел и техническое помещение. На втором (мансардном) этаже расположены три спальни и санузел. Высоты мансардного этажа достаточно, чтобы, находясь в нём, комфортно себя чувствовали даже люди высокого роста.
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>43</Id>
@@ -842,6 +917,10 @@
       <Description>
         Дом из оцилиндрованного бревна Краснодар .Просторный современный дом, который удачно вписывается в большинство загородных участков, за счет своих габаритов и планировочных решений. Дом имеет вытянутую форму, позволяющую максимально сместив его к одной из границ участка, выгодно использовать оставшуюся площадь участка. Причем зона жизнедеятельности дома: гостиная, столовая, веранда при этом обращены в глубь участка.
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>false</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>44</Id>
@@ -860,6 +939,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>false</HasSecondLight>
+      <HasTerrace>false</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>false</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>45</Id>
@@ -878,6 +961,10 @@
       <ShowOnMain>false</ShowOnMain>
       <Description>
       </Description>
+      <HasSecondLight>true</HasSecondLight>
+      <HasTerrace>true</HasTerrace>
+      <HasErker>true</HasErker>
+      <HasBalcony>true</HasBalcony>
     </ProjectModel>
     <ProjectModel>
       <Id>46</Id>
