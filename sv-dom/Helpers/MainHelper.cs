@@ -100,7 +100,15 @@ namespace Helpers
             if ((filter.Floor1 || filter.Floor2 || filter.Floor3) && !floorResult)
                 return false;
 
-            return areaResult || matherialResult || priceResult || floorResult;
+            var attributesResult = (filter.HasBalcony && project.HasBalcony) ||
+                (filter.HasErker && project.HasErker) ||
+                (filter.HasSecondLight && project.HasSecondLight) ||
+                (filter.HasTerrace && project.HasTerrace);
+
+            if ((filter.HasBalcony || filter.HasErker || filter.HasSecondLight || filter.HasTerrace) && !attributesResult)
+                return false;
+
+            return areaResult || matherialResult || priceResult || floorResult || attributesResult;
         }
 
         public static string FormatPrice(decimal price, bool ifPositive = true)
@@ -243,7 +251,7 @@ namespace Helpers
             return list.ToArray();
         }
 
-        public static SampleImageModel[] GetProjectGallery(int projectId)
+        public static SampleImageModel[] GetProjectGallery(int projectId, Matherial? matherial = null)
         {
             var list = new List<SampleImageModel>();
             var basePath = $"/Images/{projectId}/Gallery";
@@ -253,6 +261,12 @@ namespace Helpers
             if (Directory.Exists(localPath))
             {
                 var files = Directory.GetFiles(localPath, "*.jpg", SearchOption.TopDirectoryOnly);
+
+                if (matherial != null)
+                {
+                    Array.Sort(files, new GelleryMatherialComparer((int)matherial));
+                }
+
                 foreach (var file in files)
                 {
                     var path = basePath + "/" + Path.GetFileName(file);
@@ -261,6 +275,23 @@ namespace Helpers
             }
 
             return list.ToArray();
+        }
+
+        public class GelleryMatherialComparer : IComparer<string>
+        {
+            int _matherial;
+            public GelleryMatherialComparer(int matherial)
+            {
+                _matherial = matherial;
+            }
+            public int Compare(string x, string y)
+            {
+                if (x.EndsWith("_" + _matherial.ToString() + ".jpg"))
+                {
+                    return y.CompareTo(x);
+                }
+                return x.CompareTo(y);
+            }
         }
 
         public static SampleImageModel[] GetMainGallery(int typeId)
@@ -338,6 +369,26 @@ namespace Helpers
                 case ProjectCommentType.Sample:
                     result = $"{ht1} из {mt} «{project.Name}»";
                     break;
+            }
+
+            if (project.HasBalcony)
+            {
+                result += " c балконом";
+            }
+
+            if (project.HasErker)
+            {
+                result += $" {(result.Contains(" с ") ? "," : "с")} эркером";
+            }
+
+            if (project.HasSecondLight)
+            {
+                result += $" {(result.Contains(" с ") ? "," : "с")} вторым светом";
+            }
+
+            if (project.HasTerrace)
+            {
+                result += $" {(result.Contains(" с ") ? "," : "с")} террасой";
             }
 
             return result;

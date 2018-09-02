@@ -117,13 +117,17 @@ a{
     }
 
     .project-summary {
-        background-color:#c2f1b3;
+        background-color: #d4ffd3;
     }
 
     .project-summary td span {
         font-weight:600;
         font-size:24px;
         text-align:center;
+    }
+
+    .proj-cart .image1, .image2, .image3 {
+        box-shadow: 0px 0px 15px 5px #888;
     }
 
     /*.project_samples .image_box img{
@@ -164,6 +168,10 @@ a{
             left: 0;
             bottom: 1px;
             background: url(/content/img/check.png) left top no-repeat;
+        }
+
+        .project-compl-header {
+            background-color: #fff;
         }
 
         .project-compl-header td label:before {
@@ -261,7 +269,7 @@ a{
             display:inline-block;
             padding:18px;
             color: #fff;
-            background: #7d7d7d;
+            background: url(/content/img/background3.jpg);
             border: 1px solid #dedede;
         }
 
@@ -271,10 +279,12 @@ a{
             margin-right:13px;
         }
 
-        .filter-panel .col_3 label {
+        .filter-panel .col_3 label, 
+        .filter-panel .col_1  label {
             cursor:pointer;
         }
 
+        .filter-panel .col_1 label:hover,
         .filter-panel .col_3 label:hover {
             cursor:pointer;
             color: #ccc;
@@ -334,9 +344,12 @@ a{
         }
 
         .proj-cart{
-             background-color:#fafafa;
+             /*background-color:#fafafa;*/
+             background: url(/content/img/background1.jpg) left top no-repeat;
              padding:20px;
              width:260px !important;
+             /*border-radius:7px;*/
+             color: #222;
         }
 
         .proj-cart:hover{
@@ -345,7 +358,9 @@ a{
         }
 
         .proj-cart .title1 {
+            margin-top: 10px !important;
             width: auto !important;
+            font-weight: 600;
         }
 
         .section_inner a {
@@ -641,7 +656,7 @@ a.hidden.btn5{
     border-bottom: 1px solid #e0e0e0;
     background-position: center center;
     background-repeat: repeat;
-    
+    background-image: url('/Content/img/background.jpg')
 }
 
 .section.fixed{
@@ -677,6 +692,7 @@ a.hidden.btn5{
     width: 1170px;
     margin: 0 auto;
     position: relative;
+  
 }
 
 
@@ -7374,6 +7390,7 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
 
 .images{
     margin-left: -20px;
+    display:inline-block;
 }
 
 

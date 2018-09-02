@@ -233,6 +233,9 @@
     <Content Include="Content\FancyBox\jquery.fancybox.min.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\architect.jpg" />
+    <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\background1.jpg" />
+    <Content Include="Content\img\background3.jpg" />
     <Content Include="Content\img\bass.jpg" />
     <Content Include="Content\img\brevno.jpg" />
     <Content Include="Content\img\brus-building.jpg" />
@@ -485,6 +488,7 @@
     <Content Include="Views\Home\Services\Roof.cshtml" />
     <Content Include="Views\Home\Services\Fond.cshtml" />
     <Content Include="Views\Home\Services\LandDesign.cshtml" />
+    <Content Include="Views\Home\Services\Engineering.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
