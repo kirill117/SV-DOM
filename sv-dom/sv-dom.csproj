@@ -484,6 +484,7 @@
     <Content Include="Views\Home\Services\Gluedbeam.cshtml" />
     <Content Include="Views\Home\Services\Roof.cshtml" />
     <Content Include="Views\Home\Services\Fond.cshtml" />
+    <Content Include="Views\Home\Services\LandDesign.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
