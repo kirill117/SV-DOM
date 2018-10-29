@@ -124,6 +124,12 @@ namespace sv_dom.Controllers
                 case 7:
                     name += "\\Engineering";
                     break;
+                case 8:
+                    name += "\\Indoor";
+                    break;
+                case 9:
+                    name += "\\Outdoor";
+                    break;
                 case 12:
                     name += "\\LandDesign";
                     break;
@@ -148,6 +154,9 @@ namespace sv_dom.Controllers
                     name += "\\Profiledbeam";
                     break;
                 case 4:
+                    name += "\\Types";
+                    break;
+                case 5:
                     name += "\\Construction";
                     break;
             }

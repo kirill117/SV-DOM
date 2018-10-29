@@ -489,6 +489,9 @@
     <Content Include="Views\Home\Services\Fond.cshtml" />
     <Content Include="Views\Home\Services\LandDesign.cshtml" />
     <Content Include="Views\Home\Services\Engineering.cshtml" />
+    <Content Include="Views\Home\Services\Indoor.cshtml" />
+    <Content Include="Views\Home\Services\Outdoor.cshtml" />
+    <Content Include="Views\Home\Articles\Types.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
