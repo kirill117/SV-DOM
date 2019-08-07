@@ -1,6 +1,8 @@
 ﻿@using Helpers
 @using Models
 
+@model Tuple<int[], string>
+
 @{
     Layout = "~/Views/Shared/_ShortLayout.cshtml";
 }
@@ -8,69 +10,25 @@
 <script src="/content/js/jquery.waterwheelCarousel.js"></script>
 <link rel="stylesheet" href="/content/css/carusel/jquery.carousel-3d.default.css">
 
-<script type="text/javascript">
-</script>
-
-
-<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+<input type="hidden" class="page-name" value="Портфолио" />
+<div class="hide_line section transparent_ico section128" style="background-color:#FFFFFF;">
     <div class="section_inner">
-        <div class="title" style="font-size:38px;margin-bottom:40px;">Коллекция построенных объектов</div>
-        <div class="title title-gallery">Дома из оцилиндрованного бревна<br></div>
-        <div class="images project_samples">
-            @foreach (var item in MainHelper.GetMainGallery(1))
-            {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Дом из оцилиндрованного бревна" }, "ocb"))
-            }
-            <div class="clear"></div>
-        </div>
+        <div class="title">@Model.Item2</div>
     </div>
 </div>
+    
+@foreach (var item in Model.Item1)
+{
+    @Html.Partial("~/Views/Shared/_GalleryPartial.cshtml", item)
+}
 
-<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title title-gallery">Дома из клееного бруса<br></div>
-        <div class="images project_samples">
-            @foreach (var item in MainHelper.GetMainGallery(2))
-            {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Дом из клееного бруса" }, "brus"))
-            }
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
 
-<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title title-gallery">Интерьеры деревянных домов<br></div>
-        <div class="images project_samples">
-            @foreach (var item in MainHelper.GetMainGallery(3))
-            {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = "Интерьер деревянного дома" }, "interier"))
-            }
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
-
-<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title title-gallery">Гаражи, беседки, малые формы<br></div>
-        <div class="images project_samples">
-            @foreach (var item in MainHelper.GetMainGallery(4))
-            {
-                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = item.Comment }, "smallForms"))
-            }
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
-
-<div class="hide_line section section143" style="background-color:#FFFFFF;">
-    <div class="section_inner">
-        <div class="title title-gallery">Еще больше фотографий<br></div>
-        <div>
-            <a href="https://www.instagram.com/psk_sv_stroy/" target="_blank"><img style="width:100%" src="~/Content/img/insta.jpg" /></a>
-        </div>
-    </div>
-</div>
+            @*<div class="hide_line section section143" style="background-color:#FFFFFF;">
+                    <div class="section_inner">
+                        <div class="title title-gallery">Еще больше фотографий<br></div>
+                        <div>
+                            <a href="https://www.instagram.com/psk_sv_stroy/" target="_blank"><img style="width:100%" src="~/Content/img/insta.jpg" /></a>
+                        </div>
+                    </div>
+                </div>*@
 

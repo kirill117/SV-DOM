@@ -43,27 +43,67 @@ namespace sv_dom.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult Docs()
+        {
+            return View();
+        }
+
+        public ActionResult Staff()
+        {
+            return View();
+        }
+
         public ActionResult Price()
         {
             return View();
         }
+
         public ActionResult Services()
         {
             return View();
         }
+
         public ActionResult Credit()
         {
             return View();
         }
-        public ActionResult Gallery()
+
+        public ActionResult Gallery(string id)
         {
-            return View();
+            var ids = new[] { 1, 2, 3, 4 };
+            var title = "Коллекция построенных объектов";
+            if (!string.IsNullOrEmpty(id))
+            {
+                var _id = 0;
+                if (int.TryParse(id, out _id))
+                {
+                    ids = new[] { _id };
+                }
+                else
+                {
+                    switch (id)
+                    {
+                        case "poselki":
+                            title = "Наши поселки";
+                            ids = new[] { 5, 6, 7, 8, 9 };
+                            break;
+                    }
+                }
+            }
+            return View(new Tuple<int[], string>(ids, title));
         }
+
         public ActionResult Catalog()
         {
             return View();
         }
+
+        public ActionResult Partners()
+        {
+            return View();
+        }
+
         public ActionResult ProjectsList(int? type)
         {
             var model = MainHelper._projects.Projects;
@@ -130,6 +170,12 @@ namespace sv_dom.Controllers
                 case 9:
                     name += "\\Outdoor";
                     break;
+                case 10:
+                    name += "\\TechControl";
+                    break;
+                case 11:
+                    name += "\\Pools";
+                    break;
                 case 12:
                     name += "\\LandDesign";
                     break;
@@ -178,7 +224,7 @@ namespace sv_dom.Controllers
             return Json(new { cost = result, cost1 = result1, cost2 = result2, cost3 = result3  });
         }
 
-        public JsonResult GetRecall(string name, string phone, string email, string comment, string subcomment, string textbody)
+        public JsonResult GetRecall(string name, string phone, string email, string comment, string subcomment, string textbody, string pagename)
         {
             var result = false;
             var user = ConfigurationManager.AppSettings["MailUserTarget"];
@@ -208,6 +254,13 @@ namespace sv_dom.Controllers
                 {
                     body.AppendLine("Комментарий:");
                     body.AppendLine(comment.Trim());
+                }
+
+                if (!string.IsNullOrEmpty(pagename))
+                {
+                    body.AppendLine("");
+                    body.AppendLine("");
+                    body.AppendLine("(Отправлено со страницы - " + pagename.Trim() + ")");
                 }
 
                 result = EmailHelper.SendMail(user, body.ToString(), "Сообщение с сайта SV-DOM.RU");

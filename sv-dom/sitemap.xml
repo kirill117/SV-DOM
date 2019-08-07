@@ -1,427 +1,434 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://sv-dom.ru/</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://sv-dom.ru/</loc>
+	<lastmod>2018-10-29T23:19:16+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/index</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/catalog</loc>
+	<lastmod>2018-10-29T23:19:16+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/catalog</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/services</loc>
+	<lastmod>2018-10-29T23:19:17+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/services</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/credit</loc>
+	<lastmod>2018-10-29T23:19:17+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/credit</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/gallery</loc>
+	<lastmod>2018-10-29T23:19:18+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/gallery</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/articles/5</loc>
+	<lastmod>2018-10-29T23:19:18+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/price</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/price</loc>
+	<lastmod>2018-10-29T23:19:19+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/contacts</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/contacts</loc>
+	<lastmod>2018-10-29T23:19:20+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/1</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/project/1</loc>
+	<lastmod>2018-10-29T23:19:20+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/21</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/project/21</loc>
+	<lastmod>2018-10-29T23:19:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/2</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/project/2</loc>
+	<lastmod>2018-10-29T23:19:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/20</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/project/20</loc>
+	<lastmod>2018-10-29T23:19:22+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/articles/4</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/articles/4</loc>
+	<lastmod>2018-10-29T23:19:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=1</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=1</loc>
+	<lastmod>2018-10-29T23:19:24+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=2</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=2</loc>
+	<lastmod>2018-10-29T23:19:24+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=3</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=3</loc>
+	<lastmod>2018-10-29T23:19:25+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=4</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=4</loc>
+	<lastmod>2018-10-29T23:19:26+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=5</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=5</loc>
+	<lastmod>2018-10-29T23:19:27+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/projectsList?type=6</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/projectsList?type=6</loc>
+	<lastmod>2018-10-29T23:19:27+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/articles/1</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/articles/1</loc>
+	<lastmod>2018-10-29T23:19:28+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/articles/2</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/articles/2</loc>
+	<lastmod>2018-10-29T23:19:29+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/articles/3</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/articles/3</loc>
+	<lastmod>2018-10-29T23:19:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/ShowTour/?projectid=1</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/ShowTour/?projectid=1</loc>
+	<lastmod>2018-10-29T23:19:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/ShowTour/?projectid=2</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/ShowTour/?projectid=2</loc>
+	<lastmod>2018-10-29T23:19:31+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/contacts/</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sv-dom.ru/contacts/</loc>
+	<lastmod>2018-10-29T23:19:38+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/1</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/1</loc>
+	<lastmod>2018-10-29T23:19:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/2</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/2</loc>
+	<lastmod>2018-10-29T23:19:43+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/3</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/3</loc>
+	<lastmod>2018-10-29T23:19:44+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/4</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/4</loc>
+	<lastmod>2018-10-29T23:19:45+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/5</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/5</loc>
+	<lastmod>2018-10-29T23:19:45+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/6</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/6</loc>
+	<lastmod>2018-10-29T23:19:46+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/service/7</loc>
-  <lastmod>2018-06-19T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/7</loc>
+	<lastmod>2018-10-29T23:19:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/3</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/8</loc>
+	<lastmod>2018-10-29T23:19:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/10</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/9</loc>
+	<lastmod>2018-10-29T23:19:48+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/11</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/service/12</loc>
+	<lastmod>2018-10-29T23:19:49+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/12</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/3</loc>
+	<lastmod>2018-10-29T23:20:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/7</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/10</loc>
+	<lastmod>2018-10-29T23:20:56+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/38</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/11</loc>
+	<lastmod>2018-10-29T23:20:56+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/9</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/12</loc>
+	<lastmod>2018-10-29T23:20:57+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/4</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/7</loc>
+	<lastmod>2018-10-29T23:20:58+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/5</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/38</loc>
+	<lastmod>2018-10-29T23:20:58+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/6</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/9</loc>
+	<lastmod>2018-10-29T23:20:59+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/8</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/4</loc>
+	<lastmod>2018-10-29T23:21:00+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/36</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/5</loc>
+	<lastmod>2018-10-29T23:21:00+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/39</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/6</loc>
+	<lastmod>2018-10-29T23:21:01+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/40</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/8</loc>
+	<lastmod>2018-10-29T23:21:02+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/41</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/36</loc>
+	<lastmod>2018-10-29T23:21:02+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/42</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/39</loc>
+	<lastmod>2018-10-29T23:21:03+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/43</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/40</loc>
+	<lastmod>2018-10-29T23:21:04+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/44</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/41</loc>
+	<lastmod>2018-10-29T23:21:04+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/45</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/42</loc>
+	<lastmod>2018-10-29T23:21:05+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/37</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/43</loc>
+	<lastmod>2018-10-29T23:21:06+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/46</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/44</loc>
+	<lastmod>2018-10-29T23:21:06+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/48</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/45</loc>
+	<lastmod>2018-10-29T23:21:07+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/51</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/37</loc>
+	<lastmod>2018-10-29T23:21:08+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/52</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/46</loc>
+	<lastmod>2018-10-29T23:21:08+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/53</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/48</loc>
+	<lastmod>2018-10-29T23:21:09+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/13</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/51</loc>
+	<lastmod>2018-10-29T23:21:10+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/14</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/52</loc>
+	<lastmod>2018-10-29T23:21:10+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/15</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/53</loc>
+	<lastmod>2018-10-29T23:21:11+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/16</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/13</loc>
+	<lastmod>2018-10-29T23:21:14+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/17</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/14</loc>
+	<lastmod>2018-10-29T23:21:14+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/18</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/15</loc>
+	<lastmod>2018-10-29T23:21:14+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/32</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/16</loc>
+	<lastmod>2018-10-29T23:21:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/22</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/17</loc>
+	<lastmod>2018-10-29T23:21:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/23</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/18</loc>
+	<lastmod>2018-10-29T23:21:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/54</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/32</loc>
+	<lastmod>2018-10-29T23:21:18+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/24</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/22</loc>
+	<lastmod>2018-10-29T23:21:18+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/25</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/23</loc>
+	<lastmod>2018-10-29T23:21:18+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/26</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/54</loc>
+	<lastmod>2018-10-29T23:21:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/27</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/24</loc>
+	<lastmod>2018-10-29T23:21:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/28</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/25</loc>
+	<lastmod>2018-10-29T23:21:21+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/29</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/26</loc>
+	<lastmod>2018-10-29T23:21:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/30</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/27</loc>
+	<lastmod>2018-10-29T23:21:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/31</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/28</loc>
+	<lastmod>2018-10-29T23:21:23+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/19</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/29</loc>
+	<lastmod>2018-10-29T23:21:25+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/33</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/30</loc>
+	<lastmod>2018-10-29T23:21:25+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/34</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/31</loc>
+	<lastmod>2018-10-29T23:21:25+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/35</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/19</loc>
+	<lastmod>2018-10-29T23:21:27+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/47</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/33</loc>
+	<lastmod>2018-10-29T23:21:27+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/49</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/34</loc>
+	<lastmod>2018-10-29T23:21:27+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/50</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/35</loc>
+	<lastmod>2018-10-29T23:21:29+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://sv-dom.ru/project/55</loc>
-  <lastmod>2018-06-01T11:58:14+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://sv-dom.ru/project/47</loc>
+	<lastmod>2018-10-29T23:21:29+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-
-
+<url>
+	<loc>https://sv-dom.ru/project/49</loc>
+	<lastmod>2018-10-29T23:21:29+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sv-dom.ru/project/50</loc>
+	<lastmod>2018-10-29T23:21:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sv-dom.ru/project/55</loc>
+	<lastmod>2018-10-29T23:21:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
 </urlset>

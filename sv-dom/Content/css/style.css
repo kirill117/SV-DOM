@@ -8,7 +8,7 @@ font-family: 'Russo One', sans-serif;
 
 
 /*@import 'https://fonts.googleapis.com/css?family=Comfortaa:300|Cormorant+Garamond|Cormorant+Infant|Cormorant+SC|Cormorant+Unicase|EB+Garamond|El+Messiri|Forum|Jura|Lobster|Neucha|Open+Sans+Condensed:300|PT+Sans|PT+Sans+Narrow|Philosopher|Playfair+Display+SC|Poiret+One|Ruslan+Display|Russo+One|Ubuntu&subset=cyrillic';*/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
 
 html, body{
     height: 100%;
@@ -391,6 +391,16 @@ a{
         .menu1 a:hover {
             opacity: 1;
         }
+
+.question-btn {
+    position:fixed;
+    bottom:50px;
+    right: 50px;
+    background: url(/content/img/question.png) center no-repeat;
+    width:100px;
+    height:100px;
+    background-color:transparent;
+}
 
 .left{
     float: left;
@@ -5971,7 +5981,7 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
 }
 
 .section103 .text1{
-    font-size: 22px;
+    font-size: 28px;
     font-weight:600;
 }
 
@@ -6132,14 +6142,8 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
     
 }
 
-.section119 .policy2{
-    cursor: pointer;
-    display: inline;
-    border-bottom: dashed 1px ;
-}
-
-.section119 .policy2:hover{
-    border-bottom: solid 1px transparent;
+.table-price tr {
+    background-color: white;
 }
 
 .section119 .policy2_title{
@@ -6260,9 +6264,34 @@ body.editor_true .popup_form.html_popup .popup_form_inner{
     
 }
 
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: auto;
+    top: 37px;
+    background-color: #333;
+    opacity: 0.95;
+    border: none;
+    z-index:1;
+    text-align:left !important;
+}
+ul.submenu > li {
+    display: block;
+    line-height: 40px !important;
+}
+ul.submenu > li > a {
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
 
-
-
+li.level2:hover > ul.submenu {
+    display: block;
+}
 
 
 /*стили для нижнего бордера*/

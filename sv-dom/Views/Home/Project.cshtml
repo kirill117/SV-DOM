@@ -12,7 +12,7 @@
     var matherial = (int)(Model.CurrentMatherial ?? Model.Matherials.First());
     matherial = matherial == 4 ? 1 : matherial;
 
-    ViewBag.Title = "Строительство деревянных домов ПСК СВ-Строй - " + MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First());
+    ViewBag.Title = MainHelper.GetProjectComment(Model.Id, ProjectCommentType.Project, Model.Matherials.First()) + " - ПСК СВ-Строй";
 }
 
 
@@ -95,6 +95,7 @@
         var mat = $('body').find('.matSel:checked').val();
         $('.tblCompl1').hide();
         $('.tblCompl2').hide();
+        $('.tblCompl3').hide();
         $('.tblCompl'+mat).show();
         
         $('.complectation-table tbody tr').find('td').css("background-color","white");
@@ -161,10 +162,10 @@
 </script>
 
 @Html.HiddenFor(m => m.Id)
-
+<input type="hidden" class="page-name" value="Проект «@(Model.Name)»" />
 <div class="size_450x350 hide_line section section126" style="background-color:#FFFFFF;">
     <div class="section_inner">
-        <div class="title" style="font-size:34px;font-weight:600;">Проект «@(Model.Name)»</div>
+        <div class="title"><h1 class="project-title">Проект «@(Model.Name)»</h1></div>
         <div class="sub_title"> </div>
         <div class="">
             <div class="slider-wrapper">
@@ -364,7 +365,7 @@
                             </ul>
                             <ul class="tblCompl3" style="display:none;">
                                 <li>
-                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                    брус профилированный 190(h)х190  мм (сосна-ель) естественной влажности<br />
                                 </li>
                                 <li>
                                     сборка на сухие березовые нагеля с прокладкой льноволокна
@@ -390,7 +391,7 @@
                             </ul>
                             <ul class="tblCompl3" style="display:none;">
                                 <li>
-                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                    брус профилированный 190(h)х190  мм (сосна-ель) естественной влажности<br />
                                 </li>
                                 <li>
                                     сборка на сухие березовые нагеля с прокладкой льноволокна
@@ -416,7 +417,7 @@
                             </ul>
                             <ul class="tblCompl3" style="display:none;">
                                 <li>
-                                    брус профилированный 160(h)х160 мм (сосна-ель) естественной влажности<br />
+                                    брус профилированный 190(h)х190  мм (сосна-ель) естественной влажности<br />
                                 </li>
                                 <li>
                                     сборка на сухие березовые нагеля с прокладкой льноволокна
@@ -760,4 +761,7 @@
 @Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 1))
 @Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 2))
 @Html.Partial("~/Views/Shared/_OptionsPopupPartial.cshtml", new Tuple<int, int>(Model.Id, 3))
+
+<div class="question-btn btn_recall">
+</div>
 

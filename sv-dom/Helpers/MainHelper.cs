@@ -20,9 +20,29 @@ namespace Helpers
         public static PriceListModel _prices = XMLHelper.Get<PriceListModel>();
         public static OptionsListModel _options = XMLHelper.Get<OptionsListModel>();
 
+        public static string[] _gallery = GetGalleryList();
+
         public static List<ProjectModel> GetProjectsForMainPage()
         {
             return _projects.Projects.Where(s => s.ShowOnMain).ToList();
+        }
+
+        private static string[] GetGalleryList()
+        {
+            return new[]
+            {
+                "",
+                "Дома из оцилиндрованного бревна",
+                "Дома из клееного бруса",
+                "Интерьеры деревянных домов",
+                "Гаражи, беседки, малые формы",
+                "КП Борисоглебский",
+                "КП Истринские Дачи",
+                "КП Земляничная поляна",
+                "ДНП Речица",
+                "КП Сосновые берега",
+                "Каркасные дома"
+            };
         }
 
         public static List<OptionModel> GetOptionsList(int ProjectID, int MatherialID, int ConfigurationID)

@@ -309,6 +309,10 @@
 }
 
 @media (max-width: 800px) {
+
+    .question-btn {
+        display:none;
+    }
      
     .content_block{
         display: flex;

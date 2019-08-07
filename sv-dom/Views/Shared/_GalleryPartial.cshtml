@@ -1,0 +1,18 @@
+﻿@using Helpers
+@using Models
+
+@model int
+
+<div class="hide_line section section143 img_zoom" style="background-color:#FFFFFF;">
+    <div class="section_inner">
+        @*<div class="title" style="font-size:38px;margin-bottom:40px;">Коллекция построенных объектов</div>*@
+        <div class="title title-gallery">@MainHelper._gallery[Model]<br></div>
+        <div class="images project_samples">
+            @foreach (var item in MainHelper.GetMainGallery(Model))
+            {
+                @Html.Partial("~/Views/Shared/_SampleImageGroupPartial.cshtml", new Tuple<SampleImageModel, string>(new SampleImageModel() { Name = item.Name, Comment = MainHelper._gallery[Model] }, MainHelper._gallery[Model]))
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

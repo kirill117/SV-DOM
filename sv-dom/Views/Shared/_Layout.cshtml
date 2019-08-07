@@ -1,25 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@using Helpers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
     <meta name="description" content="Строительство и проектирование домов и бань из оцилиндрованного бревна и клееного бруса. Реконструкция деревянных домов. Внешняя и внутренняя отделка. Инженерные системы и коммуникации.">
-    <meta name="keywords" content="оцилиндрованное бревно,клееный брус,строительство домов,бани,реконструкция домов,проекты коттеджей">
     <meta name="yandex-verification" content="a7868af0f846d223" />
 
     <title>@(ViewBag.Title ?? "Дома из оцилиндрованного бревна - строительство деревянных домов ПСК СВ-Строй")</title>
     
+
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/modernizr")
-
-    @*<link rel="stylesheet" type="text/css" href="~/content/css/jquery-ui.css">*@
-    <link rel="stylesheet" type="text/css" href="~/content/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="~/content/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="~/content/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/content/css/mobile.css">
-
-    <script type='text/javascript' src='/content/fancybox/jquery.fancybox.min.js'></script>
-    <link rel='stylesheet' href='/content/fancybox/jquery.fancybox.min.css' type='text/css' />
+    @Styles.Render("~/bundles/css")
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
     <script>
         $(document).ready(function () {
@@ -31,6 +26,7 @@
             $(".btn_recall").on('click', function (e) {
                 e.preventDefault();
                 var txt = $(this).attr("subcomment");
+   
                 if (txt && txt.length > 0) {
                     $('.popup_form_recall').find(".popup_form_title span").text(txt);                   
                 }
@@ -42,9 +38,19 @@
                     $('.popup_form_recall').find(".input-hidden-comment").val(txt);
                 }
                 else {
-                    $('.popup_form_recall').find(".input-hidden-comment").val('');
+                    txt = '';
+                    var projTitle = $('body').find('.project-title')
+                    if (projTitle && projTitle.length > 0) {
+                        txt = 'Страница - ' + projTitle.text();
+                    }
+                    $('.popup_form_recall').find(".input-hidden-comment").val(txt);
                 }
                 $('.popup_form_recall').show();
+            });
+
+            $(".policy2").on('click', function (e) {
+                e.preventDefault();
+                $('.policy2_popup').toggle();
             });
 
             $(".popup_form_close").on('click', function () {
@@ -74,6 +80,9 @@
                 }
 
                 $('.popup_form').hide();
+
+                var page_name = $('body').find('.page-name').length > 0 ? $('body').find('.page-name').val() : '';
+
                 $.ajax({
                     type: 'POST',
                     url: '/GetRecall',
@@ -84,7 +93,8 @@
                         email: frm.find('.input-mail').val(),
                         comment: frm.find('.input-comment').val(),
                         subcomment: frm.parent().find(".popup_form_title span").text(),
-                        textbody: frm.find(".input-hidden-comment").val()
+                        textbody: frm.find(".input-hidden-comment").val(),
+                        pagename: page_name
                     },
                     success: function (content) {
                         try {
@@ -148,7 +158,7 @@
             <div class="logo_img"><img src="/content/img/logo.png" alt=""></div>
             <div class="slogan">
                 <div class="text1">ПСК «СВ-Строй»</div>
-                <div class="text2">Строительство домов в Москве и Области</div>
+                <div class="text2">Строительство экологичных домов</div>
             </div>
             <div class="phone-and-btn">
                 <div class="phone1">
@@ -165,11 +175,26 @@
             <div class="menu-toogler"><i class="fa fa-bars"></i></div>
             <div class="menu1">
                 <ul>
-                    <li class="level0"><a href="/index" title="">О нас</a></li>
+                    <li class="level2"><a href="#" title="">О нас</a>
+                        <ul class="submenu">
+                            <li class=""><a href="/">Главная</a></li>
+                            <li class=""><a href="~/staff">Наша команда</a></li>
+                            <li class=""><a href="~/gallery/poselki">Поселки</a></li>
+                            <li class=""><a href="~/partners">Партнеры</a></li>
+                        </ul>
+                    </li>
                     <li class="level0"><a href="/catalog" title="">Проекты</a></li>
                     <li class="level0"><a href="/services" title="">Услуги</a></li>
                     <li class="level0"><a href="/credit" title="">Кредитование</a></li>
-                    <li class="level0"><a href="/gallery" title="">Портфолио</a></li>
+                    <li class="level2"><a href="#" title="">Портфолио</a>
+                        <ul class="submenu">
+                            <li class=""><a href="~/gallery/1">@MainHelper._gallery[1]</a></li>
+                            <li class=""><a href="~/gallery/2">@MainHelper._gallery[2]</a></li>
+                            <li class=""><a href="~/gallery/10">@MainHelper._gallery[10]</a></li>
+                            <li class=""><a href="~/gallery/3">@MainHelper._gallery[3]</a></li>
+                            <li class=""><a href="~/gallery/4">@MainHelper._gallery[4]</a></li>
+                        </ul>
+                    </li>
                     <li class="level0"><a href="/articles/5" title="">Статьи</a></li>
                     <li class="level0"><a href="/price" title="">Стоимость</a></li>
                     <li class="level0"><a href="/contacts" title="">Контакты</a></li>
@@ -228,13 +253,6 @@
                 <div class="form_text">Нажимая на кнопку, Вы принимаете <b>Положение</b> и <b>Согласие</b> на обработку персональных данных.<br></div>
             </div>
             <div class="clear"></div>
-            @*<div class="popup_thanks">
-                <div class="popup_thanks_inner">
-                    <div class="popup_thanks_close">X</div>
-                    <div class="popup_thanks_title">Спасибо за заявку!</div>
-                    <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
-                </div>
-            </div>*@
         </div>
     </div>
     <div class="section section119" style="background-color:#ffffff;">
@@ -242,13 +260,20 @@
             <div class="logo_img"><img src="/content/img/logo.png" alt=""></div>
             <div class="address-and-ua">
                 <div class="address1">ПСК "СВ-СТРОЙ", 123456, г.Москва, Шитова наб. 4 стр.1 <br>ИНН 5044080411 ОГРН 1115044002920</div>
-                <div class="policy2 ">Политика конфиденциальности</div>
+                <div>
+                    <a class="policy2" href="#">Политика конфиденциальности</a>
+                    <span>&nbsp;|&nbsp;</span>
+                    <a href="~/docs">Правовая информация</a>
+                </div>
             </div>
             <div class="phone-and-address">
                 <div class="phone1">
                     <a href="tel:+74957838389" style="color:#000;">+7 495 783-83-89</a>
                 </div>
                 <div class="text1"><a href="mailto:info@sv-dom.ru">E-mail: info@sv-dom.ru</a></div>
+                <div>
+                    <a href="https://www.instagram.com/psk_sv_stroy/" target="_blank"><img src="~/Content/img/insta.png" /></a>
+                </div>
             </div>
             <div class="clear"></div>
             <div class="policy2_popup">
@@ -323,9 +348,11 @@
         </div>
     </div>
 
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/fancybox")
+    @Scripts.Render("~/bundles/imgViewer")
+
     @RenderSection("scripts", required: false)
 
-    <script src="~/content/js/underscore-min.js"></script>
-    <script src="~/content/js/imgViewer.js"></script>
 </body>
 </html>
