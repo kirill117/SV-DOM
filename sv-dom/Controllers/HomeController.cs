@@ -88,6 +88,10 @@ namespace sv_dom.Controllers
                             title = "Наши поселки";
                             ids = new[] { 5, 6, 7, 8, 9 };
                             break;
+                        case "objects":
+                            title = "Наши последние работы";
+                            ids = new[] { 17, 16, 14, 13, 12, 11 };
+                            break;
                     }
                 }
             }
