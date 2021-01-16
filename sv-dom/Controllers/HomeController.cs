@@ -90,7 +90,7 @@ namespace sv_dom.Controllers
                             break;
                         case "objects":
                             title = "Наши последние работы";
-                            ids = new[] { 17, 16, 14, 13, 12, 11 };
+                            ids = new[] { 20, 19, 18, 17, 16, 14, 13, 12, 11 };
                             break;
                     }
                 }
