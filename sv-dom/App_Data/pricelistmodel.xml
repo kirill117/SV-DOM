@@ -1,74 +1,74 @@
 <PriceListModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Prices>
-    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="1" Cost="1396000" />
-    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="2" Cost="1948000" />
-    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="3" Cost="2544000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="1" Cost="1759000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="2" Cost="2421000" />
+    <PriceModel ProjectID="1" MatherialID="1" ConfigurationID="3" Cost="3104000" />
 
-    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="1" Cost="2840000" />
-    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="2" Cost="3930000" />
-    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="3" Cost="4670000" />
+    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="1" Cost="3550000" />
+    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="2" Cost="4912000" />
+    <PriceModel ProjectID="2" MatherialID="1" ConfigurationID="3" Cost="5837000" />
 
-    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="1" Cost="2198000" />
-    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="2" Cost="2990000" />
-    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="3" Cost="3565000" />
+    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="1" Cost="2747000" />
+    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="2" Cost="3737000" />
+    <PriceModel ProjectID="3" MatherialID="1" ConfigurationID="3" Cost="4456000" />
 
-    <PriceModel ProjectID="38" MatherialID="1" ConfigurationID="1" Cost="1724000" />
-    <PriceModel ProjectID="10" MatherialID="1" ConfigurationID="1" Cost="1499000" />
-    <PriceModel ProjectID="43" MatherialID="1" ConfigurationID="1" Cost="1999000" />
-    <PriceModel ProjectID="39" MatherialID="1" ConfigurationID="1" Cost="2350000" />
-    <PriceModel ProjectID="42" MatherialID="1" ConfigurationID="1" Cost="1970000" />
-    <PriceModel ProjectID="41" MatherialID="1" ConfigurationID="1" Cost="2230000" />
-    <PriceModel ProjectID="7" MatherialID="1" ConfigurationID="1" Cost="1766000" />
-    <PriceModel ProjectID="44" MatherialID="1" ConfigurationID="1" Cost="2700000" />
-    <PriceModel ProjectID="40" MatherialID="1" ConfigurationID="1" Cost="2740000" />
+    <PriceModel ProjectID="38" MatherialID="1" ConfigurationID="1" Cost="2155000" />
+    <PriceModel ProjectID="10" MatherialID="1" ConfigurationID="1" Cost="1873000" />
+    <PriceModel ProjectID="43" MatherialID="1" ConfigurationID="1" Cost="2498000" />
+    <PriceModel ProjectID="39" MatherialID="1" ConfigurationID="1" Cost="2937000" />
+    <PriceModel ProjectID="42" MatherialID="1" ConfigurationID="1" Cost="2462000" />
+    <PriceModel ProjectID="41" MatherialID="1" ConfigurationID="1" Cost="2787000" />
+    <PriceModel ProjectID="7" MatherialID="1" ConfigurationID="1" Cost="2207000" />
+    <PriceModel ProjectID="44" MatherialID="1" ConfigurationID="1" Cost="3375000" />
+    <PriceModel ProjectID="40" MatherialID="1" ConfigurationID="1" Cost="3425000" />
     
-    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="1" Cost="2330000" />
-    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="2" Cost="3194000" />
+    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="1" Cost="2912000" />
+    <PriceModel ProjectID="36" MatherialID="1" ConfigurationID="2" Cost="3992000" />
 
-    <PriceModel ProjectID="37" MatherialID="1" ConfigurationID="1" Cost="3099000" />
-    <PriceModel ProjectID="8" MatherialID="1" ConfigurationID="1" Cost="2750000" />
-    <PriceModel ProjectID="4" MatherialID="1" ConfigurationID="1" Cost="2750000" />
-    <PriceModel ProjectID="5" MatherialID="1" ConfigurationID="1" Cost="2410000" />
-    <PriceModel ProjectID="6" MatherialID="1" ConfigurationID="1" Cost="2275000" />
+    <PriceModel ProjectID="37" MatherialID="1" ConfigurationID="1" Cost="3873000" />
+    <PriceModel ProjectID="8" MatherialID="1" ConfigurationID="1" Cost="3437000" />
+    <PriceModel ProjectID="4" MatherialID="1" ConfigurationID="1" Cost="3437000" />
+    <PriceModel ProjectID="5" MatherialID="1" ConfigurationID="1" Cost="3012000" />
+    <PriceModel ProjectID="6" MatherialID="1" ConfigurationID="1" Cost="2843000" />
     
-    <PriceModel ProjectID="12" MatherialID="1" ConfigurationID="1" Cost="1385000" />
-    <PriceModel ProjectID="12" MatherialID="1" ConfigurationID="2" Cost="1830000" />
+    <PriceModel ProjectID="12" MatherialID="1" ConfigurationID="1" Cost="1731000" />
+    <PriceModel ProjectID="12" MatherialID="1" ConfigurationID="2" Cost="2287000" />
 
-    <PriceModel ProjectID="11" MatherialID="1" ConfigurationID="1" Cost="1499000" />
+    <PriceModel ProjectID="11" MatherialID="1" ConfigurationID="1" Cost="1873000" />
     
-    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="1" Cost="985000" />
-    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="2" Cost="1482000" />
-    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="3" Cost="1919000" />
+    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="1" Cost="1231000" />
+    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="2" Cost="1852000" />
+    <PriceModel ProjectID="9" MatherialID="1" ConfigurationID="3" Cost="2398000" />
 
-    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="1" Cost="1414000" />
-    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="2" Cost="1947000" />
-    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="3" Cost="2336000" />
+    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="1" Cost="1767000" />
+    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="2" Cost="2433000" />
+    <PriceModel ProjectID="46" MatherialID="1" ConfigurationID="3" Cost="2920000" />
 
-    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="1" Cost="2116000" />
-    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="2" Cost="2896000" />
-    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="3" Cost="3331000" />
+    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="1" Cost="2645000" />
+    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="2" Cost="3620000" />
+    <PriceModel ProjectID="46" MatherialID="2" ConfigurationID="3" Cost="4163000" />
 
-    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="1" Cost="982000" />
-    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="2" Cost="1491000" />
-    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="3" Cost="1841000" />
+    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="1" Cost="1227000" />
+    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="2" Cost="1863000" />
+    <PriceModel ProjectID="23" MatherialID="1" ConfigurationID="3" Cost="2301000" />
 
-    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="1" Cost="816000" />
-    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="2" Cost="1177000" />
-    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="3" Cost="1526000" />
+    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="1" Cost="1020000" />
+    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="2" Cost="1471000" />
+    <PriceModel ProjectID="32" MatherialID="1" ConfigurationID="3" Cost="1907000" />
 
-    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="1" Cost="568000" />
-    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="2" Cost="815000" />
-    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="3" Cost="1013500" />
+    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="1" Cost="710000" />
+    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="2" Cost="1018000" />
+    <PriceModel ProjectID="21" MatherialID="1" ConfigurationID="3" Cost="1266000" />
 
-    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="1" Cost="773000" />
-    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="2" Cost="1127000" />
-    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="3" Cost="1362000" />
+    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="1" Cost="966000" />
+    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="2" Cost="1408000" />
+    <PriceModel ProjectID="22" MatherialID="1" ConfigurationID="3" Cost="1702000" />
 
-    <PriceModel ProjectID="16" MatherialID="1" ConfigurationID="2" Cost="2790000" />
-    <PriceModel ProjectID="16" MatherialID="2" ConfigurationID="2" Cost="3580000" />
+    <PriceModel ProjectID="16" MatherialID="1" ConfigurationID="2" Cost="3487000" />
+    <PriceModel ProjectID="16" MatherialID="2" ConfigurationID="2" Cost="4475000" />
 
-    <PriceModel ProjectID="17" MatherialID="1" ConfigurationID="2" Cost="3134000" />
-    <PriceModel ProjectID="17" MatherialID="2" ConfigurationID="2" Cost="4174000" />
+    <PriceModel ProjectID="17" MatherialID="1" ConfigurationID="2" Cost="3917000" />
+    <PriceModel ProjectID="17" MatherialID="2" ConfigurationID="2" Cost="5217000" />
     
   </Prices>
 </PriceListModel>
