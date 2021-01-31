@@ -353,11 +353,14 @@
     <Content Include="Content\img\gallery\18\05.jpg" />
     <Content Include="Content\img\gallery\18\06.jpg" />
     <Content Include="Content\img\gallery\19\1 .JPG" />
-    <Content Include="Content\img\gallery\19\2 .JPG" />
-    <Content Include="Content\img\gallery\19\3 .JPG" />
-    <Content Include="Content\img\gallery\19\4.jpg" />
+    <Content Include="Content\img\gallery\19\2.JPG" />
+    <Content Include="Content\img\gallery\19\3.JPG" />
+    <Content Include="Content\img\gallery\19\4 .JPG" />
     <Content Include="Content\img\gallery\19\5.jpg" />
     <Content Include="Content\img\gallery\19\6.jpg" />
+    <Content Include="Content\img\gallery\19\7.jpg" />
+    <Content Include="Content\img\gallery\19\8.jpg" />
+    <Content Include="Content\img\gallery\19\9.JPG" />
     <Content Include="Content\img\gallery\20\1.jpg" />
     <Content Include="Content\img\gallery\20\2.jpg" />
     <Content Include="Content\img\gallery\20\3.jpg" />
@@ -427,6 +430,7 @@
     <Content Include="Content\img\partners\viatskiydom.jpg" />
     <Content Include="Content\img\production.jpeg" />
     <Content Include="Content\img\question.png" />
+    <Content Include="Content\img\reconst.jpg" />
     <Content Include="Content\img\roof.jpg" />
     <Content Include="Content\img\s-berega.jpg" />
     <Content Include="Content\img\s-berega1.jpg" />
@@ -671,6 +675,7 @@
     <Content Include="Views\Home\Staff.cshtml" />
     <Content Include="Views\Shared\_GalleryPartial.cshtml" />
     <Content Include="Views\Home\Partners.cshtml" />
+    <Content Include="Views\Home\Services\Reconstruction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\gallery\0\" />
